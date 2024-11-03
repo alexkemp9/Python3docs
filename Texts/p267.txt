@@ -1,0 +1,50 @@
+Custom Collection Classes 267
+
+may include other collections, etc.), the whole lot will be pickled—and without
+duplicating objects that occur more than once.
+
+A pickle can be read back directly into a Python variable—we don’t have to do
+any parsing or other interpretation ourselves. So using pickles is ideal for sav-
+ing and loading ad hoc collections of data, especially for small programs and for
+programs created for personal use. However, pickles have no security mecha-
+nisms (no encryption, no digital signature), so loading a pickle that comes from
+an untrusted source could be dangerous. In view of this, for programs that
+are not purely for personal use, it is best to create a custom file format that is
+specific to the program. In Chapter 7 we show how to read and write custom
+binary, text, and XML file formats.
+
+def save(self, filename=None):
+if filename is not None:
+self. filename = filename
+if not self.filename:
+raise NoFilenameError()
+
+fh = None
+try:
+data = [self.width, self.height, self. background,
+self. data]
+fh = open(self.filename, “wb")
+pickle.dump(data, fh, pickle.HIGHEST PROTOCOL)
+except (EnvironmentError, pickle.PicklingError) as err:
+raise SaveError(str(err))
+finally:
+if fh is not None:
+fh.close()
+
+The first part of the function is concerned purely with the filename. If the
+Image object was created with no filename and no filename has been set since,
+then the save() method must be given an explicit filename (in which case it
+behaves as “save as” and sets the internally used filename). If no filename is
+specified the current filename is used, and if there is no current filename and
+none is given an exception is raised.
+
+We create a list (data) to hold the objects we want to save, including the
+self.__data dictionary of coordinate—color items, but excluding the set of
+unique colors since that data can be reconstructed. Then we open the file to
+write in binary mode and call the pickle. dump() function to write the data object.
+to the file. And that’s it!
+
+The pickle module can serialize data using various formats (called protocols
+in the documentation), with the one to use specified by the third argument to
+pickle.dump(). Protocol 0 is ASCII and is useful for debugging. We have used
+protocol 3 (pickle.HIGHEST PROTOCOL), a compact binary format which is why

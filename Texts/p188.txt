@@ -1,0 +1,30 @@
+I<
+
+188 Chapter 4. Control Structures and Functions
+
+if year == 0:
+raise CancelledError()
+filename = get_string("Enter filename", “filename")
+if not filename:
+raise CancelledError()
+if not filename.endswith((".htm", “.html")):
+filename += ".html"
+
+information.update(name=name, year=year, filename=filename,
+title=title, description=description,
+keywords=keywords, stylesheet=stylesheet)
+
+We have omitted the code for getting the title and description texts, HTML keywords, and the stylesheet file. All of them use the get_string() function that we will look at shortly. It is sufficient to note that this function takes a message prompt, the “name” of the relevant variable (for use in error messages), and an optional default value. Similarly, the get_integer() function takes a message prompt, variable name, default value, minimum and maximum values, and whether 0 is allowed.
+
+At the end we update the information dictionary with the new values using keyword arguments. For each key=value pair the key is the name of a key in the dictionary whose value will be replaced with the given value—and in this case each value is a variable with the same name as the corresponding key in the dictionary.
+
+In theory, it looks like we could have done the update using information. update(locals()), since all the variables we want to update are in the local scope. After all, we often use mapping unpacking with locals() to pass arguments to str. format(). In fact, using locals() to pass arguments to str. format() is generally safe because only the keys named in the format string are used, with any others harmlessly ignored. But this is not the case for updating a dictionary. If we use locals() to update a dictionary, it will update the dictionary with everything in the local scope—including the dictionary itself—not just the variables we are interested in. So using locals() to populate or update a dictionary is usually a bad idea.
+
+This function has no explicit return value (so it returns None). It may also be terminated if a CancelledError exception is raised, in which case the exception is passed up the call stack to main() and handled there.
+
+We will look at the make_html_skeleton() function in two parts.
+
+def make_html_skeleton(year, name, title, description, keywords,
+stylesheet, filename):
+copyright = COPYRIGHT TEMPLATE. format(year,
+xml. sax. saxutils.escape(name) )

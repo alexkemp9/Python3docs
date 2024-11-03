@@ -1,0 +1,46 @@
+The Object-Oriented Approach 237
+
+class, or derived to describe a class that inherits from (i.e., specializes) another
+class. In Python every built-in and library class and every class we create is
+derived directly or indirectly from the ultimate base class—object. Figure 6.1
+illustrates some of the inheritance terminology.
+
+Superclass of dict, MyDict, ...
+Base class of dict,MyDict,
+
+. Subclass of object
+Bene lace of: ct dict] Specialization of object
+Derived from object
+Subclass of dict Subclass of object
+Specialization of dict |MyDict] Specialization of object
+Derived from dict Derived from object
+
+Figure 6.1 Some object-oriented inheritance terminology
+
+Any method can be overridden, that is, reimplemented, in a subclass; this is the
+same as Java (apart from Java’s “final” methods)» If we have an object of class
+MyDict (a class that inherits dict) and we call a method that is defined by both
+dict and MyDict, Python will correctly call the MyDict version—this is known as
+dynamic method binding, also called polymorphism. If we need to call the base
+class version of a method inside a reimplemented method we can do so by using
+the built-in super() function.
+
+Python also supports duck typing—‘if it walks like a duck and quacks like
+a duck, it is a duck”. In other words, if we want to call certain methods on an
+object, it doesn’t matter what class the object is, only that it has the methods we
+want to call. In the preceding chapter we saw that when we needed a file object
+we could provide one by calling the built-in open() function—or by creating an
+io.StringI0 object and providing that instead, since io.StringI0 objects have
+the same API (Application Programming Interface), that is, the same methods,
+as the file objects returned by open() in text mode.
+
+Inheritance is used to model is-a relationships, that is, where a class’s objects
+are essentially the same as some other class’s objects, but with some variations,
+such as extra data attributes and extra methods. Another approach is to use
+aggregation (also called composition)—this is where a class includes one or
+more instance variables that are of other classes. Aggregation is used to model
+has-a relationships. In Python, every class uses inheritance—because all
+custom classes have object as their ultimate base class, and most classes also
+use aggregation since most classes have instance variables of various types.
+
+*In C++ terminology, all Python methods are virtual.

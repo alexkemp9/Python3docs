@@ -1,0 +1,47 @@
+292 Chapter 7. File Handling
+
+work in report ID order. This works because the values() and items() methods
+iterate over the keys returned by IncidentCollection.keys()—and this method
+(which is just another name for IncidentCollection.__iter_()), iterates in
+sorted order over the keys provided by the base class dict .keys() method.
+
+In addition, the IncidentCollection class has export() and import_() meth-
+ods. (We use the trailing underscore to distinguish the method from the
+built-in import statement.) The export() method is passed a filename, and
+optionally a writer and a compress flag, and based on the filename and writ-
+er, it hands off the work to a more specific method such as export_xml_dom()
+or export_xml_etree(). The import_() method takes a filename and an optional
+reader and works similarly. The import methods that read binary formats are
+not told whether the file is compressed—they are expected to work this out for
+themselves and behave appropriately.
+
+Writing and Reading Binary Data
+
+Binary formats, even without compression, usually take up the least amount
+of disk space and are usually the fastest to save and load. Easiest of all is
+to use pickles, although handling binary data manually should produce the
+smallest file sizes.
+
+Pickles with Optional Compression
+
+Pickles offer the simplest approach to saving and loading data from Python
+programs, but as we noted in the preceding chapter, pickles have no securi-
+ty mechanisms (no encryption, no digital signature), so loading a pickle that
+comes from an untrusted source could be dangerous. The security concern aris-
+es because pickles can import arbitrary modules and call arbitrary functions, so
+we could be given a pickle where the data has been manipulated in such a way
+as to, for example, make the interpreter execute something harmful when the
+pickle is loaded. Nonetheless, pickles are often ideal for handling ad hoc data,
+especially for programs for personal use.
+
+It is usually easier when creating file formats to write the saving code before
+the loading code, so we will begin by seeing how to save the incidents into
+a pickle.
+
+def export_pickle(self, filename, compress=False):
+fh = None
+try:
+if compress:
+fh = gzip.open(filename, "wb")
+else:
+fh = open(filename, “wb")

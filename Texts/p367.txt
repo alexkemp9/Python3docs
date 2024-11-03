@@ -1,0 +1,52 @@
+Further Object-Oriented Programming 367
+
+tributes, the __getattribute_() method is called first for every attribute
+access. Although it can be useful or even essential in some cases to call
+__getattribute_(), reimplementing the _ getattribute_() method can be
+tricky. Reimplementations must be very careful not to call themselves
+recursively—using super()._getattribute_() or object._getattribute_()
+is often done in such cases. Also, since __getattribute__() is called for every
+attribute access, reimplementing it can easily end up degrading performance
+compared with direct attribute access or properties. None of the classes pre-
+sented in this book reimplements __getattribute_().
+
+Functors
+
+In Python a function object is an object reference to any callable, such as a
+function, a lambda function, or a method. The definition also includes classes,
+since an object reference to a class is a callable that, when called, returns an
+object of the given class—for example, x = int (5). In computer science a functor
+is an object that can be called as though it were a function, so in Python terms a
+functor is just another kind of function object. Any class that hasa__call_()
+special method is a functor. The key benefit that functors offer is that they can
+maintain some state information. For example, we could create a functor that
+always strips basic punctuation from the ends of a string. We would create and
+use it like this:
+
+strip_punctuation = Strip("
+strip_punctuation(“Land ahoy
+
+2)
+) # returns: ‘Land ahoy'
+
+Here we create an instance of the Strip functor initializing it with the value
+",;1.!?", Whenever the instance is called it returns the string it is passed with
+any punctuation characters stripped off. Here’s the complete implementation
+of the Strip class:
+
+class Strip:
+
+def init__(self, characters):
+self.characters = characters
+
+def __call_(self, string):
+return string.strip(self.characters)
+
+We could achieve the same thing using a plain function or lambda, but if we
+need to store a bit more state or perform more complex processing, a functor is
+often the right solution.
+
+A functor’s ability to capture state by using a class is very versatile and power-
+ful, but sometimes it is more than we really need. Another way to capture state
+isto use a closure. A closure is a function or method that captures some external
+state. For example:

@@ -1,0 +1,50 @@
+70 Chapter 2. Data Types
+
+If we use the second (one colon) syntax, we can omit either of the integer
+indexes. If we omit the start index, it will default to 0. If we omit the end index,
+it will default to len(seq). This means that if we omit both indexes, for example,
+s[:], it is the same as writing s[0:len(s)], and extracts—that is, copies—the
+entire sequence.
+
+Given the assignment s = "The waxwork man", Figure 2.2 shows some example
+slices for string s.
+
+le s[4:11] al e— s[-3:] —
+
+T[hle|_ [wlalx[wlo|r[k] [m[a[n
+
+s[:7] >i s[7:] >
+
+Figure 2.2 Sequence slicing
+
+One way of inserting a substring inside a string is to mix slicing with concate-
+nation. For example:
+
+>>> s = s[:12] + "wo" + s[12:]
+>>> Ss
+“The waxwork woman’
+
+In fact, since the text “wo” appears in the original string, we could have
+achieved the same effect by assigning s[:12] + s[7:9] + s[12:].
+
+Using + to concatenate and += to append is not particularly efficient when
+many strings are involved. For joining lots of strings it is usually best to use
+the str.join() method, as we will see in the next subsection.
+
+The third (two colon) slice syntax is like the second, only instead of extracting
+every character, every step-th character is taken. And like the second syntax,
+we can omit either of the index integers. If we omit the start index, it will
+default to 0—unless a negative step is given, in which case the start index
+defaults to -1. If we omit the end index, it will default to len(seq)—unless a
+negative step is given, in which case the end index effectively defaults to before
+the beginning of the string. If we use two colons but omit the step size, it will
+default to 1. But there is no point using the two colon syntax with a step size
+of 1, since that’s the default anyway. Also, a step size of zero isn’t allowed.
+
+If we have the assignment s = "he ate camel food", Figure 2.3 shows a couple of
+example strided slices for string s.
+
+Here we have used the default start and end indexes, so s[::-2] starts at the
+last character and extracts every second character counting toward the start
+of the string. Similarly, s[::3] starts at the first character and extracts every
+third character counting toward the end.

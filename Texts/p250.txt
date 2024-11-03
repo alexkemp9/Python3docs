@@ -1,0 +1,61 @@
+ascii()
+68<
+
+str.
+format ()
+
+83<
+
+250 Chapter 6. Object-Oriented Programming
+
+Table 6.2 Fundamental Special Methods
+
+Special Method Usage Description
+
+__bool__(self) bool (x) If provided, returns a truth value
+for x; useful for if x: ...
+
+__format__(self, "{0}".format(x) Provides str.format() support for
+
+format_spec) custom classes
+
+__hash__(self) hash(x) If provided, x can be used as a dic-
+tionary key or held in a set
+
+__init_(self, args) x = X(args) Called when an object is initialized
+
+__new_(cls, args) x = X(args) Called when an object is created
+
+__repr__(self) repr(x) Returns a string representation of
+x; where possible eval (repr(x)) == x
+
+__repr__(self) ascii(x) Returns a string representation of
+x using only ASCII characters
+
+__str_(self) str(x) Returns a human-comprehensible
+string representation of x
+
+Special Method
+
+The _del__(self) special method is called when an object is destroyed—at
+least in theory. In practice, _del__() may never be called, even at program
+termination. Furthermore, when we write del x, all that happens is that the
+object reference x is deleted and the count of how many object references
+refer to the object that was referred to by x is decreased by 1. Only when
+this count reaches 0 is __del__() likely to be called, but Python offers no
+guarantee that it will ever be called. In view of this, _del__() is very rarely
+reimplemented—none of the examples in this book reimplements it—and
+it should not be used to free up resources, so it is not suitable to be used for
+closing files, disconnecting network connections, or disconnecting database
+connections.
+
+Python provides two separate mechanisms for ensuring that resources are
+properly released. One is to use a try ... finally block as we have seen before
+and will see again in Chapter 7, and the other is to use a context object in
+conjunction with a with statement—this is covered in Chapter 8.
+
+The bitwise logical anD operator (§) is provided by the __and__() special method,
+and the in-place version (&) is provided by _iand__():
+
+def __and_(self, other):
+return FuzzyBool(min(self. value, other. value))

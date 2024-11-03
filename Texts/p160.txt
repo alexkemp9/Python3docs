@@ -1,0 +1,51 @@
+160 Chapter 4. Control Structures and Functions
+
+elif boolean_expression2:
+suite2
+
+elif boolean_expressionN:
+suiteN
+
+else:
+else_suite
+
+There can be zero or more elif clauses, and the final else clause is option-
+al. If we want to account for a particular case, but want to do nothing if it
+occurs, we can use pass (which serves as a “do nothing” place holder) as that
+branch’s suite.
+
+In some cases, we can reduce an if ...else statement down to a single condition-
+al expression. The syntax for a conditional expression is:
+
+expressionl if boolean_expression else expression2
+
+If the boolean_expression evaluates to True, the result of the conditional
+expression is expression1; otherwise, the result is expression2.
+
+One common programming pattern is to set a variable to a default value, and
+then change the value if necessary, for example, due to a request by the user,
+or to account for the platform on which the program is being run. Here is the
+pattern using a conventional if statement:
+
+offset = 20
+if not sys.platform.startswith(“win"):
+offset = 10
+
+The sys. platform variable holds the name of the current platform, for example,
+“win32” or “linux2”. The same thing can be achieved in just one line using a
+conditional expression:
+
+offset = 20 if sys.platform.startswith("win") else 10
+
+No parentheses are necessary here, but using them avoids a subtle trap. For
+example, suppose we want to set a width variable to 100 plus an extra 10 if
+margin is True. We might code the expression like this:
+
+width = 100 + 10 if margin else @ # WRONG!
+
+What is particularly nasty about this, is that it works correctly if margin is True,
+setting width to 110. But if margin is False, width is wrongly set to 0 instead
+of 100. This is because Python sees 100 + 10 as the expressionl part of the
+conditional expression. The solution is to use parentheses:
+
+width = 100 + (10 if margin else 0)

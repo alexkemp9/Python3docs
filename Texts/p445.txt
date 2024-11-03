@@ -1,0 +1,41 @@
+Using the Threading Module 445
+
+One problem with locking is the risk of deadlock. Suppose thread #1 acquires
+lock A so that it can access shared data a and then within the scope of lock A
+tries to acquire lock B so that it can access shared data b—but it cannot acquire
+lock B because meanwhile, thread #2 has acquired lock B so that it can access
+b, and is itself now trying to acquire lock A so that it can access a. So thread #1
+holds lock A and is trying to acquire lock B, while thread #2 holds lock B and is
+trying to acquire lock A. As a result, both threads are blocked, so the program
+is deadlocked, as Figure 10.2 illustrates.
+
+Figure 10.2 Deadlock: two or more blocked threads trying to acquire each other's locks
+
+Although it is easy to visualize this particular deadlock, in practice deadlocks
+can be difficult to spot because they are not always so obvious. Some threading
+libraries are able to help with warnings about potential deadlocks, but it
+requires human care and attention to avoid them.
+
+One simple yet effective way to avoid deadlocks is to have a policy that defines
+the order in which locks should be acquired. For example, if we had the policy
+that lock A must always be acquired before lock B, and we wanted to acquire
+lock B, the policy requires us to first acquire lock A. This would ensure that the
+deadlock described here would not occur—since both threads would begin by
+trying to acquire A and the first one that did would then go on to lock B—unless
+someone forgets to follow the policy.
+
+Another problem with locking is that if multiple threads are waiting to acquire
+a lock, they are blocked and are not doing any useful work. We can mitigate
+this to a small extent with subtle changes to our coding style to minimize the
+amount of work we do within the context of a lock.
+
+Every Python program has at least one thread, the main thread. To create
+multiple threads we must import the threading module and use that to cre-
+ate as many additional threads as we want. There are two ways to create
+threads: We can call threading. Thread() and pass it a callable object, or we can
+subclass the threading. Thread class—both approaches are shown in this chap-
+ter. Subclassing is the most flexible approach and is quite straightforward.
+Subclasses can reimplement __init__() (in which case they must call the base
+class implementation), and they must reimplement run()—it is in this method
+that the thread’s work is done. The run() method must never be called by our
+code—threads are started by calling the start() method and that will call run()

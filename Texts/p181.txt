@@ -1,0 +1,50 @@
+Custom Functions 181
+
+The print() Functio
+
+The print() function accepts any number of positional arguments, and has
+three keyword arguments, sep, end, and file. All the keyword arguments
+have defaults. The sep parameter’s default is a space; if two or more posi-
+tional arguments are given, each is printed with the sep in between, but if
+there is just one positional argument this parameter does nothing. The end
+parameter’s default is \n, which is why a newline is printed at the end of calls
+to print(). The file parameter’s default is sys.stdout, the standard output
+stream, which is usually the console.
+
+Any of the keyword arguments can be given the values we want instead of
+using the defaults. For example, file can be set to a file object that is open
+for writing or appending, and both sep and end can be set to other strings,
+including the empty string.
+
+If we need to print several items on the same line, one common pattern is
+to print the items using print() calls where end is set to a suitable separator,
+and then at the end to call print() with no arguments, since this just prints
+anewline. For an example, see the print_digits() function (180 <).
+
+Here is the code from the program’s main() function. It changes the Language
+variable’s value if necessary, and calls print_digits() to produce the output.
+
+def main():
+if len(sys.argv) == 1 or sys.argv[1] in {"-h", "“—help"}:
+print("usage: {0} [en|fr] number". format(sys.argv[0]))
+sys.exit()
+
+args = sys.argv[1:]
+
+if args[0] in {"en", “fr"}:
+global Language
+Language = args.pop(0)
+
+print_digits(args.pop(®))
+
+What stands out here is the use of the global statement. This statement is
+used to tell Python that a variable exists at the global (file) scope, and that
+assignments to the variable should be applied to the global variable, rather
+than cause a local variable of the same name to be created.
+
+If we did not use the global statement the program would run, but when
+Python encountered the Language variable in the if statement it would look
+for it in the local (function) scope, and not finding it would create a new local
+variable called Language, leaving the global Language unchanged. This subtle
+bug would show up as an error only when the program was run with the “fr”
+argument, because then the local Language variable would be created and set to

@@ -1,0 +1,51 @@
+get_
+files()
+
+3438<
+
+Using the Multiprocessing Module 441
+
+grepword-p.py
+
+me
+
+grepword-p-child.py grepword-p-child. py
+
+Figure 10.1 Parent and child programs
+
+We begin by getting the name of the child program. Then we get the user’s
+command-line options. The parse_options() function uses the optparse module.
+It returns the opts named tuple which indicates whether the program should
+recurse into subdirectories and the count of how many processes to use—the
+default is 7, and the program has an arbitrarily chosen maximum of 20. It also
+returns the word to search for and the list of names (filenames and directory
+names) given on the command line. The get_files() function returns a list of
+files to be read.
+
+Once we have the information necessary to perform the task we calculate
+how many files must be given to each process to work on. The start and end
+variables are used to specify the slice of the filelist that will be given to the
+next child process to work on. Usually the number of files won’t be an exact
+multiple of the number of processes, so we increase the number of files the
+first process is given by the remainder. The number variable is used purely for
+debugging so that we can see which process produced each line of output.
+
+pipes = []
+while start < len(filelist):
+command = [sys.executable, child]
+if opts.debug:
+command. append(str(number) )
+pipe = subprocess.Popen(command, stdin=subprocess.PIPE)
+pipes . append (pipe)
+pipe.stdin.write(word.encode("utf8") + b"\n")
+for filename in filelist[start:end]:
+pipe.stdin.write(filename.encode("utf8") + b"\n")
+pipe.stdin.close()
+number += 1
+start, end = end, end + files per process
+
+For each start:end slice of the filelist we create a command list consisting of
+the Python interpreter (conveniently available in sys. executable), the child pro-
+gram we want Python to execute, and the command-line options—in this case
+just the child number if we are debugging. If the child program has a suitable
+shebang line or file association we could list it first and not bother including

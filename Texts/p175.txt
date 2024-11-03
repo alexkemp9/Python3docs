@@ -1,0 +1,51 @@
+Custom Functions 175
+
+not guess). The careful use of default values can simplify our code and make
+calls much cleaner. Recall that the built-in open() function has one manda-
+tory argument (filename), and six optional arguments. By using a mixture of
+positional and keyword arguments we are able to specify those arguments we
+care about, while omitting the others. This leaves us free to write things like
+open(filename, encoding="utf8"), rather than being forced to supply every ar-
+gument like this: open(filename, "r", None, "utf8", None, None, True). Anoth-
+er benefit of using keyword arguments is that they make function calls much
+more readable, particularly for Boolean arguments.
+
+When default values are given they are created at the time the def statement
+is executed (i.e., when the function is created), not when the function is called.
+For immutable arguments like numbers and strings this doesn’t make any
+difference, but for mutable arguments a subtle trap is lurking.
+
+def append_if_even(x, lst=[]): # WRONG!
+ifx%2= 0:
+Lst.append(x)
+return lst
+
+When this function is created the lst parameter is set to refer to a new list.
+And whenever this function is called with just the first parameter, the default
+list will be the one that was created at the same time as the function itself—so
+no new list is created. Normally, this is not the behavior we want—we expect
+a new empty list to be created each time the function is called with no second
+argument. Here is a new version of the function, this time using the correct
+idiom for default mutable arguments:
+
+def append_if_even(x, lst=None):
+if lst is None:
+Ist = []
+ifx%2= 0:
+Lst.append(x)
+return lst
+
+Here we create a new list every time the function is called without a list argu-
+ment. And if a list argument is given, we use it, just the same as the previous
+version of the function. This idiom of having a default of None and creating a
+fresh object should be used for dictionaries, lists, sets, and any other mutable
+data types that we want to use as default arguments. Here isa slightly shorter
+version of the function which has exactly the same behavior:
+
+def append_if_even(x, lst=None):
+lst = [] if lst is None else lst
+ifx%2= 0:
+Lst.append(x)
+return lst
+
+A

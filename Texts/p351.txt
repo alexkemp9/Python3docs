@@ -1,0 +1,48 @@
+Further Procedural Programming 351
+
+callable.) If the attribute exists and is callable we can return it to the caller;
+otherwise, we return None to signify that the function isn’t available.
+
+If hundreds of files were being processed (e.g., due to using *.* in the C: \windows
+directory), we don’t want to go through the lookup process for every module
+for every file. So immediately after defining the get_function() function, we
+add an attribute to the function, a dictionary called cache. (In general, Python
+allows us to add arbitrary attributes to arbitrary objects.) The first time that
+get_function() is called the cache dictionary is empty, so the dict .get() call will
+return None. But each time a suitable function is found it is put in the dictionary
+with a 2-tuple of the module and function name used as the key and the func-
+tion itself as the value. So the second and all subsequent times a particular
+function is requested the function is immediately returned from the cache and
+no attribute lookup takes place at all.*
+
+The technique used for caching the get_function()’s return value for a given set
+of arguments is called memoizing. It can be used for any function that has no
+side effects (does not change any global variables), and that always returns the
+same result for the same (immutable) arguments. Since the code required to
+create and manage a cache for each memoized function is the same, it is an ide-
+al candidate for a function decorator, and several @nemoize decorator recipes are
+given in the Python Cookbook, in code.activestate.com/recipes/langs/python/.
+However, module objects are mutable, so some off-the-shelf memoizer decora-
+tors wouldn’t work with our get_function() function as it stands. An easy so-
+lution would be to use each module’s __name__ string rather than the module
+itself as the first part of the key tuple.
+
+Doing dynamic module imports is easy, and so is executing arbitrary Python
+code using the exec() function. This can be very convenient, for example,
+allowing us to store code in a database. However, we have no control over
+what imported or exec()uted code will do. Recall that in addition to variables,
+functions, and classes, modules can also contain code that is executed when it
+is imported—if the code came from an untrusted source it might do something
+unpleasant. How to address this depends on circumstances, although it may
+not be an issue at all in some environments, or for personal projects.
+
+Local and Recursive Functions
+
+It is often useful to have one or more small helper functions inside another
+function. Python allows this without formality—we simply define the functions
+we need inside the definition of an existing function. Such functions are often
+called nested functions or local functions. We already saw examples of these in
+Chapter 7.
+
+*A slightly more sophisticated get_function() that has better handling of modules without the
+required functionality is in the nagic-nunbers. py program alongside the version shown here.

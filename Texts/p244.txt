@@ -1,0 +1,56 @@
+Chapter 6. Object-Oriented Programming
+
+def area(self):
+return math.pi * (self.radius ** 2)
+
+def circumference(self):
+
+return 2 * math.pi * self.radius
+
+def _eq_|
+
+(self, other):
+
+return self.radius == other.radius and super()._eq_ (other)
+
+def __repr__(self):
+return "Circle({@.radius!r}, {@.x!r}, {@.y!r})". format (self)
+
+def _str_(self):
+return repr(self)
+
+Inheritance is achieved simply by listing the class (or classes) that we want our
+class to inherit in the class line.* Here we have inherited the Point class—the
+inheritance hierarchy for Circle is shown in Figure 6.3.
+
+object — Point Circle
+—rew_() \
+init] Ee » bi
+am 0 ew radius
+e a
+Ser | | =init_o “
+~str_() distance_from_origin() _—init_()
+ae —eq_0) istance_f ‘igin
+— __repr_() edge_distance_from_origin()
+_str_() area()
+wee circumference()
+Key —ea_()
+inherited —repr_()
+implemented _str_()
+reimplemented wee
+
+Figure 6.3 The Circle class’s inheritance hierarchy
+
+Inside the __init__() method we use super() to call the base class’s__init__()
+method—this creates and initializes the self.x and self.y attributes. Users
+of the class could supply an invalid radius, such as -2; in the next subsection
+we will see how to prevent such problems by making attributes more robust
+
+using properties.
+
+The area() and circumference() methods are straightforward. The edge_dis-
+tance_from_origin() method calls the distance_from_origin() method as part
+
+* Multiple inheritance, abstract base types, and other advanced object-oriented techniques are
+
+covered in Chapter 8.

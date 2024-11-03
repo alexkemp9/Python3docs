@@ -1,0 +1,62 @@
+528
+
+Chapter 14. Introduction to Parsing
+
+—
+
+—
++
+
+nawe
+020» ke
+
+2 3
+
+nawe
+
+oa
+a
+KY
+pores | [g
+
+yor wed |
+
+a
+3
+
+guns
+
+naw?
+evo Le
+
+Figure 14.13 The parsed hierarchy.blk file’s blocks
+
+and which in turn has a list of new rows and child blocks (including empty
+
+blocks) inside the “Frame”. This is illustrated in Figure 14.14—the message-
+box. blk file was shown earlier (526 <).
+
+All the blocks parsers shown in this chapter return a root block with child
+blocks as Figures 14.13 and 14.14 illustrate—providing the parse is successful.
+The BlockOutput . py module that the blocks. py program uses provides a function
+called save_blocks_as_svg() that takes a root block and traverses its children
+recursively to create an SVG file to visually represent the blocks.
+
+root
+t
+“MessageBox Window”
+“Frame”
+a
+for yy y yy yy
+g a2 &@ |e; g ||e a) a
+
+Figure 14.14 The parsed messagebox. blk file’s blocks and their children
+
+Before creating the parser, we will begin by defining a Block class to representa
+block and any child blocks it contains. Then we will look at the parser, and see
+
+how it produces a single root Block whose child blocks represent the contents
+of the . blk file it parses.
+
+Instances of the Block class have three attributes: name, color, and children (a
+possibly empty list of children). A root block has no name or color,and an empty

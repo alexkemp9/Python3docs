@@ -1,0 +1,61 @@
+Exception Handling 165
+
+them from most specific (lowest in the hierarchy) to least specific (highest in
+the hierarchy).
+
+try:
+
+x= d[k / n]
+
+except Exception: # BAD PRACTICE
+print("Something happened")
+
+Note that it is usually bad practice to use except Exception since this will
+catch all exceptions and could easily mask logical errors in our code. In this
+example, we might have intended to catch KeyErrors, but if n is 0, we will
+unintentionally—and silently—catch a ZeroDivisionError exception.
+
+It is also possible to write except:, that is, to have no exception group at all.
+An except block like this will catch any exception, including those that inherit
+BaseException but not Exception (these are not shown in Figure 4.1). This has
+the same problems as using except Exception, only worse, and should never
+normally be done.
+
+If none of the except blocks matches the exception, Python will work its way up
+the call stack looking for a suitable exception handler. If none is found the pro-
+gram will terminate and print the exception and a traceback on the console.
+
+If no exceptions occur, any optional else block is executed. And in all
+cases—that is, if no exceptions occur, if an exception occurs and is handled, or
+if an exception occurs that is passed up the call stack—any finally block’s suite
+is always executed. If no exception occurs, or if an exception occurs and is han-
+dled by one of the except blocks, the finally block’s suite is executed at the end;
+but if an exception occurs that doesn’t match, first the finally block’s suite is
+executed, and then the exception is passed up the call stack. This guarantee of
+execution can be very useful when we want to ensure that resources are prop-
+erly released. Figure 4.2 illustrates the general try ... except ... finally block
+control flows.
+
+Normal Flow Handled Exception Unhandled Exception
+
+won CY
+# process
+
+# process # process
+
+except exception: except exception: except exception:
+# handle # handle
+> finally: “> finally:
+
+>. # cleanup
+> # continue here
+
+>. # cleanup
+> # continue here
+
+2. # cleanup
+“> # go up call stack
+
+Figure 4.2 Try... except ... finally control flows
+
+> Be

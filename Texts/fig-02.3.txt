@@ -1,0 +1,51 @@
+Strings 71
+
+s[::-2] == ‘do ea t h'
+x x x
+cla|mle
+
+a
+
+s[::3] == 'hamo'
+Figure 2.3 Sequence striding
+
+It is also possible to combine slicing indexes with striding, as Figure 2.4
+illustrates.
+
+s[-1:2:-2] = ee == 'do eat’
+
+x x yx yx x
+hle altel, Telalpe I [tlofold
+s[0:-5:3] == s[:-5:3] == 'ha m'
+
+Figure 2.4 Sequence slicing and striding
+
+Striding is most often used with sequence types other than strings, but there
+is one context in which it is used for strings:
+
+pers, s[ii-l]
+(‘The waxwork woman', ‘namow krowxaw ehT')
+
+Stepping by -1 means that every character is extracted, from the end back to
+the beginning—and therefore produces the string in reverse.
+
+String Operators and Methods
+
+Since strings are immutable sequences, all the functionality that can be used
+with immutable sequences can be used with strings. This includes member-
+ship testing with in, concatenation with +, appending with +, replication with
+*,and augmented assignment replication with *=. We will discuss all of these in
+the context of strings in this subsection, in addition to discussing many of the
+string methods. Tables 2.8, 2.9, and 2.10 summarize all the string methods, ex-
+cept for two rather specialized ones (str.maketrans() and str.translate()) that
+we will briefly discuss further on.
+
+As strings are sequences they are “sized” objects, and therefore we can call
+len() with a string as the argument. The length returned is the number of
+characters in the string (zero for an empty string).
+
+We have seen that the + operator is overloaded to provide string concatenation.
+In cases where we want to concatenate lots of strings the str.join() method
+
+Sized
+> 383

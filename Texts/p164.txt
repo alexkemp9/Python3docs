@@ -1,0 +1,45 @@
+164 Chapter 4. Control Structures and Functions
+
+as the (or one of the) exception types listed in the group, or the same type as
+the (or one of the) group’s exception types’ subclasses.*
+
+For example, if a KeyError exception occurs in a dictionary lookup, the first
+except clause that has an Exception class will match since KeyError is an
+(indirect) subclass of Exception. If no group lists Exception (as is normally the
+case), but one did have a LookupError, the KeyError will match, because KeyError
+is a subclass of LookupError. And if no group lists Exception or LookupError, but
+one does list KeyError, then that group will match. Figure 4.1 shows an extract
+
+from the exception hierarchy.
+
+BaseException
+
+i T I T 1
+(ArithmeticError] (EnvironmentError] {EOFError] (LookupError] (VatueError]
+F ry
+
+(ToError) OSError TndexError) _(KeyError]
+
+Figure 4.1 Some of Python’s exception hierarchy
+
+Here is an example of an incorrect use:
+
+try:
+x = d[5]
+except LookupError: # WRONG ORDER
+print("Lookup error occurred")
+except KeyError:
+print("Invalid key used")
+
+If dictionary d has no item with key 5, we want the most specific exception,
+KeyError, to be raised, rather than the more general LookupError exception. But
+here, the KeyError except block will never be reached. If a KeyError is raised,
+the LookupError except block will match it because LookupError is a base class
+of KeyError, that is, LookupError appears higher than KeyError in the exception
+hierarchy. So when we use multiple except blocks, we must always order
+
+* As we will see in Chapter 6, in object-oriented programming it is common to have a class
+hierarchy, that is, one class—data type—inheriting from another. In Python, the start of this
+hierarchy is the object class; every other class inherits from this class, or from another class that
+inherits from it. A subclass is a class that inherits from another class, so all Python classes (except
+object) are subclasses since they all inherit object.

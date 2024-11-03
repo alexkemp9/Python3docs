@@ -1,0 +1,47 @@
+122 Chapter 3. Collection Data Types
+
+using set(), ot using empty braces* A set of one or more items can be created Set
+
+by using a comma-separated sequence of items inside braces. Another way compre-
+of creating sets is to use a set comprehension—a topic we will cover later in
+this subsection.
+
+Sets always contain unique items—adding duplicate items is safe but pointless.
+For example, these three sets are the same: set ("apple"), set("aple"),and{'e',
+‘p', 'a', 'L'}. In view of this, sets are often used to eliminate duplicates. For
+example, if x isa list of strings, after executing x = list (set(x)), all of x’s strings
+will be unique—and in an arbitrary order.
+
+Sets support the built-in len() function, and fast membership testing with in
+and not in. They also provide the usual set operators, as Figure 3.4 illustrates.
+
+OOOO VY OOO > OOOOO®
+
+set("pecan") | set("pie") == {'p', ‘e', ‘c', ‘a', ‘'n', ‘i'} # Union
+
+O©OOO® 1 OOO > O©
+
+set("pecan") & set("pie") == {'p', ‘e'} # Intersection
+©C©OOO® \ ©O© ~ ©O®
+set("pecan") - set("pie") == {'c', ‘a’, 'n'} # Difference
+O©OO® A OOO > OOOO
+set("pecan") * set("pie") == {'c', ‘a’, ‘n', ‘i'} # Symmetric difference
+
+Figure 3.4 The standard set operators
+
+The complete list of set methods and operators is given in Table 3.2. All the
+“update” methods (set.update(), set.intersection_update(), etc.) accept any
+iterable as their argument—but the equivalent operator versions (|=, &, etc.)
+require both of their operands to be sets.
+
+One common use case for sets is when we want fast membership testing. For ex-
+ample, we might want to give the user a usage message if they don’t enter any
+command-line arguments, or if they enter an argument of “-h” or “--help”:
+
+if len(sys.argv) == 1 or sys.argv[1] in {"-h", "--help"}:
+
+Another common use case for sets is to ensure that we don’t process duplicate
+data. For example, suppose we had an iterable (such as a list), containing
+the IP addresses from a web server’s log files, and we wanted to perform some
+
+*Empty braces, {}, are used to create an empty dict as we will see in the next section.

@@ -1,0 +1,50 @@
+198 Chapter 5. Modules
+
+list called sys.path that holds a list of the directories that constitute the Python
+path. The first directory is the directory that contains the program itself, even
+if the program was invoked from another directory. If the PYTHONPATH environ-
+ment variable is set, the paths specified in it are the next ones in the list, and
+the final paths are those needed to access Python’s standard library—these are
+set when Python is installed.
+
+When we first import a module, if it isn’t built-in, Python looks for the module
+in each path listed in sys.path in turn. One consequence of this is that if we cre-
+ate a module or program with the same name as one of Python’s library mod-
+ules, ours will be found first, inevitably causing problems. To avoid this, never
+create a program or module with the same name as one of the Python library’s
+top-level directories or modules—unless you are providing your own implemen-
+tation of that module and are deliberately overriding it. (A top-level module is
+one whose . py file is in one of the directories in the Python path, rather than in
+one of those directories’ subdirectories.) For example, on Windows the Python
+path usually includes a directory called C:\Python31\Lib, so on that platform we
+should not create a module called Lib. py, nor a module with the same name as
+any of the modules in the C:\Python31\Lib directory.
+
+One quick way to check whether a module name is in use is to try to import
+the module. This can be done at the console by calling the interpreter with
+the -c (“execute code”) command-line option followed by an import statement.
+For example, if we want to see whether there is a module called Music. py (or a
+top-level directory in the Python path called Music), we can type the following
+at the console:
+
+python -c “import Music"
+
+If we get an ImportError exception we know that no module or top-level direc-
+tory of that name is in use; any other output (or none) means that the name
+is taken. Unfortunately, this does not guarantee that the name will always be
+okay, since we might later on install a third-party Python package or module
+that has a conflicting name, although in practice this is a very rare problem.
+
+For example, if we created a module file called os.py, it would conflict with the
+library’s os module. But if we create a module file called path. py, this would be
+okay since it would be imported as the path module whereas the library module
+would be imported as os.path. In this book we use an uppercase letter for the
+first letter of custom module filenames; this avoids name conflicts (at least on
+Unix) because standard library module filenames are lowercase.
+
+A program might import some modules which in turn import modules of their
+own, including some that have already been imported. This does not cause any
+problems. Whenever a module is imported Python first checks to see whether
+it has already been imported. If it has not, Python executes the module’s
+byte-code compiled code, thereby creating the variables, functions, and other
+objects it provides, and internally records that the module has been imported.
