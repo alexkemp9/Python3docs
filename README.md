@@ -48,7 +48,7 @@ I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtop
 ### *The Bugs*
 I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
 
-1. Copy + Paste misses Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
+1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
 
 >Example 1:
 >> Chapter 13 Regular Expressions (begins p483 in [1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)) has 7 tables.
@@ -60,3 +60,18 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 >> That is a Bug.
 
 The above seems nice & simple, but the truth is messier.
+
+>Example 2:
+>> Chapter 14 Introduction to Parsing (begins p507 in [1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)) has 11 tables + 4 images.
+>
+>> I went through a similar copy/paste as with Ch13 above: only 5 of the 15 successfully pasted after copy:
+>
+>> - Table 14.5 (p514) : This Table IS encapsulated in a Frame.
+>> - Table 14.8 (p519) : This Table is NOT encapsulated in a Frame.
+>> - Table 14.10 (p520) : This Table is NOT encapsulated in a Frame.
+>> - Image 14.11 (p520) : This Image has a caption (and thus IS encapsulated in a Frame).
+>> - Image 14.14 (p522) : This Image has a caption (and thus IS encapsulated in a Frame).
+>
+>> All other 10 tables+images are contained within a Frame & did NOT copy.
+
+2. Selecting the whole of an image caption (eg for rename) also selects the image. The 1st letter needs to be de-selected to prevent that.
