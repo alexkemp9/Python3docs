@@ -41,3 +41,22 @@ Here is a timeline of production of each of these documents, and how they are li
 >
 >>After changing all problematic draw-elements on each page into PNG images, I was then able to produce the “Contents at a Glance” (p3 of [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf)) without any problems. It seemed to me that I should produce a “List of Tables, Sidebars + Figures” first, then a Contents listing, and finally add a “Contents at a Glance” page. The last act would be to correct the jump targets for all forward-jump boxes + correct all Chapter links in the text. The first part (Tables listing) went without problems. However, after completing that LO simply refused to produce any Contents, though without any error message.
 - 25 Oct 2024: (the day before my 75th birthday) My entire computer crashed & burned as I loaded up [‘3_new.odt’](/3_new.odt) to try (yet again) to produce a Contents listing. In a state of disbelief I shut the computer down via the physical power button. Devuan successfully auto-restored the Journal on restart. In a state of some shock — I was used to this with Windows, but thought that I had left it all behind with Linux — I tried again with nothing else loaded. Just a second or two after loading up ‘3_new.odt’ the mouse stopped moving & everything froze. I got to the command line with `Ctrl-Alt-F1`, logged in & entered `startx` to get back to the desktop then shut down normally. My final act was to use `libreoffice --convert-to pdf:writer_pdf_Export 3_new.odt` in a terminal to get a PDF (which was successful).
+
+### *Feedback*
+I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
+
+### *The Bugs*
+I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
+
+1. Copy + Paste misses Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
+
+>Example 1:
+>> Chapter 13 Regular Expressions (begins p483 in [1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)) has 7 tables.
+>
+>> I placed my cursor on the last line of p481 in [1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt), held down the \<Shift> key on the keyboard, and then moved my cursor to the last line of p505. That meant that the whole of Chapter 13 was selected. I then pressed \<Ctrl>+C (copy) and moved to a new LO document. Next was to press \<Ctrl>+V (paste).
+>
+>> Most of Chapter 13 was pasted into the new document, but that did NOT include 6 of the tables. The only Table that was pasted was Table 13.6 (p497). That Table is NOT encapsulated in a Frame, whilst all other Tables ARE encapsulated within a Frame.
+>
+>> That is a Bug.
+
+The above seems nice & simple, but the truth is messier.
