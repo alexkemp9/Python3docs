@@ -16,12 +16,13 @@ These are my current LO + OS versions:
 ### *Timeline*
 Here is a timeline of production of each of these documents, and how they are linked to each other.
 
-- August 2024: ‘0_ProgrammingInPython3.pdf’ obtained at https:// cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf
->Note: The ProgrammingInPython3 PDF is chock-a-block with internal + external links, but none of those links are active. As I had a little time, I resolved to add those links into the PDF.
+- August 2024: [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`
+>Note:
+>>The ProgrammingInPython3 PDF is chock-a-block with internal + external links, but none of those links are active. As I had a little time, I resolved to add those links into the PDF.
 >
->‘ProgrammingInPython3.txt’ obtained from ‘0_ProgrammingInPython3.pdf’ using ‘pdftotext’
+>>[‘ProgrammingInPython3.txt’](Texts/ProgrammingInPython3.txt) obtained from [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) using `pdftotext`
 >
->Work began to convert ProgrammingInPython3.txt into ‘1_Programming-In-Python3.odt’ and thus into ‘1_Programming-In-Python3.pdf’. It was during this work that most of the PNG files within /Images were obtained. It was also during this work that most of the TXT files within /Texts were obtained using tesseract upon the PNG files.
+>>Work began to convert [ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt) into [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) and thus into [‘1_Programming-In-Python3.pdf’](/1_Programming-In-Python3.pdf). It was during this work that most of the PNG files within [/Images](/Images) were obtained. It was also during this work that most of the TXT files within [/Texts](/Texts) were obtained using `tesseract` upon the PNG files.
 - 17 Oct 2024: Conversion work crashed & burned *after* I saved the document at p586 (“Summary”, final chapter).
              (I believe that I was in process of creating “Epilogue” + “Selected Bibliography” when the program just froze [NOT a system freeze] but made no notes & cannot now recall precise details)
              Work began to convert ‘1_Programming-In-Python3.odt’ into ‘2_scratch.odt’ and thus into ‘2_scratch.pdf’
