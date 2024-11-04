@@ -1,4 +1,4 @@
-# *Inadvertant Poison*
+# *Inadvertent Poison*
 ## *(Documentation for Python v3)*
 
 ### *¡Warning!*
