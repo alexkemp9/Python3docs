@@ -17,6 +17,7 @@ These are my current LO + OS versions:
 Here is a timeline of production of each of these documents, and how they are linked to each other.
 
 - August 2024: [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`
+  (I wanted to learn Python 3)
 >Note:
 >>The ProgrammingInPython3 PDF is chock-a-block with internal + external links, but none of those links are active. As I had a little time, I resolved to add those links into the PDF.
 >
