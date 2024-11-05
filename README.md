@@ -1,8 +1,8 @@
-# *Inadvertent Poison*
+# *Source Docs for Bug-Hunting*
 ## *(Documentation for Python v3)*
 
 ### *¡Warning!*
-On my computer, the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice causes the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. YMMV
+In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV
 
 ### *Intentions*
 The intention of these documents is ultimately to act as a reference for a Bug Report to Libreoffice (LO). The point for me is that, whilst I have unearthed numerous bugs in LO whilst using it to produce these documents, I have zero idea as to why any of those bugs — both minor & show-stopping — exist. It is entirely possible that I've done something stupid whilst producing the PDFs that has caused those bugs, though I am unaware of what that could be if so. In addition, now that I cannot any longer load the ODT it is impossible for me to document the bug(s). So, here are the raw documents so that others with better tools than me can find them.
