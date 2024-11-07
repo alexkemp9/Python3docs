@@ -10,6 +10,8 @@ It was still as buggy as can be under the AppImage: the Status Bar Page-stats ke
 
 On my first attempt I tried to save the ODT and LibreOffice froze, yet again. On try #2 I noticed that my 4-core machine had 1 core permanently occupied (the machine load was ~29%). After ~5 minutes the load dropped to normal. Now trying the *Save* once again it now completed normally & I was able to shutdown LibreOffice in normal fashion. Phew!
 
+**7 Nov update:** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
+
 ### *Intentions*
 The intention of these documents is ultimately to act as a reference for a Bug Report to Libreoffice (LO). The point for me is that, whilst I have unearthed numerous bugs in LO whilst using it to produce these documents, I have zero idea as to why any of those bugs — both minor & show-stopping — exist. It is entirely possible that I've done something stupid whilst producing the PDFs that has caused those bugs, though I am unaware of what that could be if so. In addition, now that I cannot any longer load the ODT it is impossible for me to document the bug(s). So, here are the raw documents so that others with better tools than me can find them.
 
