@@ -19,6 +19,25 @@ These are my current LO + OS versions:
 - `$ lsb_release -ds` => “Devuan GNU/Linux 5 (daedalus)”
 - `$ uname -srm` => “Linux 6.1.0-27-amd64 x86_64”
 
+Under AppImage (installed 6 November 2014):
+- LibreOffice 24.8.2.1
+
+### *AppImage Installation*
+For myself this was installed in a Terminal. Thus, what is shown below is at a user command-line.
+```
+$ cd /usr/local/bin
+$ sudo wget https://appimages.libreitalia.org/LibreOffice-fresh.standard-x86_64.AppImage
+$ sudo mv LibreOffice-fresh.standard-x86_64.AppImage LibreOffice-24.8.AppImage
+$ sudo chmod a+x LibreOffice-24.8.AppImage
+$ LibreOffice-24.8.AppImage --help
+  LibreOffice 24.8.2.1 0f794b6e29741098670a3b95d60478a65d05ef13
+$ sudo cp /usr/share/applications/libreoffice-startcenter.desktop /usr/share/applications/loappimage-startcenter.desktop
+$ sudo nano /usr/share/applications/loappimage-startcenter.desktop
+  # I changed the .desktop name + all Exec lines to begin “/usr/local/bin/LibreOffice-24.8.AppImage”,
+  # but pretty much everything else was left unchanged
+```
+The new launch link was immediately within `menu:Office | LO AppImage Start Centre` & showed the correct LO version.
+
 ### *Timeline*
 Here is a timeline of production of each of these documents, and how they are linked to each other.
 
