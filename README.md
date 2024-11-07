@@ -23,7 +23,7 @@ Under AppImage (installed 6 November 2024):
 - LibreOffice 24.8.2.1
 
 ### *AppImage Installation*
-For myself this was installed in a Terminal. Thus, what is shown below is at a user command-line.
+The installation was done in a Terminal. Thus, what is shown below is at a user command-line:
 ```
 $ cd /usr/local/bin
 $ sudo wget https://appimages.libreitalia.org/LibreOffice-fresh.standard-x86_64.AppImage
