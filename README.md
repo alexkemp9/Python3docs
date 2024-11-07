@@ -19,7 +19,7 @@ These are my current LO + OS versions:
 - `$ lsb_release -ds` => “Devuan GNU/Linux 5 (daedalus)”
 - `$ uname -srm` => “Linux 6.1.0-27-amd64 x86_64”
 
-Under AppImage (installed 6 November 2014):
+Under AppImage (installed 6 November 2024):
 - LibreOffice 24.8.2.1
 
 ### *AppImage Installation*
