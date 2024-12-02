@@ -4,9 +4,9 @@
 ### *¡Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV
 
-The above was all under LibreOffice v7.4.7.2. In 6 Nov 2024 I installed a Fresh AppImage (v24.8.2.1 - see below) to be available together with the v7 installation, and that AppImage would successfully allow access to the ODT.
+The above was all under LibreOffice v7.4.7.2. On Nov 06 2024 I installed a Fresh AppImage (v24.8.2.1 - see below (updated to v24.8.3.2 on Nov 14)) to be available together with the v7.4.7 installation, and that AppImage would successfully allow access to the ODT.
 
-It was still as buggy as can be under the AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to change to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
+It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to change to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
 On my first attempt I tried to save the ODT and LibreOffice froze, yet again. On try #2 I noticed that my 4-core machine had 1 core permanently occupied (the machine load was ~29%). After ~5 minutes the load dropped to normal. Now trying the *Save* once again it now completed normally & I was able to shutdown LibreOffice in normal fashion. Phew!
 
