@@ -1,8 +1,12 @@
 # *Source Docs for Bug-Hunting*
-## *(Documentation for Python v3)*
+## *(original: Documentation for Python v3)*
 
 ### *¡Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV
+| The Files | Information |
+| --- | --- |
+|[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
+
 
 The above was all under LibreOffice v7.4.7.2. On Nov 06 2024 I installed a Fresh AppImage (v24.8.2.1 - see below (updated to v24.8.3.2 on Nov 14)) to be available together with the v7.4.7 installation, and that AppImage would successfully allow access to the ODT.
 
@@ -42,7 +46,7 @@ The new launch link was immediately within `menu:Office | LO AppImage Start Cent
 
 ## *Timeline*
 Here is a timeline of production of each of these documents, and how they are linked to each other.
-
+<a name="2024-august-00"></a>
 ### August 2024:
 1. [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`     
   (I wanted to learn Python 3)     
