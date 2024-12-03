@@ -7,7 +7,7 @@ In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreo
 | The Files | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
-|[0_ProgrammingInPython3.txt](/0_ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
+|[ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
 |[1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt)|[August 2024 #2](#2024-august-02)|
 |[1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)|[August 2024 #2](#2024-august-02)|
 |[2_scratch.odt](/2_scratch.odt)|[Oct 17 2024](#2024-oct-17)|
