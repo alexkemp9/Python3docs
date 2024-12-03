@@ -3,9 +3,17 @@
 
 ### *¡Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV
-| The Files | Information |
+| The Files | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
+|[0_ProgrammingInPython3.txt](/0_ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
+|[1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt)|[August 2024 #2](#2024-august-02)|
+|[1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)|[August 2024 #2](#2024-august-02)|
+|[2_scratch.odt](/2_scratch.odt)|[Oct 17 2024](#2024-oct-17)|
+|[2_scratch.pdf](/2_scratch.pdf)|[Oct 17 2024](#2024-oct-17)|
+|[3_new.odt](/3_new.odt)|[Oct 19 2024](#2024-oct-19)|
+|[3_new.pdf](/3_new.pdf)|[Oct 19 2024](#2024-oct-19)|
+|[4_paragraph-fix.odt](/4_paragraph-fix.odt)|[Nov 09 2024](#2024-nov-09)|
 
 
 The above was all under LibreOffice v7.4.7.2. On Nov 06 2024 I installed a Fresh AppImage (v24.8.2.1 - see below (updated to v24.8.3.2 on Nov 14)) to be available together with the v7.4.7 installation, and that AppImage would successfully allow access to the ODT.
@@ -51,10 +59,12 @@ Here is a timeline of production of each of these documents, and how they are li
 1. [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`     
   (I wanted to learn Python 3)     
 > Note:
+<a name="2024-august-01"></a>
 > The ProgrammingInPython3 PDF is chock-a-block with internal + external links, but none of those links are active. As I had a little time, I resolved to add those links into the PDF.
 >
 2. [‘ProgrammingInPython3.txt’](Texts/ProgrammingInPython3.txt) obtained from [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) using `pdftotext`
 >
+<a name="2024-august-02"></a>
 3. Work began to convert [ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt) into [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) and thus into [‘1_Programming-In-Python3.pdf’](/1_Programming-In-Python3.pdf).
 > It was during this work that most of the PNG files within [/Images](/Images) were obtained. It was also during this work that most of the TXT files within [/Texts](/Texts) were obtained using `tesseract` upon the PNG files.
 ### 17 Oct 2024:
@@ -62,6 +72,7 @@ Here is a timeline of production of each of these documents, and how they are li
 >Note:
 > I believe that I was in process of creating “Epilogue” + “Selected Bibliography” when the program just froze [NOT a system freeze] but made no notes & cannot now recall precise details
 >
+<a name="2024-oct-17"></a>
 5. Work then began to convert [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) into [‘2_scratch.odt’](/2_scratch.odt) and thus into [‘2_scratch.pdf’](2_scratch.pdf)
 ### 19 Oct 2024:
 6. Conversion work crashed & burned *after* completing all chapters (including “Epilogue” + “Selected Bibliography” but not the Index) and whilst preparing the Contents listing.
@@ -72,6 +83,7 @@ Here is a timeline of production of each of these documents, and how they are li
 >
 > I resolved to convert all these draw examples into PNG images & try one more time.
 >
+<a name="2024-oct-19"></a>
 7. Work began to convert [‘2_scratch.odt’](/2_scratch.odt) into [‘3_new.odt’](/3_new.odt) and thus into [‘3_new.pdf’](3_new.pdf)
 >
 > After changing all problematic draw-elements on each page into PNG images, I was then able to produce the “Contents at a Glance” (p3 of [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf)) without any problems. It seemed to me that I should produce a “List of Tables, Sidebars + Figures” first, then a Contents listing, and finally add a “Contents at a Glance” page. The last act would be to correct the jump targets for all forward-jump boxes + correct all Chapter links in the text. The first part (Tables listing) went without problems. However, after completing that LO simply refused to produce any Contents, though without any error message.
@@ -81,9 +93,10 @@ Here is a timeline of production of each of these documents, and how they are li
  ### 09 Nov 2024:
 Two significant steps forward on the same day:     
   * A post by me within the  [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915) had produced responses that suggested that *ealier* versions of LO could run [“3_new.odt”](/3_new.odt) without freezing nor dying. After installing *"LibreOffice-7.2.3.2.basic-x86_64.AppImage"* from [AppImages listing](https://appimages.libreitalia.org/) I was able to prove that yes, those were accurate reports.
-  * A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that it was my extensive use of *"Default Paragraph Style"* rather than *Body Text* (or some other paragraph style) that was responsible for the increased load, since *"Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will"*. Such a design feature appeared to be too stupid to be true but, sure enough, experimentation showed it to be true.
+  * A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that it was my extensive use of *"Default Paragraph Style"* rather than *Body Text* (or some other paragraph style) that was responsible for the increased load, since *"Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will"*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation showed it to be true.
     
-  10.  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO, so I changed all Introduction paragraphs from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt)
+  <a name="2024-nov-09"></a>
+10.  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO. `Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text"). I changed all Introduction paragraphs from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt) Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
 
 
 ## *Feedback*
