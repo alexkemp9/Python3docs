@@ -3,7 +3,12 @@
 
 ### *¡Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
-### Internal Navigation
+
+The above was all under LibreOffice v7.4.7.2.
+  * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) would allow temp access to the ODT.
+  * On [Nov 09](#09-nov-2024) the AppImage v7.2.3.2 finally gave error-free access to all ODTs.
+
+### Internal Navigation:
 | The Files | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
@@ -15,10 +20,6 @@ In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreo
 |[3_new.odt](/3_new.odt)|[Oct 19 2024](#2024-oct-19)|
 |[3_new.pdf](/3_new.pdf)|[Oct 19 2024](#2024-oct-19)|
 |[4_paragraph-fix.odt](/4_paragraph-fix.odt)|[Nov 09 2024](#2024-nov-09)|
-
-
-
-The above was all under LibreOffice v7.4.7.2. On Nov 06 2024 I installed a Fresh AppImage (v24.8.2.1 - see below (updated to v24.8.3.2 on Nov 14)) to be available together with the v7.4.7 installation, and that AppImage would successfully allow access to the ODT.
 
 It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to change to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
