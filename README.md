@@ -2,7 +2,8 @@
 ## *(original: Documentation for Python v3)*
 
 ### *¡Warning!*
-In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV
+In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
+### Internal Navigation
 | The Files | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
@@ -14,6 +15,7 @@ In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreo
 |[3_new.odt](/3_new.odt)|[Oct 19 2024](#2024-oct-19)|
 |[3_new.pdf](/3_new.pdf)|[Oct 19 2024](#2024-oct-19)|
 |[4_paragraph-fix.odt](/4_paragraph-fix.odt)|[Nov 09 2024](#2024-nov-09)|
+
 
 
 The above was all under LibreOffice v7.4.7.2. On Nov 06 2024 I installed a Fresh AppImage (v24.8.2.1 - see below (updated to v24.8.3.2 on Nov 14)) to be available together with the v7.4.7 installation, and that AppImage would successfully allow access to the ODT.
@@ -95,8 +97,10 @@ Two significant steps forward on the same day:
   * A post by me within the  [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915) had produced responses that suggested that *ealier* versions of LO could run [“3_new.odt”](/3_new.odt) without freezing nor dying. After installing *"LibreOffice-7.2.3.2.basic-x86_64.AppImage"* from [AppImages listing](https://appimages.libreitalia.org/) I was able to prove that yes, those were accurate reports.
   * A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that it was my extensive use of *"Default Paragraph Style"* rather than *Body Text* (or some other paragraph style) that was responsible for the increased load, since *"Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will"*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation showed it to be true.
     
+10.  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO.     
+`Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text").     
   <a name="2024-nov-09"></a>
-10.  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO. `Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text"). I changed all Introduction paragraphs from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt) Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
+I changed all Introduction paragraphs in *3_new.odt* from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt). Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
 
 
 ## *Feedback*
