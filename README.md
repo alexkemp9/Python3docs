@@ -55,7 +55,7 @@ $ sudo nano /usr/share/applications/loappimage-startcenter.desktop
 ```
 The new launch link was immediately within `menu:Office | LO AppImage Start Centre` & showed the correct LO version.
 
-On Nov 14 the 24.8 AppImage was updated, the dir re-organised using hard-links (`cp -l`). This is how the relevant files looked after:-
+On Nov 14 the 24.8 AppImage was updated + the dir re-organised, in part using hard-links (`cp -l`). This is how the relevant files looked after:-
 ```
 $ la /usr/local/bin
 total 927764
