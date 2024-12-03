@@ -55,6 +55,16 @@ $ sudo nano /usr/share/applications/loappimage-startcenter.desktop
 ```
 The new launch link was immediately within `menu:Office | LO AppImage Start Centre` & showed the correct LO version.
 
+On Nov 14 the 24.8 AppImage was updated, the dir re-organised using hard-links (`cp -l`). This is how the relevant files looked after:-
+```
+$ la /usr/local/bin
+total 927764
+-rwxr-xr-x 2 root  root  334357696 Nov 14 12:47 LibreOffice-24.8.3.2.standard-x86_64.AppImage
+-rwxr-xr-x 2 root  root  334357696 Nov 14 12:47 lo-24.8.AppImage
+-rwxr-xr-x 1 root  root  280609984 May 22  2024 lo-7.2.AppImage
+```
+
+
 ## *Timeline*
 Here is a timeline of production of each of these documents, and how they are linked to each other.
 <a name="2024-august-00"></a>
