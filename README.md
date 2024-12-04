@@ -106,12 +106,23 @@ Here is a timeline of production of each of these documents, and how they are li
  ### 09 Nov 2024:
 Two significant steps forward on the same day:     
   * A post by me within the  [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915) had produced responses that suggested that *ealier* versions of LO could run [“3_new.odt”](/3_new.odt) without freezing nor dying. After installing *"LibreOffice-7.2.3.2.basic-x86_64.AppImage"* from [AppImages listing](https://appimages.libreitalia.org/) I was able to prove that yes, those were accurate reports.
-  * A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *"Default Paragraph Style"* rather than *Body Text* was responsible for the increased load, since *"Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will"*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation showed it to be true.
+  * A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *Direct Paragraph Formatting* (sic) rather than *Body Text* was responsible for the increased load, since *“Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will”*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation seemed to show it to be true.
+
+    ***Later Comment on “Direct Paragraph Formatting”:***     
+    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. However, that writer is obsessed with *any* use of direct format by someone asking for help, and uses that as a stick to beat the questioner with. Having re-read it, I now am unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
+
+    Here are a few paragraphs to try to set the record straight:–
+
+    > * ***Stylesheets:*** Libreoffice makes use of *Stylesheets*, referred to in the program as *“Styles”*. Each is a collection of format settings that refer to one particular scenario.
+    > * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
+    > * ***Style Cascade:*** One style within each scenario is the default from which all others in the same scenario are derived
+    > * ***Style Values:*** Less work for the author + a more professional appearance.
+    > * ***Direct Format:*** It is still possible to directly change any format setting directly within the page (paragraph, etc.)
     
 10.  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO.     
 `Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text").     
   <a name="2024-nov-09"></a>
-I changed all Introduction paragraphs in *3_new.odt* from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt). Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
+I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt). Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
 1. The initial magic of *4_paragraph-fix.odt* evapourated almost immediately as I continued with the default-paragraph changes. In addition, the bugs in *3_new.odt* had caused various elements to change position, and all of those needed fixing as well. The excess load issue reappeared the next day & did not go away. This new document was now beginning to show all the same symptoms as the old ones, plus a few new ones of it's own. I resolved to abandon this line of documents  to try anew with one of the original documents.
  ### 20 Nov 2024:
 Begininng again with [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) under 7.2.3.2 I saved it as [‘2_paragraph-fixes.odt’](/2_paragraph-fixes.odt), and using `Ctrl-h` replaced every instance of 'Default Paragraph Style' with 'Text Body' style + a host of other changes. That enabled me to open the document under 7.4.7 and, after 10 seconds, the load fell to a minimal level. However, it refused to allow a *Table of Contents* to be created.
