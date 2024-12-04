@@ -5,7 +5,7 @@
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
 The above was all under LibreOffice v7.4.7.2.
-  * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) would allow temp access to the ODT.
+  * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
   * On [Nov 09](#09-nov-2024) the AppImage v7.2.3.2 finally gave error-free access to all ODTs.
 
 ### Internal Navigation:
