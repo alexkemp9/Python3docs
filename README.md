@@ -30,7 +30,9 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |[chapter_00.odt](/chapter_00.odt) (etc.)|[Nov 27 2024](#2024-nov-27)|
 
 ### *Intentions*
-The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO). The point for me is that, whilst I have unearthed numerous bugs in LO whilst using it to produce these documents, I have zero idea as to why any of those bugs — both minor & show-stopping — exist. It is entirely possible that I've done something stupid whilst producing the PDFs that has caused those bugs, though I am unaware of what that could be if so. In addition, now that I cannot any longer load the ODT it is impossible for me to document the bug(s). So, here are the raw documents so that others with better tools than me can find them.
+The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
+
+When it became impossible to load the ODTs it was not possible to document the bug(s). So, in that situation I thought that access to the raw documents would help others with better tools than me to find them.
 
 ### *Versions*
 These are my current LO + OS versions:
@@ -57,7 +59,7 @@ $ sudo nano /usr/share/applications/loappimage-startcenter.desktop
 ```
 The new launch link was immediately within `menu:Office | LO AppImage Start Centre` & showed the correct LO version.
 
-On Nov 14 the 24.8 AppImage was updated + the dir re-organised, in part using hard-links (`cp -l`). This is how the relevant files looked after:-
+On Nov 14 the 24.8 AppImage was updated + the dir re-organised, in part using hard-links (`cp -l`). This is how the relevant files looked afterwards:-
 ```
 $ la /usr/local/bin
 total 927764
@@ -110,22 +112,22 @@ Two significant steps forward on the same day:
   1. A post by me within the  [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915) had produced responses that suggested that *ealier* versions of LO could run [“3_new.odt”](/3_new.odt) without freezing nor dying. After installing *"LibreOffice-7.2.3.2.basic-x86_64.AppImage"* from [AppImages listing](https://appimages.libreitalia.org/) I was able to prove that yes, those were accurate reports.
   2. A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *Direct Paragraph Formatting* (sic) rather than *Body Text* was responsible for the increased load, since *“Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will”*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation seemed to show it to be true.
 
-    ***Later Comment on “Direct Paragraph Formatting”:***     
+Later Comment on “Direct Paragraph Formatting”:     
     At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. However, that writer is obsessed with *any* use of direct format by someone asking for help, and uses it as a stick to beat the questioner with. Having re-read it, I am now unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
 
-    Here are a few paragraphs to try to set the record straight:–
+Here are a few paragraphs to try to set the record straight:–
 
-    > * ***Stylesheets:*** Libreoffice makes use of *Stylesheets*, referred to in the program as *“Styles”*. Each is a collection of format settings that refer to one particular scenario.
-    > * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
-    > * ***Style Cascade:*** One style within each scenario is the default from which most others in the same scenario are derived.
-    > * ***Style Values:*** Less work for the author + a more professional appearance.
-    > * ***Direct Format:*** It is still possible to directly change any format setting within the page, paragraph, etc..
+> * ***Stylesheets:*** Libreoffice makes use of *Stylesheets*, referred to in the program as *“Styles”*. Each is a collection of format settings that refer to one particular scenario.
+> * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
+> * ***Style Cascade:*** One style within each scenario is the default from which most others in the same scenario are derived.
+> * ***Style Values:*** Less work for the author + a more professional appearance.
+> * ***Direct Format:*** It is still possible to directly change any format setting within the page, paragraph, etc..
     
 *  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO.     
-`Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text").     
+`Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been renamed to "Body Text").     
   <a name="2024-nov-09"></a>
 I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt). Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
-* The initial magic of *4_paragraph-fix.odt* evapourated almost immediately as I continued with the default-paragraph changes. In addition, the bugs in *3_new.odt* had caused various elements to change position, and all of those needed fixing as well. The excess load issue reappeared the next day & did not go away. This new document was now beginning to show all the same symptoms as the old ones, plus a few new ones of it's own. I resolved to abandon this line of documents  to try anew with one of the original documents.
+* The initial magic of *4_paragraph-fix.odt* evapourated almost immediately as I continued with the default-paragraph changes. In addition, the bugs in *3_new.odt* had caused various elements to change position, and all of those needed fixing as well. The excess load issue reappeared the next day & did not go away. This new document was now beginning to show all the same symptoms as the old ones, plus a few new ones of it's own. I resolved to abandon this line of documents and to try anew with one of the original documents.
  ### 20 Nov 2024:
   <a name="2024-nov-20"></a>
 * Begininng again with [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) under 7.2.3.2 I saved it as [‘2_paragraph-fixes.odt’](/2_paragraph-fixes.odt), and using `Ctrl-h` replaced every instance of 'Default Paragraph Style' with 'Text Body' style + a host of other changes. That enabled me to open the document under 7.4.7 and, after 10 seconds, the load fell to a minimal level. (False dawn; the next day it was back to continual load). This continued though every Chapter, including Epilogue & Bibliography. Next was to create a *Table of Contents*. I went through all the motions to do that, but nothing happened.
