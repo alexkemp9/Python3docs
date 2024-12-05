@@ -115,7 +115,7 @@ Two significant steps forward on the same day:
 Later Comment on ***“Direct Paragraph Formatting”*** within the [ask.lo.org answer](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458):     
     At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. That writer is obsessed with *any* use of direct format by someone asking for help, and immediately uses it as a stick to beat the questioner with. Having re-read the answer, I am now unsure as to whether that writer was referring to *Default Paragraph Style* or not.
 
-Here are a few paragraphs on Libreoffice Writer Styles:–
+This is ***Libreoffice Writer Styles***:–
 
 > * ***Stylesheets:*** LO makes use of *Stylesheets* (similar to html *CSS*), referred to in LO as *“Styles”*. Each is a collection of format settings that all apply within one particular scenario.
 > * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
@@ -132,17 +132,27 @@ I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph
   <a name="2024-nov-20"></a>
 * Begininng again with [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) under 7.2.3.2 I saved it as [‘2_paragraph-fixes.odt’](/2_paragraph-fixes.odt), and using `Ctrl-h` replaced every instance of 'Default Paragraph Style' with 'Text Body' style + a host of other changes. That enabled me to open the document under 7.4.7 and, after 10 seconds, the load fell to a minimal level. (False dawn; the next day it was back to continual load). This continued though every Chapter, including Epilogue & Bibliography. Next was to create a *Table of Contents*. I went through all the motions to do that, but nothing happened.
 
-The first line of construction (4 months: *0_ProgrammingInPython3.pdf* through to *4_paragraph-fix.odt*) clearly had hit a brick wall.     
-The second line of construction (11 days: *1_Programming-In-Python3.odt* to *2_paragraph-fixes.odt*) had also hit yet another brick wall.     
-I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
+## Interim Summary:
+
+1. The first line of construction clearly had hit a brick wall (4 months: *[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)* through to *[4_paragraph-fix.odt](/4_paragraph-fix.odt)*).     
+2. The second line of construction had also hit yet another brick wall (11 days: *[‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt)* to *[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)*).     
+3. I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
  ### 27 Nov 2024:
   <a name="2024-nov-27"></a>
 * The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt)) and a Master Document ([‘Programming-In-Python3.odm’](/Programming-In-Python3.odm)). This time I hit the brick wall instantly, but at least I was able to find the fix after a short while. Though not yet (Dec 05) for Master Documents, and only in one specific instance for *“odt”* documents.
+### Chapter Numbering
+***Bottom Line:***     
+It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup that will decide whether *Chapter Numbering* is switched on or not.
+> * *Chapter Numbering…* needs to be setup first
+> * *Heading 1 styles* need to be setup last
+> * (the info above is not in any [documentation](https://help.libreoffice.org/7.4/en-US/text/swriter/01/06060000.html) that I have seen, nor known about by the [experts I consulted](https://ask.libreoffice.org/t/cannot-number-a-chapter-in-a-figure-table-caption-etc/114155/9))
+> * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`
+> * Later versions call the same menu item `menu:/Tools/Header Numbering…`
 
 ## *Feedback*
 I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
 
-## *The Bugs*
+## The Bugs
 I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
 
 1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
