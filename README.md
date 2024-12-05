@@ -1,7 +1,7 @@
 # *Source Docs for Bug-Hunting*
 ## *(original: Documentation for Python v3)*
 
-### *¡Warning!*
+### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
 The above was all under LibreOffice v7.4.7.2.
