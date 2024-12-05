@@ -111,15 +111,15 @@ Two significant steps forward on the same day:
   2. A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *Direct Paragraph Formatting* (sic) rather than *Body Text* was responsible for the increased load, since *“Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will”*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation seemed to show it to be true.
 
     ***Later Comment on “Direct Paragraph Formatting”:***     
-    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. However, that writer is obsessed with *any* use of direct format by someone asking for help, and uses that as a stick to beat the questioner with. Having re-read it, I am now unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
+    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. However, that writer is obsessed with *any* use of direct format by someone asking for help, and uses it as a stick to beat the questioner with. Having re-read it, I am now unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
 
     Here are a few paragraphs to try to set the record straight:–
 
     > * ***Stylesheets:*** Libreoffice makes use of *Stylesheets*, referred to in the program as *“Styles”*. Each is a collection of format settings that refer to one particular scenario.
     > * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
-    > * ***Style Cascade:*** One style within each scenario is the default from which all others in the same scenario are derived.
+    > * ***Style Cascade:*** One style within each scenario is the default from which most others in the same scenario are derived.
     > * ***Style Values:*** Less work for the author + a more professional appearance.
-    > * ***Direct Format:*** It is still possible to directly change any format setting directly within the page (paragraph, etc.).
+    > * ***Direct Format:*** It is still possible to directly change any format setting within the page, paragraph, etc..
     
 *  [‘3_new.odt’](/3_new.odt) loaded up under 7.2.3.2 & allowed me to operate LO.     
 `Ctrl-h` gave Search+Replace. Using "Paragraph Styles" I searched for "Default Paragraph Style" & replaced with "Text Body". (Note: in 24.8.2 "Text Body" style has been changed to "Body Text").     
