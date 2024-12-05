@@ -112,12 +112,12 @@ Two significant steps forward on the same day:
   1. A post by me within the  [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915) had produced responses that suggested that *ealier* versions of LO could run [“3_new.odt”](/3_new.odt) without freezing nor dying. After installing *"LibreOffice-7.2.3.2.basic-x86_64.AppImage"* from [AppImages listing](https://appimages.libreitalia.org/) I was able to prove that yes, those were accurate reports.
   2. A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *Direct Paragraph Formatting* (sic) rather than *Body Text* was responsible for the increased load, since *“Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will”*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation seemed to show it to be true.
 
-Later Comment on “Direct Paragraph Formatting”:     
-    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. However, that writer is obsessed with *any* use of direct format by someone asking for help, and uses it as a stick to beat the questioner with. Having re-read it, I am now unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
+Later Comment on ***“Direct Paragraph Formatting”***:     
+    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. That writer is obsessed with *any* use of direct format by someone asking for help, and uses it as a stick to beat the questioner with. Having re-read it, I am now unsure as to whether that writer was referring to the *Default Paragraph Style* or not.
 
 Here are a few paragraphs to try to set the record straight:–
 
-> * ***Stylesheets:*** Libreoffice makes use of *Stylesheets*, referred to in the program as *“Styles”*. Each is a collection of format settings that refer to one particular scenario.
+> * ***Stylesheets:*** Libreoffice makes use of *Stylesheets* (similar to html *CSS*), referred to in LO as *“Styles”*. Each is a collection of format settings that all apply within one particular scenario.
 > * ***Writer Style Scenarios:*** Page, Paragraph, Character, Frame, List, Table.
 > * ***Style Cascade:*** One style within each scenario is the default from which most others in the same scenario are derived.
 > * ***Style Values:*** Less work for the author + a more professional appearance.
