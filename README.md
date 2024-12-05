@@ -8,8 +8,8 @@ The above was all under LibreOffice v7.4.7.2.
   * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
   * On [Nov 09](#09-nov-2024) the AppImage v7.2.3.2 finally gave error-free access to all ODTs.
 
-### Internal Navigation:
-| The Files | Information Link |
+### Index:
+| The Files (1<sup>st</sup> Attempt) | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
 |[ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
@@ -20,6 +20,10 @@ The above was all under LibreOffice v7.4.7.2.
 |[3_new.odt](/3_new.odt)|[Oct 19 2024](#2024-oct-19)|
 |[3_new.pdf](/3_new.pdf)|[Oct 19 2024](#2024-oct-19)|
 |[4_paragraph-fix.odt](/4_paragraph-fix.odt)|[Nov 09 2024](#2024-nov-09)|
+| (2<sup>nd</sup> Attempt) |   |
+|[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)|[Nov 20 2024](#2024-nov-20)|
+| (3<sup>rd</sup> Attempt) |   |
+|[Chapter_00.odt](/Chapter_00.odt) (etc.)|[Nov 27 2024](#2024-nov-27)|
 
 It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to change to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
@@ -125,11 +129,15 @@ Two significant steps forward on the same day:
 I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph Style"* to *Body Text* and then saved the ODT as  [‘4_paragraph-fix.odt’](/4_paragraph-fix.odt). Opening *4_paragraph-fix.odt* again all the excess load was magically gone. Good Lord.
 1. The initial magic of *4_paragraph-fix.odt* evapourated almost immediately as I continued with the default-paragraph changes. In addition, the bugs in *3_new.odt* had caused various elements to change position, and all of those needed fixing as well. The excess load issue reappeared the next day & did not go away. This new document was now beginning to show all the same symptoms as the old ones, plus a few new ones of it's own. I resolved to abandon this line of documents  to try anew with one of the original documents.
  ### 20 Nov 2024:
-Begininng again with [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) under 7.2.3.2 I saved it as [‘2_paragraph-fixes.odt’](/2_paragraph-fixes.odt), and using `Ctrl-h` replaced every instance of 'Default Paragraph Style' with 'Text Body' style + a host of other changes. That enabled me to open the document under 7.4.7 and, after 10 seconds, the load fell to a minimal level. (False dawn; the next day it was back to continual load). This continued though every Chapter, including Epilogue & Bibliography. Next was to create a *Table of Contents*. I went through all the motions, but nothing happened.
+  <a name="2024-nov-20"></a>
+Begininng again with [‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt) under 7.2.3.2 I saved it as [‘2_paragraph-fixes.odt’](/2_paragraph-fixes.odt), and using `Ctrl-h` replaced every instance of 'Default Paragraph Style' with 'Text Body' style + a host of other changes. That enabled me to open the document under 7.4.7 and, after 10 seconds, the load fell to a minimal level. (False dawn; the next day it was back to continual load). This continued though every Chapter, including Epilogue & Bibliography. Next was to create a *Table of Contents*. I went through all the motions to do that, but nothing happened.
 
 The first line of construction (4 months: *0_ProgrammingInPython3.pdf* through to *4_paragraph-fix.odt*) clearly had hit a brick wall.     
 The second line of construction (11 days: *1_Programming-In-Python3.odt* to *2_paragraph-fixes.odt*) had also hit yet another brick wall.     
 I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
+ ### 27 Nov 2024:
+  <a name="2024-nov-27"></a>
+11.  The first issue was to produce 18 chapters ([‘Chapter_00.odt’](/Chapter_00.odt) to  ([‘Chapter_15.odt’](/Chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt))
 
 ## *Feedback*
 I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
