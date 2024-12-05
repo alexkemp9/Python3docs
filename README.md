@@ -23,7 +23,7 @@ The above was all under LibreOffice v7.4.7.2.
 | (2<sup>nd</sup> Attempt) |   |
 |[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)|[Nov 20 2024](#2024-nov-20)|
 | (3<sup>rd</sup> Attempt) |   |
-|[Chapter_00.odt](/Chapter_00.odt) (etc.)|[Nov 27 2024](#2024-nov-27)|
+|[chapter_00.odt](/chapter_00.odt) (etc.)|[Nov 27 2024](#2024-nov-27)|
 
 It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to change to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
@@ -137,7 +137,7 @@ The second line of construction (11 days: *1_Programming-In-Python3.odt* to *2_p
 I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
  ### 27 Nov 2024:
   <a name="2024-nov-27"></a>
-11.  The first issue was to produce 18 chapters ([‘Chapter_00.odt’](/Chapter_00.odt) to  ([‘Chapter_15.odt’](/Chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt))
+11.  The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt))
 
 ## *Feedback*
 I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
@@ -175,4 +175,4 @@ The above seems nice & simple, but the truth is messier.
 3. The bottom of an image-in-frame-with-caption will coelesce with the top of a table-in-frame. In other words, the image will pay no regard to it's below-paragraph spacing. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; it is still a bug).
 4. The “Sidebar” (which is identified as a `Frame` in the Navigator (F5), and I think is a TextBox) coelesces with the Border of a Paragraph. An example can be seen on p293 of [‘3_new.pdf’](3_new.pdf). Just as with #3, this is an example of an entity within a Frame paying no attention to it's below-paragraph spacing. Possibly an identical bug.
 5. The Jump-Boxes (which are LO TextBoxes) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
-6. In contrast to #5, `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted.
+6. In contrast to #5, `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
