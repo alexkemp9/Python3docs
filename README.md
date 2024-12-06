@@ -8,7 +8,9 @@ The above was all under LibreOffice v7.4.7.2.
   * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
   * On [Nov 09](#09-nov-2024) the AppImage v7.2.3.2 finally gave error-free access to all ODTs.
 
-***Dec 06 Update:*** Whilst attempting to compile the tabulation of files + Chapter / Header Numbering [below](#2024-nov-27) my Debian system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
+***Dec 06 Update:*** Whilst attempting to compile the tabulation of files + Chapter / Header Numbering [below](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
+
+Note that my Devuan is currently Linux 5 daedalus, based on Debian stable, kernel 6.11.5+bpo-amd64 + fully updated each day.
 
 It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to switch view to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
@@ -146,18 +148,26 @@ I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph
 ***Bottom Line:***     
 It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup that will decide whether *Chapter Numbering* is switched on or not.
 > * *Chapter Numbering…* needs to be setup first
-> * *Heading 1 styles* need to be setup last
+> * *Heading 1 styles* need to be used last
 > * (the info above is not in any [documentation](https://help.libreoffice.org/7.4/en-US/text/swriter/01/06060000.html) that I have seen, nor known about by the [experts I consulted](https://ask.libreoffice.org/t/cannot-number-a-chapter-in-a-figure-table-caption-etc/114155/9))
 > * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`.  Below is the dialog:
 > * Later versions call the same menu item `menu:/Tools/Header Numbering…`.
-> * ![Header numbering](/Screenshot_Chapter-numbering.png)
-I setup all my Header 1, 2, 3 + 4 styles first in each document that I built, and then tried to setup Chapter Numbering (it failed every time, because that was the wrong order - see above). After a while I tried to use *“Drawing”*,as a replacement field, but that is not an effective substitute.
+> ![Header numbering](/Screenshot_Chapter-numbering.png)     
+
+I setup all my Header 1, 2, 3 + 4 styles first in each document that I built, and then tried to setup Chapter Numbering (it failed every time, because that was the wrong order - see above). After a while I tried to use *“Drawing”* as a replacement field, but that is not an effective substitute.
+
+Having discovered the undocumented ‘trick’ to be able to switch *Chapter Numbering* ON I also discovered that doing so inserted the Chapter Number into all Headings at that level when they were created. Why? !!! It may be reasonable as an option, but surely not as a requirement. The *“H1 Auto-number”* Character style that I created was my means to hide that number in the Headings; a 2pt number in DejaVu Sans Condensed with the same #95BFEC font colour as the Heading background does the job there, and does not affect the field use in other circumstances.
+
+Once I had discovered the correct 2-stage order to switch on Chapter / Header numbering, inserting *“x.y”* *Figure* + *Table* numbers became a breeze (in which x == current Chapter number auto-inserted, and y == *Figure + 1* or *Table + 1* in order to get auto-incrementing numbers. That works fine. Although not yet in Master documents.
 
 Here is a tabulation of the documents re: Chapter numbering; unmentioned files are the same as their predecessor:–
-| Document | Chapter Numbering |
+<a name="2024-dec-06"></a>
+* | Document | Chapter Numbering |
 |:---:|:---: |
 | 1_Programming-In-Python3.odt | Inoperative |
-| 1_Programming-In-Python3.odt | Inoperative |
+| 2_paragraph-fixes.odt | *Drawing* as a substitute field |
+| chapter_02.odt | Operative     
+(back-ported into chapter_00 + chapter_01) |
 
 
 ## *Feedback*
