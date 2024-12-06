@@ -143,27 +143,27 @@ I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph
 3. I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
  ### 27 Nov 2024:
   <a name="2024-nov-27"></a>
-* The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt)) and a Master Document ([‘Programming-In-Python3.odm’](/Programming-In-Python3.odm)). This time I hit the brick wall instantly with Chapter / Header numbering, but at least I was able to find the fix after a short while. Though not yet (Dec 06) for the same issue in Master Documents.
-### Chapter / Header Numbering
+* The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt)) and a Master Document ([‘Programming-In-Python3.odm’](/Programming-In-Python3.odm)). This time I hit the brick wall instantly with Chapter / Heading numbering, but at least I was able to find the fix after a short while. Though not yet (Dec 06) for the same issue in Master Documents.
+### Chapter / Heading Numbering
 ***Bottom Line:***     
-It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup that will decide whether *Chapter Numbering* is switched on or not.
+It is the order in which `Chapter Numbering…` and `Heading styles` are setup that will decide whether *Chapter Numbering* is switched on or not.
 > * *Chapter Numbering…* needs to be setup first
-> * *Heading 1 styles* need to be used last
+> * *Heading styles* need to be used last
 > * (the info above is not in any [documentation](https://help.libreoffice.org/7.4/en-US/text/swriter/01/06060000.html) that I have seen, nor known about by the [experts I consulted](https://ask.libreoffice.org/t/cannot-number-a-chapter-in-a-figure-table-caption-etc/114155/9))
 > * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`.  Below is the dialog:
-> * Later versions call the same menu item `menu:/Tools/Header Numbering…`.
-> ![Header numbering](/Screenshot_Chapter-numbering.png)     
+> * Later versions call the same menu item `menu:/Tools/Heading Numbering…`. Below is Tab#2 of the dialog:
+> ![Chapter numbering](/Screenshot_Chapter-numbering.png)     
+> ![Heading numbering](/Screenshot_Header-numbering.png)     
 
 I setup all my Header 1, 2, 3 + 4 styles first in each document that I built, and then tried to setup Chapter Numbering (it failed every time, because that was the wrong order - see above). After a while I tried to use *“Drawing”* as a replacement field, but that is not an effective substitute.
 
-Having discovered the undocumented ‘trick’ to be able to switch *Chapter Numbering* ON I also discovered that doing so inserted the Chapter Number into all Headings at that level when they were created. Why? !!! It may be reasonable as an option, but surely not as a requirement. The *“H1 Auto-number”* Character style that I created was my means to hide that number in the Headings; a 2pt number in DejaVu Sans Condensed with the same #95BFEC font colour as the Heading background does the job there, and does not affect the field use in other circumstances.
+Having discovered the undocumented ‘trick’ to be able to switch *Chapter / Heading Numbering* ON I also discovered that doing so inserted the Chapter Number into all Headings at that level when they were created. Why? !!! It may be reasonable as an option, but surely not as a requirement. The *“H1 Auto-number”* Character style that I created was my means to hide that number in the Headings; a 2pt number in DejaVu Sans Condensed with the same #95BFEC font colour as the Heading background does the job there, and does not affect the field use in other circumstances.
 
-Once I had discovered the correct 2-stage order to switch on Chapter / Header numbering, inserting *“x.y”* *Figure* + *Table* numbers became a breeze (in which x == current Chapter number auto-inserted, and y == *Figure + 1* or *Table + 1* in order to get auto-incrementing numbers. That works fine. Although not yet in Master documents.
+Once I had discovered the correct 2-stage order to switch on Chapter / Heading numbering, inserting *“x.y”* *Figure* + *Table* numbers became a breeze (in which x == current Chapter number auto-inserted, and y == *Figure + 1* or *Table + 1* in order to get auto-incrementing numbers. That works fine. Although not yet in Master documents.
 
 Here is a tabulation of the documents re: Chapter numbering; unmentioned files are the same as their predecessor:–
 <a name="2024-dec-06"></a>
-
-| Document | Chapter Numbering |
+| Document | Chapter / Heading Numbering |
 |:---:|:---: |
 | 1_Programming-In-Python3.odt | Inoperative |
 | 2_paragraph-fixes.odt | *Drawing* as a substitute field |
