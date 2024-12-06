@@ -171,8 +171,8 @@ Here is a tabulation of the documents re: Chapter numbering; unmentioned files a
 (back-ported into chapter_00 + chapter_01) |
 
 
-## *Feedback*
-I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
+## *Contact*
+Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
 
 ## The Bugs
 I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
