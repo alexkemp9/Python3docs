@@ -146,8 +146,9 @@ It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup
 > * *Chapter Numbering…* needs to be setup first
 > * *Heading 1 styles* need to be setup last
 > * (the info above is not in any [documentation](https://help.libreoffice.org/7.4/en-US/text/swriter/01/06060000.html) that I have seen, nor known about by the [experts I consulted](https://ask.libreoffice.org/t/cannot-number-a-chapter-in-a-figure-table-caption-etc/114155/9))
-> * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`
-> * Later versions call the same menu item `menu:/Tools/Header Numbering…`
+> * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`.  Below is the dialog:
+> * Later versions call the same menu item `menu:/Tools/Header Numbering…`.
+> * ![Header numbering](/Screenshot_Chapter-numbering.png)
 
 ## *Feedback*
 I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
