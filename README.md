@@ -162,7 +162,8 @@ Once I had discovered the correct 2-stage order to switch on Chapter / Header nu
 
 Here is a tabulation of the documents re: Chapter numbering; unmentioned files are the same as their predecessor:–
 <a name="2024-dec-06"></a>
-* | Document | Chapter Numbering |
+
+| Document | Chapter Numbering |
 |:---:|:---: |
 | 1_Programming-In-Python3.odt | Inoperative |
 | 2_paragraph-fixes.odt | *Drawing* as a substitute field |
