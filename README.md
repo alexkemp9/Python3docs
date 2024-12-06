@@ -139,8 +139,8 @@ I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph
 3. I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
  ### 27 Nov 2024:
   <a name="2024-nov-27"></a>
-* The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt)) and a Master Document ([‘Programming-In-Python3.odm’](/Programming-In-Python3.odm)). This time I hit the brick wall instantly, but at least I was able to find the fix after a short while. Though not yet (Dec 05) for Master Documents, and only in one specific instance for *“odt”* documents.
-### Chapter Numbering
+* The first issue was to produce 18 chapters ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt) + ([‘Epilogue.odt’](/Epilogue.odt) + ([‘Bibliography.odt’](/Bibliography.odt)) and a Master Document ([‘Programming-In-Python3.odm’](/Programming-In-Python3.odm)). This time I hit the brick wall instantly with Chapter / Header numbering, but at least I was able to find the fix after a short while. Though not yet (Dec 06) for the same issue in Master Documents.
+### Chapter / Header Numbering
 ***Bottom Line:***     
 It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup that will decide whether *Chapter Numbering* is switched on or not.
 > * *Chapter Numbering…* needs to be setup first
@@ -149,6 +149,14 @@ It is the order in which `Chapter Numbering…` and `Heading 1 styles` are setup
 > * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`.  Below is the dialog:
 > * Later versions call the same menu item `menu:/Tools/Header Numbering…`.
 > * ![Header numbering](/Screenshot_Chapter-numbering.png)
+I setup all my Header 1, 2, 3 + 4 styles first in each document that I built, and then tried to setup Chapter Numbering (it failed every time, because that was the wrong order - see above). After a while I tried to use *“Drawing”*,as a replacement field, but that is not an effective substitute.
+
+Here is a tabulation of the documents re: Chapter numbering; unmentioned files are the same as their predecessor:–
+| Document | Chapter Numbering |
+|:---:|:---: |
+| 1_Programming-In-Python3.odt | Inoperative |
+| 1_Programming-In-Python3.odt | Inoperative |
+
 
 ## *Feedback*
 I can be contacted via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
