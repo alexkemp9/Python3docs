@@ -175,25 +175,25 @@ I was dealing with so many different bugs in Writer by this stage that my head w
 One common theme between the original errors & the Master document errors was in copying from one document to another. The bright thought was that it should be possible to measure that, and measurement is something that everyone at every level can understand.
 
 <a name="2024-dec-07"></a>
-In the following tabulation I used the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) + the Status bar at bottom left to measure the stats of various components of the first odt under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
+In the following tabulation I used the Status bar (bottom left) +  the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) to measure the stats of various components of the first odt under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
 ### Copying Errors
 | 1_Programming-In-Python3.odt 7.2.3.2 |Original | Copy | Diff |
 |:---:|---: |---:|---:
-| Words | 232,206 | 226,263 | 5,943  |
-| Words (selection) | 223,631 |  | 2,632 |
-| Characters | 1,392,176 | 1,356,358 | 35,818 |
-| Chars (selection) | 1,340,553 |  | 15,805 |
+| Pages | 666 | 556 | -110 (17%) |
+| Words | 232,206 | 226,263 | -5,943 (2.6%)  |
+| Words (selection) | 223,631 |  | -2,632 (1.2%) |
+| Characters | 1,392,176 | 1,356,358 | -35,818 (2.6%) |
+| Chars (selection) | 1,340,553 |  | -15,805 (1.2%) |
 | Headings | 241 | 241 |0 |
-| Tables | 105 | 68 | 37 |
-| Frames | 77 | 33 | 44 |
-| Images | 39 | 35 | 4 |
+| Tables | 105 | 68 | -37 (35%) |
+| Frames | 77 | 33 | -44 (57%) |
+| Images | 39 | 35 | -4 (5.2%) |
 | OLE objects | 3 | 3 | 0 |
-| Bookmarks | 52 | 40 | 12 |
-| Hyperlinks | 114 | 113 | 1 |
+| Bookmarks | 52 | 40 | -12 (23%) |
+| Hyperlinks | 114 | 113 | -1 (0.9%) |
 | References | 7 | 7 | 0 |
-| Drawing Objects | 689 | 634 | 5 |
-| Fields | 262 | 253 | 9 |
-| Pages | 666 | 556 | 110  |
+| Drawing Objects | 689 | 634 | -5 (0.7%) |
+| Fields | 262 | 253 | -9 (3.4%) |
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
