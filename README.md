@@ -17,7 +17,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 **7 Nov update:** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### Index:
-| The Files (1<sup>st</sup> Attempt) | Information Link |
+| The Files (1<sup>st</sup> Attempt at Production) | Information Link |
 | --- | --- |
 |[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)|[August 2024](#2024-august-00)|
 |[ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
@@ -31,12 +31,12 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | (2<sup>nd</sup> Attempt) |   |
 |[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)|[Nov 20 2024](#2024-nov-20)|
 | (3<sup>rd</sup> Attempt) |   |
-|[chapter_00.odt](/chapter_00.odt) (etc.)|[Nov 27 2024](#2024-nov-27)|
+|[chapter_00.odt](/chapter_00.odt) (etc. re: Master Documents)|[Nov 27 2024](#2024-nov-27)|
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
 
-When it became impossible to load the ODTs it was not possible to document the bug(s). So, in that situation I thought that access to the raw documents would help others with better tools than me to find them.
+When it became impossible to load the ODTs it was not possible to document the bug(s). So, in that situation I thought that access to the raw documents would help others with better tools than me to find those bugs.
 
 ### *Versions*
 These are my current LO + OS versions:
