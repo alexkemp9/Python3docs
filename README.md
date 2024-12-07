@@ -216,6 +216,8 @@ Almost one fifth of the pages not copied?
 | Fields | 240 | 237 | -3 | 1.3% | different |
 | Footnotes | 72 | 72 | 0 |  | no comparison |
 
+***Bottom line:*** Both v7 + v24.8 are unable to copy then paste all components of an odt. That is a bad set of bugs.
+
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
 
