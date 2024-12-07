@@ -172,7 +172,7 @@ Here is a tabulation of the documents re: Chapter numbering; unmentioned files a
 ### 07 Dec 2024:
 I was dealing with so many different bugs in Writer by this stage that my head was spinning. I was having difficulty both in spotting any common theme between the bugs, and also how on earth could I sensibly & simply report them to others? Then I had a bright thought.
 
-One common theme between the original errors & the Master document errors was in copying from one document to another. The bright thought was that it should be possible to measure that, and measurement is something that everyone at every level can understand.
+One common theme between the original errors & the Master document errors was transfer from one document to another. The bright thought was that it should be possible to measure that, and measurement is something that everyone at every level can understand.
 
 <a name="2024-dec-07"></a>
 In the following tabulation I used the Status bar (bottom left) +  the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) to measure the stats of various components of [1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt) under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
