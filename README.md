@@ -175,9 +175,9 @@ I was dealing with so many different bugs in Writer by this stage that my head w
 One common theme between the original errors & the Master document errors was in copying from one document to another. The bright thought was that it should be possible to measure that, and measurement is something that everyone at every level can understand.
 
 <a name="2024-dec-07"></a>
-In the following tabulation I used the Status bar (bottom left) +  the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) to measure the stats of various components of the first odt under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
+In the following tabulation I used the Status bar (bottom left) +  the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) to measure the stats of various components of [1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt) under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
 ### Copying Errors
-| 1_Programming-In-Python3.odt 7.2.3.2 |Original | Copy | Diff | % |
+| 7.2.3.2 |Original | Copy | Diff | % |
 |:---:|---: |---:|---:|---:|
 | Pages | 666 | 556 | -110| 17% |
 | Words | 232,206 | 226,263 | -5,943 | 2.6%  |
@@ -194,6 +194,27 @@ In the following tabulation I used the Status bar (bottom left) +  the Writer *N
 | References | 7 | 7 | 0 ||
 | Drawing Objects | 689 | 634 | -5 | 0.7% |
 | Fields | 262 | 253 | -9 | 3.4% |
+
+Almost one fifth of the pages not copied?
+
+| 24.8.3.2 |Original | Copy | Diff | % | cf v7 |
+|:---:|---: |---:|---:|---:|:---:|
+| Pages | 664 | 558 | -106| 16% | different |
+| Words | 232,206 | 226,263 | -5,943 | 2.6%  | same |
+| Words (selection) | 223,631 |  | -2,632 | 1.2% |  same |
+| Characters | 1,392,176 | 1,356,358 | -35,818 | 2.6% | same |
+| Chars (selection) | 1,340,553 |  | -15,805 | 1.2% | same |
+| Headings | 241 | 241 |0 | | same |
+| Tables | 105 | 68 | -37 | 35% | same |
+| Frames | 77 | 33 | -44 | 57% | same |
+| Images | 39 | 35 | -4 | 5.2% | same |
+| OLE objects | 3 | 3 | 0 || same |
+| Bookmarks | 52 | 40 | -12 | 23% | same |
+| Hyperlinks | 114 | 113 | -1 | 0.9% | same |
+| References | 7 | 7 | 0 || same |
+| Drawing Objects | 689 | 634 | -5 | 0.7% | same |
+| Fields | 240 | 237 | -3 | 1.3% | different |
+| Footnotes | 72 | 72 | 0 |  | no comparison |
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
