@@ -257,14 +257,39 @@ Frames had the largest proportion of errors ( 57%). So, the obvious next step wa
 |27| p183 |print() Fun… || |✔| |
 |28| p239 |figure 6.1 |✔| | | |
 |29| p244 |Table 6.1 | | ✔| | |
-|30| p251 |figure 6.3 | | ✔| | |
+|30| p251 |Figure 6.3 | | ✔| | |
 |31| p252 |Table 6.2 | | ✔| | |
 |32| p252 |del_() Spe… || |✔| |
 |33| p255 |Table 6.3 | | ✔| | |
 |34| p264 |figure 6.6 |✔| | | |
 |35| p267 |Table 6.4 | | ✔| | |
 |36| p280 |Generator Fun… || |✔| |
-|37| p290 |figure 7.1 | | ✔| | |
+|37| p290 |Figure 7.1 | | ✔| | |
+|38| p291 |Figure 7.2 | | ✔| | |
+|39| p295 |Bytes and Byte… || |✔| |
+|40| p298 |Struct Module… || |✔| |
+|41| p349 |Table 8.1 | | ✔| | |
+|42| p314 |Table 8.2 | | ✔| | |
+|43| p379 |Table 8.3 | | ✔| | |
+|44| p381 |Table 8.4 | | ✔| | |
+|45| p398 |Figure 8.2 | | ✔| | |
+|46| p421 |figure 9.2 |✔| | | |
+|47| p420 |figure 9.1 |✔| | | |
+|48| p437 |Figure 10.1 | | ✔| | |
+|49| p440 |figure 10.2 |✔| | | |
+|50| p442 |Figure 10.3 | | ✔| | |
+|51| p475 |Table 12.1 | | ✔| | |
+|52| p476 |Table 12.2 | | ✔| | |
+|53| p486 |Table 13.1 | | ✔| | |
+|54| p487 |Table 13.2 | | ✔| | |
+|55| p492 |Table 13.3 | | ✔| | |
+|56| p496 |Table 13.4 | | ✔| | |
+|57| p496 |Table 13.5 | | ✔| | |
+|58| p502 |Table 13.7 | | ✔| | |
+|59| p510 |Figure 14.1 | | ✔| | |
+|60| p511 |Figure 14.2 | | ✔| | |
+|61| p512 |Figure 14.3 | | ✔| | |
+|62| p514 |Figure 14.4 | | ✔| | |
 
 
 
