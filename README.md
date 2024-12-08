@@ -290,6 +290,22 @@ Frames had the largest proportion of errors ( 57%). So, the obvious next step wa
 |60| p511 |Figure 14.2 | | ✔| | |
 |61| p512 |Figure 14.3 | | ✔| | |
 |62| p514 |Figure 14.4 | | ✔| | |
+|63| p514 |Figure 14.5 | | ✔| | |
+|64| p517 |Figure 14.6 | | ✔| | |
+|65| p517 |Figure 14.7 | | ✔| | |
+|66| p520 |Figure 14.9 |✔| | | |
+|67| p521 |Figure 14.12 | | ✔| | |
+|68| p520 |Caption 14.9 |✔| | | |
+|69| p520 |Caption 14.11 |✔| | | |
+|70| p522 |Figure 14.13 |✔| | | |
+|71| p522 |Figure 14.14 |✔| | | |
+|72| p543 |Figure 14.15 | | ✔| | |
+|73| p565 |Figure 15.1 || | |✔|
+|74| p567 |Figure 15.2 |✔| | | |
+|75| p573 |Figure 15.4 |✔| | | |
+|76| p583 |Figure 15.6 |✔| | | |
+|77| p584 |Figure 15.7 | | ✔| | |
+|||Totals:| 25 (32%) | 35 (45%) | 8 (10%) | 9 (12%) |
 
 
 
