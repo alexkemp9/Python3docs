@@ -226,7 +226,7 @@ Almost one fifth of the pages are not transferred on copy/paste?
 <a name="2024-dec-08"></a>
 Frames had the largest proportion of failures during transfer ( 57%). So, the obvious next step was to try to identify what was causing so many Frame errors during copying. The following stats were collected under 24.8.3.2:
 > ✔ == yes, is copied fine     
-> ✘ == no, is NOT copied during copy/paste     
+> ✘ == no, is NOT transferred during copy/paste     
 ### Frame Stats
 | Serial |Page | Name | Image | Table | Sidebar | Drawing Object |
 |---:|:---: |:---:|:---:|:---:|:---:|:---:|
