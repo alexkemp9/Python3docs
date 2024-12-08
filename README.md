@@ -226,20 +226,22 @@ Almost one fifth of the pages are not transferred on copy/paste?
 <a name="2024-dec-08"></a>
 Frames had the largest proportion of errors ( 57%). So, the obvious next step was to try to identify what was causing so many Frame errors during copying. The following stats were collected under 24.8.3.2:
 ### Frame Stats
+> ✔ == yes, is copied fine     
+> ✘ == no, is NOT copied during copy/paste     
 | Serial |Page | Name | Image | Table | Sidebar | Drawing Object |
 |---:|:---: |:---:|:---:|:---:|:---:|:---:|
 |1| p014 |figure 1.1 |✔| | | |
 |2| p017 |figure 1.2 |✔| | | |
 |3| p033 |figure 1.4 |✔| | | |
 |4| p032 |figure 1.3 |✔| | | |
-|5| p066 |Table 2.7 | | ✔| | |
+|5| p066 |Table 2.7 | | ✘| | |
 |6| p069 |figure 2.1 |✔| | | |
 |7| p071 |figure 2.3 |✔| | | |
 |8| p070 |figure 2.2 |✔| | | |
 |9| p071 |figure 2.4 |✔| | | |
 |10| p099 |figure 2.7 |✔| | | |
 |11| p116 |Deleting Items… || |✔| |
-|12| p122 |figure 3.3 || | |✔|
+|12| p122 |figure 3.3 || | |✘|
 |13| p123 |figure 3.4 |✔| | | |
 |14| p128 |figure 3.5-d3 || | |✔|
 |15| p128 |figure 3.5-d2 || | |✔|
@@ -248,61 +250,61 @@ Frames had the largest proportion of errors ( 57%). So, the obvious next step wa
 |18| p128 |figure 3.5-d4 || | |✔|
 |19| p128 |figure 3.5-d5 || | |✔|
 |20| p128 |figure 3.5-d7 || | |✔|
-|21| p130 |Table 3.3 | | ✔| | |
-|22| p132 |Read Write… || |✔| |
-|23| p142 |Table 3.4 | | ✔| | |
+|21| p130 |Table 3.3 | | ✘| | |
+|22| p132 |Read Write… || |✘| |
+|23| p142 |Table 3.4 | | ✘| | |
 |24| p166 |figure 4.1 |✔| | | |
 |25| p167 |figure 4.2 |✔| | | |
-|26| p174 |Online Doc… || |✔| |
-|27| p183 |print() Fun… || |✔| |
+|26| p174 |Online Doc… || |✘| |
+|27| p183 |print() Fun… || |✘| |
 |28| p239 |figure 6.1 |✔| | | |
-|29| p244 |Table 6.1 | | ✔| | |
-|30| p251 |Figure 6.3 | | ✔| | |
-|31| p252 |Table 6.2 | | ✔| | |
+|29| p244 |Table 6.1 | | ✘| | |
+|30| p251 |Figure 6.3 | | ✘| | |
+|31| p252 |Table 6.2 | | ✘| | |
 |32| p252 |del_() Spe… || |✔| |
-|33| p255 |Table 6.3 | | ✔| | |
+|33| p255 |Table 6.3 | | ✘| | |
 |34| p264 |figure 6.6 |✔| | | |
-|35| p267 |Table 6.4 | | ✔| | |
-|36| p280 |Generator Fun… || |✔| |
-|37| p290 |Figure 7.1 | | ✔| | |
-|38| p291 |Figure 7.2 | | ✔| | |
-|39| p295 |Bytes and Byte… || |✔| |
-|40| p298 |Struct Module… || |✔| |
-|41| p349 |Table 8.1 | | ✔| | |
-|42| p314 |Table 8.2 | | ✔| | |
-|43| p379 |Table 8.3 | | ✔| | |
-|44| p381 |Table 8.4 | | ✔| | |
-|45| p398 |Figure 8.2 | | ✔| | |
+|35| p267 |Table 6.4 | | ✘| | |
+|36| p280 |Generator Fun… || |✘| |
+|37| p290 |Figure 7.1 | | ✘| | |
+|38| p291 |Figure 7.2 | | ✘| | |
+|39| p295 |Bytes and Byte… || |✘| |
+|40| p298 |Struct Module… || |✘| |
+|41| p349 |Table 8.1 | | ✘| | |
+|42| p314 |Table 8.2 | | ✘| | |
+|43| p379 |Table 8.3 | | ✘| | |
+|44| p381 |Table 8.4 | | ✘| | |
+|45| p398 |Figure 8.2 | | ✘| | |
 |46| p421 |figure 9.2 |✔| | | |
 |47| p420 |figure 9.1 |✔| | | |
-|48| p437 |Figure 10.1 | | ✔| | |
+|48| p437 |Figure 10.1 | | ✘| | |
 |49| p440 |figure 10.2 |✔| | | |
-|50| p442 |Figure 10.3 | | ✔| | |
-|51| p475 |Table 12.1 | | ✔| | |
-|52| p476 |Table 12.2 | | ✔| | |
-|53| p486 |Table 13.1 | | ✔| | |
-|54| p487 |Table 13.2 | | ✔| | |
-|55| p492 |Table 13.3 | | ✔| | |
-|56| p496 |Table 13.4 | | ✔| | |
-|57| p496 |Table 13.5 | | ✔| | |
-|58| p502 |Table 13.7 | | ✔| | |
-|59| p510 |Figure 14.1 | | ✔| | |
-|60| p511 |Figure 14.2 | | ✔| | |
-|61| p512 |Figure 14.3 | | ✔| | |
-|62| p514 |Figure 14.4 | | ✔| | |
+|50| p442 |Figure 10.3 | | ✘| | |
+|51| p475 |Table 12.1 | | ✘| | |
+|52| p476 |Table 12.2 | | ✘| | |
+|53| p486 |Table 13.1 | | ✘| | |
+|54| p487 |Table 13.2 | | ✘| | |
+|55| p492 |Table 13.3 | | ✘| | |
+|56| p496 |Table 13.4 | | ✘| | |
+|57| p496 |Table 13.5 | | ✘| | |
+|58| p502 |Table 13.7 | | ✘| | |
+|59| p510 |Figure 14.1 | | ✘| | |
+|60| p511 |Figure 14.2 | | ✘| | |
+|61| p512 |Figure 14.3 | | ✘| | |
+|62| p514 |Figure 14.4 | | ✘| | |
 |63| p514 |Figure 14.5 | | ✔| | |
-|64| p517 |Figure 14.6 | | ✔| | |
-|65| p517 |Figure 14.7 | | ✔| | |
-|66| p520 |Figure 14.9 |✔| | | |
-|67| p521 |Figure 14.12 | | ✔| | |
+|64| p517 |Figure 14.6 | | ✘| | |
+|65| p517 |Figure 14.7 | | ✘| | |
+|66| p520 |Figure 14.9 |✘| | | |
+|67| p521 |Figure 14.12 | | ✘| | |
 |68| p520 |Caption 14.9 |✔| | | |
 |69| p520 |Caption 14.11 |✔| | | |
-|70| p522 |Figure 14.13 |✔| | | |
+|70| p522 |Figure 14.13 |✘| | | |
 |71| p522 |Figure 14.14 |✔| | | |
-|72| p543 |Figure 14.15 | | ✔| | |
+|72| p543 |Figure 14.15 | | ✘| | |
 |73| p565 |Figure 15.1 || | |✔|
 |74| p567 |Figure 15.2 |✔| | | |
-|75| p573 |Figure 15.4 |✔| | | |
+|75| p573 |Figure 15.4 |✘| | | |
 |76| p583 |Figure 15.6 |✔| | | |
 |77| p584 |Figure 15.7 | | ✔| | |
 |||Totals:| 25 (32%) | 35 (45%) | 8 (10%) | 9 (12%) |
