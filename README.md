@@ -32,6 +32,8 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)|[Nov 20 2024](#2024-nov-20)|
 | (3<sup>rd</sup> Attempt) |   |
 |[chapter_00.odt](/chapter_00.odt) (etc. re: Master Documents)|[Nov 27 2024](#2024-nov-27)|
+|Chapter / Heading Number Errors|[Dec 06 2024](#2024-dec-06)|
+|Copy Errors|[Dec 07 2024](#2024-dec-07)|
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -179,41 +181,43 @@ In the following tabulation I used the Status bar (bottom left) +  the Writer *N
 ### Copying Errors
 | 7.2.3.2 |Original | Copy | Diff | % |
 |:---:|---: |---:|---:|---:|
-| Pages | 666 | 556 | -110| 17% |
-| Words | 232,206 | 226,263 | -5,943 | 2.6%  |
-| Words (selection) | 223,631 |  | -2,632 | 1.2% |
-| Characters | 1,392,176 | 1,356,358 | -35,818 | 2.6% |
-| Chars (selection) | 1,340,553 |  | -15,805 | 1.2% |
+| Pages | 666 | 556 | -110| -17% |
+| Words | 232,206 | 226,263 | -5,943 | -2.6%  |
+| Words (selection) | 223,631 |  | -2,632 | -1.2% |
+| Characters | 1,392,176 | 1,356,358 | -35,818 | -2.6% |
+| Chars (selection) | 1,340,553 |  | -15,805 | -1.2% |
 | Headings | 241 | 241 |0 | |
-| Tables | 105 | 68 | -37 | 35% |
-| Frames | 77 | 33 | -44 | 57% |
-| Images | 39 | 35 | -4 | 5.2% |
+| Tables | 105 | 68 | -37 | -35% |
+| Frames | 77 | 33 | -44 | -57% |
+| Images | 39 | 35 | -4 | -5.2% |
 | OLE objects | 3 | 3 | 0 ||
-| Bookmarks | 52 | 40 | -12 | 23% |
-| Hyperlinks | 114 | 113 | -1 | 0.9% |
+| Bookmarks | 52 | 40 | -12 | -23% |
+| Hyperlinks | 114 | 113 | -1 | -0.9% |
 | References | 7 | 7 | 0 ||
-| Drawing Objects | 689 | 634 | -5 | 0.7% |
-| Fields | 262 | 253 | -9 | 3.4% |
+| Drawing Objects | 689 | 634 | -5 | -0.7% |
+| Fields | 262 | 253 | -9 | -3.4% |     
 
-Almost one fifth of the pages not copied?
+
+Almost one fifth of the pages not copied?     
+
 
 | 24.8.3.2 |Original | Copy | Diff | % | cf v7 |
 |:---:|---: |---:|---:|---:|:---:|
-| Pages | 664 | 558 | -106| 16% | different |
-| Words | 232,206 | 226,263 | -5,943 | 2.6%  | same |
-| Words (selection) | 223,631 |  | -2,632 | 1.2% |  same |
-| Characters | 1,392,176 | 1,356,358 | -35,818 | 2.6% | same |
-| Chars (selection) | 1,340,553 |  | -15,805 | 1.2% | same |
+| Pages | 664 | 558 | -106| -16% | different |
+| Words | 232,206 | 226,263 | -5,943 | -2.6%  | same |
+| Words (selection) | 223,631 |  | -2,632 | -1.2% |  same |
+| Characters | 1,392,176 | 1,356,358 | -35,818 | -2.6% | same |
+| Chars (selection) | 1,340,553 |  | -15,805 | -1.2% | same |
 | Headings | 241 | 241 |0 | | same |
-| Tables | 105 | 68 | -37 | 35% | same |
-| Frames | 77 | 33 | -44 | 57% | same |
-| Images | 39 | 35 | -4 | 5.2% | same |
+| Tables | 105 | 68 | -37 | -35% | same |
+| Frames | 77 | 33 | -44 |- 57% | same |
+| Images | 39 | 35 | -4 | -5.2% | same |
 | OLE objects | 3 | 3 | 0 || same |
-| Bookmarks | 52 | 40 | -12 | 23% | same |
-| Hyperlinks | 114 | 113 | -1 | 0.9% | same |
+| Bookmarks | 52 | 40 | -12 | -23% | same |
+| Hyperlinks | 114 | 113 | -1 | -0.9% | same |
 | References | 7 | 7 | 0 || same |
-| Drawing Objects | 689 | 634 | -5 | 0.7% | same |
-| Fields | 240 | 237 | -3 | 1.3% | different |
+| Drawing Objects | 689 | 634 | -5 | -0.7% | same |
+| Fields | 240 | 237 | -3 | -1.3% | different |
 | Footnotes | 72 | 72 | 0 |  | no comparison |
 
 ***Bottom line:*** Both v7 + v24.8 are unable to copy then paste all components of an odt. That is a bad set of bugs.
