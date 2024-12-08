@@ -222,6 +222,21 @@ Almost one fifth of the pages are not transferred on copy/paste?
 
 ***Bottom line:*** Both v7 + v24.8 are unable to copy then paste all components of an odt. That is a bad set of bugs.
 
+<a name="2024-dec-08"></a>
+The obvious next step was to try to identify what was causing so many Frame errors during copying. The following was collected under 24.8.3.2:
+### Frame Stats
+| Serial |Page | Name | Image | Table | Sidebar | Drawing Object |
+|---:|:---: |:---:|:---:|:---:|:---:|:---:|
+|1| p014 |figure 1.1 |✔| | | |
+|2| p017 |figure 1.2 |✔| | | |
+|3| p033 |figure 1.4 |✔| | | |
+|4| p032 |figure 1.3 |✔| | | |
+|5| p066 |Table 2.7 | | ✔| | |
+|2| p017 |figure 1.2 |✔| | | |
+|2| p017 |figure 1.2 |✔| | | |
+
+
+
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
 
