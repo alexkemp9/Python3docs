@@ -256,6 +256,15 @@ Frames had the largest proportion of errors ( 57%). So, the obvious next step wa
 |26| p174 |Online Doc… || |✔| |
 |27| p183 |print() Fun… || |✔| |
 |28| p239 |figure 6.1 |✔| | | |
+|29| p244 |Table 6.1 | | ✔| | |
+|30| p251 |figure 6.3 | | ✔| | |
+|31| p252 |Table 6.2 | | ✔| | |
+|32| p252 |del_() Spe… || |✔| |
+|33| p255 |Table 6.3 | | ✔| | |
+|34| p264 |figure 6.6 |✔| | | |
+|35| p267 |Table 6.4 | | ✔| | |
+|36| p280 |Generator Fun… || |✔| |
+|37| p290 |figure 7.1 | | ✔| | |
 
 
 
