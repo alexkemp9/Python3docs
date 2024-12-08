@@ -196,11 +196,11 @@ In the following tabulation I used the Status bar (bottom left) +  the Writer *N
 | References | 7 | 7 | 0 ||
 | Drawing Objects | 689 | 634 | -5 | -0.7% |
 | Fields | 262 | 253 | -9 | -3.4% |     
-
-
-Almost one fifth of the pages not copied?     
-
-
+     
+      
+Almost one fifth of the pages are not transferred on copy/paste?     
+     
+      
 | 24.8.3.2 |Original | Copy | Diff | % | cf v7 |
 |:---:|---: |---:|---:|---:|:---:|
 | Pages | 664 | 558 | -106| -16% | different |
