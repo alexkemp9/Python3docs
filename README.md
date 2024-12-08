@@ -34,6 +34,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |[chapter_00.odt](/chapter_00.odt) (etc. re: Master Documents)|[Nov 27 2024](#2024-nov-27)|
 |Chapter / Heading Number Errors|[Dec 06 2024](#2024-dec-06)|
 |Copy Errors|[Dec 07 2024](#2024-dec-07)|
+|Frame Stats|[Dec 08 2024](#2024-dec-08)|
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -223,7 +224,7 @@ Almost one fifth of the pages are not transferred on copy/paste?
 ***Bottom line:*** Both v7 + v24.8 are unable to copy then paste all components of an odt. That is a bad set of bugs.
 
 <a name="2024-dec-08"></a>
-The obvious next step was to try to identify what was causing so many Frame errors during copying. The following was collected under 24.8.3.2:
+Frames had the largest proportion of errors ( 57%). So, the obvious next step was to try to identify what was causing so many Frame errors during copying. The following stats were collected under 24.8.3.2:
 ### Frame Stats
 | Serial |Page | Name | Image | Table | Sidebar | Drawing Object |
 |---:|:---: |:---:|:---:|:---:|:---:|:---:|
@@ -232,8 +233,29 @@ The obvious next step was to try to identify what was causing so many Frame erro
 |3| p033 |figure 1.4 |✔| | | |
 |4| p032 |figure 1.3 |✔| | | |
 |5| p066 |Table 2.7 | | ✔| | |
-|2| p017 |figure 1.2 |✔| | | |
-|2| p017 |figure 1.2 |✔| | | |
+|6| p069 |figure 2.1 |✔| | | |
+|7| p071 |figure 2.3 |✔| | | |
+|8| p070 |figure 2.2 |✔| | | |
+|9| p071 |figure 2.4 |✔| | | |
+|10| p099 |figure 2.7 |✔| | | |
+|11| p116 |Deleting Items… || |✔| |
+|12| p122 |figure 3.3 || | |✔|
+|13| p123 |figure 3.4 |✔| | | |
+|14| p128 |figure 3.5-d3 || | |✔|
+|15| p128 |figure 3.5-d2 || | |✔|
+|16| p128 |figure 3.5-d1 || | |✔|
+|17| p128 |figure 3.5-d6 || | |✔|
+|18| p128 |figure 3.5-d4 || | |✔|
+|19| p128 |figure 3.5-d5 || | |✔|
+|20| p128 |figure 3.5-d7 || | |✔|
+|21| p130 |Table 3.3 | | ✔| | |
+|22| p132 |Read Write… || |✔| |
+|23| p142 |Table 3.4 | | ✔| | |
+|24| p166 |figure 4.1 |✔| | | |
+|25| p167 |figure 4.2 |✔| | | |
+|26| p174 |Online Doc… || |✔| |
+|27| p183 |print() Fun… || |✔| |
+|28| p239 |figure 6.1 |✔| | | |
 
 
 
