@@ -224,7 +224,7 @@ Almost one fifth of the pages are not transferred on copy/paste?
 ***Bottom line:*** Both v7 + v24.8 are unable to copy then paste all components of an odt. That is a bad set of bugs.
 
 <a name="2024-dec-08"></a>
-Frames had the largest proportion of errors ( 57%). So, the obvious next step was to try to identify what was causing so many Frame errors during copying. The following stats were collected under 24.8.3.2:
+Frames had the largest proportion of failures during transfer ( 57%). So, the obvious next step was to try to identify what was causing so many Frame errors during copying. The following stats were collected under 24.8.3.2:
 > ✔ == yes, is copied fine     
 > ✘ == no, is NOT copied during copy/paste     
 ### Frame Stats
