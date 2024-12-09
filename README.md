@@ -318,12 +318,9 @@ It is obvious from the name that a Frame was originally designed to encapsulate 
 
 Checking the non-transfer Images above (all anchored to a Page) + the successfully-transferred Tables above (all anchored to a Paragraph, unlike other Tables) answers why those did / did not transfer.
 
-When I re-discover the will to live (a few cups of tea should do it) I shall checkout the properties of the other objects to find why *they* did not transfer.
+The *Sidebars* are pure-Frame items that contain text. Once again, the couple that successfully transferred are anchored to a paragraph, whilst the others are all anchored to the page. There is a pattern emerging here.
 
-
-
-## *Contact*
-Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
+I did not bother checking the Drawing Objects that were framed. I got disenchanted very early on with the way that they became hobos & wandered all over the pages, and thus converted all of them into PNG files to stop their vagrant manner.
 
 ## The Bugs
 I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
@@ -359,3 +356,6 @@ The above seems nice & simple, but the truth is messier.
 4. The “Sidebar” (which is identified as a `Frame` in the Navigator (F5)) coelesces with the Border of a Paragraph. An example can be seen on p293 of [‘3_new.pdf’](3_new.pdf). Just as with #3, this is an example of an entity within a Frame paying no attention to it's below-paragraph spacing. Possibly an identical bug.
 5. The Jump-Boxes (which are LO TextBoxes) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
 6. In contrast to #5, `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
+
+## *Contact*
+Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
