@@ -309,6 +309,8 @@ Frames had the largest proportion of failures during transfer ( 57%). So, the ob
 |77| p584 |Figure 15.7 | | ✔| | |
 |||Totals:| 25 (32%) : 22✔ 3✘ | 35 (45%) : 2✔ 33✘ | 8 (10%) : 2✔ 6✘ | 9 (12%) : 2✔ 7✘ |
 
+This fingers a *Table* that is framed as having an exceptionally high chance of NOT transferring during a copy/paste (6% success), whilst an *Image* that is copy/pasted will almost certainly transfer without a problem (88% success). Note that almost all images are auto-framed, and especially if they have a Caption. It is most disturbing that so many Sidebars fail to transfer (25% success) and so few Drawings also (22% success). A Sidebar is simply a Frame that contains text, whilst many Drawings are composed of multiple elements and thus require a Frame to keep them all in place.
+
 
 
 ## *Contact*
