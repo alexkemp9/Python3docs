@@ -308,8 +308,17 @@ Frames had the largest proportion of failures during transfer ( 57%). So, the ob
 |76| p583 |Figure 15.6 |✔| | | |
 |77| p584 |Figure 15.7 | | ✔| | |
 |||Totals:| 25 (32%) : 22✔ 3✘ | 35 (45%) : 2✔ 33✘ | 8 (10%) : 2✔ 6✘ | 9 (12%) : 2✔ 7✘ |
+### Frames
+The [current Libreoffice Help on Frames](https://help.libreoffice.org/latest/en-US/text/swriter/guide/text_frame.html) states:
+> A frame is a container for text and graphics that you can place anywhere on a page. You can also use a frame to apply a column layout to text.
 
-This fingers a *Table* that is framed as having an exceptionally high chance of NOT transferring during a copy/paste (6% success), whilst an *Image* that is copy/pasted will almost certainly transfer without a problem (88% success). Note that almost all images are auto-framed, and especially if they have a Caption. It is most disturbing that so many Sidebars fail to transfer (25% success) and so few Drawings also (22% success). A Sidebar is simply a Frame that contains text, whilst many Drawings are composed of multiple elements and thus require a Frame to keep them all in place.
+A [vital LO Wiki page on Page-Anchoring](https://wiki.documentfoundation.org/Faq/Writer/AnchoringAndPositioning) unambiguously points out that *"(page-anchored) objects present in text documents will disappear from the master documents referencing those text documents”*. Whoops. Well, it would have been nice to have been warned at the point of trying to paste / transfer, rather than just posting a Notice attached to a wall on the other side of the County.
+
+It is obvious from the name that a Frame was originally designed to encapsulate an Image (putting a *“Frame around a Picture”*). In fact, the Wiki linked above states: *“Every image that is inserted into Writer is associated or assigned to the ‘Graphics’ Frame style”*. Also, the act of adding a Caption auto-adds a Frame to the object, with the caption placed within the Frame, either above or below the object. That is then 3 frames!
+
+Checking the non-transfer Images above (all anchored to a Page) + the successfully-transferred Tables above (all anchored to a Paragraph, unlike other Tables) answers why those did / did not transfer.
+
+When I re-discover the will to live (a few cups of tea should do it) I shall checkout the properties of the other objects to find why *they* did not transfer.
 
 
 
