@@ -170,7 +170,7 @@ Here is a tabulation of the documents re: Chapter numbering; unmentioned files a
 |:---:|:---: |
 | 1_Programming-In-Python3.odt | Inoperative |
 | 2_paragraph-fixes.odt | *Drawing* as a substitute field |
-| chapter_02.odt | Operative     
+| chapter_02.odt | Operative<br>(not operative is Master documents)     
 (back-ported into chapter_00 + chapter_01) |
 ### 07 Dec 2024:
 I was dealing with so many different bugs in Writer by this stage that my head was spinning. I was having difficulty both in spotting any common theme between the bugs, and also how on earth could I sensibly & simply report them to others? Then I had a bright thought.
@@ -327,31 +327,9 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
 
->Example 1:
->> Chapter 13 Regular Expressions (begins p483 in [1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)) has 7 tables.
->
->> I placed my cursor on the last line of p481 in [1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt), held down the \<Shift> key on the keyboard, and then moved my cursor to the last line of p505. That meant that the whole of Chapter 13 was selected. I then pressed \<Ctrl>+C (copy) and moved to a new LO document. Next was to press \<Ctrl>+V (paste).
->
->> Most of Chapter 13 was pasted into the new document, but that did NOT include 6 of the tables. The only Table that was pasted was Table 13.6 (p497). That Table is NOT encapsulated in a Frame, whilst all other Tables ARE encapsulated within a Frame.
->
->> That is a Bug.
+All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames). In short, do not anchor a Frame to a page.
 
-The above seems nice & simple, but the truth is messier.
-
->Example 2:
->> Chapter 14 Introduction to Parsing (begins p507 in [1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)) has 11 tables + 4 images.
->
->> I went through a similar copy/paste as with Ch13 above: only 5 of the 15 successfully pasted after copy:
->
->> - Table 14.5 (p514) : This Table IS encapsulated in a Frame.
->> - Table 14.8 (p519) : This Table is NOT encapsulated in a Frame.
->> - Table 14.10 (p520) : This Table is NOT encapsulated in a Frame.
->> - Image 14.11 (p520) : This Image has a caption (and thus IS encapsulated in a Frame).
->> - Image 14.14 (p522) : This Image has a caption (and thus IS encapsulated in a Frame).
->
->> All other 10 tables+images are contained within a Frame & did NOT copy.
-
-2. Selecting the whole of an image caption (eg for rename) also selects the image. The 1st letter needs to be de-selected to prevent that.
+2. Selecting the whole of an image caption (eg for rename) also selects the image. If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
 3. The bottom of an image-in-frame-with-caption will coelesce with the top of a table-in-frame. In other words, the image will pay no regard to it's below-paragraph spacing. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; it is still a bug).
 4. The “Sidebar” (which is identified as a `Frame` in the Navigator (F5)) coelesces with the Border of a Paragraph. An example can be seen on p293 of [‘3_new.pdf’](3_new.pdf). Just as with #3, this is an example of an entity within a Frame paying no attention to it's below-paragraph spacing. Possibly an identical bug.
 5. The Jump-Boxes (which are LO TextBoxes) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
