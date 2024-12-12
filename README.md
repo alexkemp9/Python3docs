@@ -331,7 +331,7 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames). In short, do not anchor a Frame to a page.
-https://bugs.documentfoundation.org/show_bug.cgi?id=164307https://bugs.documentfoundation.org/show_bug.cgi?id=164307
+
 2. ([Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)) Selecting the whole of an image caption (eg for rename) also selects the image. If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
 (whilst producing a bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected then the image+caption+paragraph will all be selected). . This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
 3. ([Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)) The bottom border of an image-in-frame-with-caption will coalesce with the top inline-border of a paragraph. In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders. This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
