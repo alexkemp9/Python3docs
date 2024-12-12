@@ -121,7 +121,7 @@ Two significant steps forward on the same day:
   2. A response to a post by me within [ask.lo.org](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458) had stated that my extensive use of *Direct Paragraph Formatting* (sic) rather than *Body Text* was responsible for the increased load, since *“Direct formatting puts stress on Writer because every occurrence must be handled individually whereas style effects can be cached and reused at will”*. Such a design feature appeared to me to be rather stupid but, sure enough, experimentation seemed to show it to be true.
 
 Later Comment on ***“Direct Paragraph Formatting”*** within the [ask.lo.org answer](https://ask.libreoffice.org/t/re-my-odt-froze-my-computer-i-had-to-press-the-power-button/113458):     
-    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. That writer is obsessed with *any* use of direct format by someone asking for help, and immediately uses it as a stick to beat the questioner with. Having re-read the answer, I am now unsure as to whether that writer was referring to *Default Paragraph Style* or not.
+    At the time I read *“Direct Paragraph Formatting”* as a mis-type for *“Default Paragraph Style”*. That writer is obsessed with *any* use of direct format by someone asking for help, and immediately uses it as a stick to beat the questioner with. Having re-read the answer, I am now unsure as to whether that writer was referring to *Default Paragraph Sthttps://bugs.documentfoundation.org/show_bug.cgi?id=164307https://bugs.documentfoundation.org/show_bug.cgi?id=164307https://bugs.documentfoundation.org/show_bug.cgi?id=164307yle* or not.
 
 This is ***Libreoffice Writer Styles***:–
 
@@ -234,7 +234,7 @@ Frames had the largest proportion of failures during transfer ( 57%). So, the ob
 |1| p014 |figure 1.1 |✔| | | |
 |2| p017 |figure 1.2 |✔| | | |
 |3| p033 |figure 1.4 |✔| | | |
-|4| p032 |figure 1.3 |✔| | | |
+|4| p032 |figure 1.3 |✔| | | |https://bugs.documentfoundation.org/show_bug.cgi?id=164307
 |5| p066 |Table 2.7 | | ✘| | |
 |6| p069 |figure 2.1 |✔| | | |
 |7| p071 |figure 2.3 |✔| | | |
@@ -331,7 +331,7 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames). In short, do not anchor a Frame to a page.
-
+https://bugs.documentfoundation.org/show_bug.cgi?id=164307https://bugs.documentfoundation.org/show_bug.cgi?id=164307
 2. ([Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)) Selecting the whole of an image caption (eg for rename) also selects the image. If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
 (whilst producing a bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected then the image+caption+paragraph will all be selected). . This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
 3. ([Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)) The bottom border of an image-in-frame-with-caption will coalesce with the top inline-border of a paragraph. In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders. This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
@@ -341,7 +341,7 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 7. ([Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)) The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space. This can be viewed within [bug7.odt](./bug7.odt) + [bug7.pdf](./bug7.pdf). Note that the 2nd item is a dupe of bug#5.
 8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
 9. ([Bugzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306)) Chapter Numbers (Heading Numbers in v24.8) will only work if the Headings are inserted into the document *after* the `menu:/Tools/Chapter / Heading Numbering…` is setup. If done in the reverse order, Chapter numbers will work with neither Fields nor Heading styles.
-10. Carrying on from Bug#8, Chapter / Heading numbering does not work with Master Documents, being broken within each Master Chapter & also thoughout the Document. Whilst Chapter Numbers will show within the Master document Header as part of the *“Heading | Heading number and contents”* field, None of that number field will show as part of *Figure* nor *Table* serial-captions within the Master document, even though they are fully active in each source document. See any of 16 source documents ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt)) and the Master Document [‘Programming-In-Python3.odm’](/Programming-In-Python3.odm).
+10. ([Bugzilla 164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307)) Carrying on from Bug#9, Chapter / Heading numbering does not work with Master Documents, being broken within each Master Chapter & also thoughout the Document. Whilst Chapter Numbers will show within the Master document Header as part of the *“Heading | Heading number and contents”* field, None of that number field will show as part of *Figure* nor *Table* serial-captions within the Master document, even though they are fully active in each source document. See any of 16 source documents ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt)) and the Master Document [‘Programming-In-Python3.odm’](/Programming-In-Python3.odm).
 11. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Wot a nightmare).
 
 ## *Contact*
