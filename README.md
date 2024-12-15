@@ -156,8 +156,8 @@ It is the order in which `Chapter Numbering…` and `Heading styles` are setup t
 > * (the info above is not in any [documentation](https://help.libreoffice.org/7.4/en-US/text/swriter/01/06060000.html) that I have seen, nor known about by the [experts I consulted](https://ask.libreoffice.org/t/cannot-number-a-chapter-in-a-figure-table-caption-etc/114155/9))
 > * Note: LO v7 & earlier call the menu item `menu:/Tools/Chapter Numbering…`.  Below is the dialog:
 > * Later versions call the same menu item `menu:/Tools/Heading Numbering…`. Below is Tab#2 of the dialog:
-> ![Chapter numbering](/Screenshot_Chapter-numbering.png)     
-> ![Heading numbering](/Screenshot_Header-numbering.png)     
+> ![Chapter numbering](/screenshot_chapter-numbering.png)     
+> ![Heading numbering](/screenshot_header-numbering.png)     
 
 I setup all my Header 1, 2, 3 + 4 styles first in each document that I built, and then tried to setup Chapter Numbering (it failed every time, because that was the wrong order - see above). After a while I tried to use *“Drawing”* as a replacement field, but that is not an effective substitute.
 
