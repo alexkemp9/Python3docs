@@ -332,10 +332,29 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames). In short, do not anchor a Frame to a page.
 
-2. ([Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)) Selecting the whole of an image caption (eg for rename) also selects the image. If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
-(whilst producing a bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected then the image+caption+paragraph will all be selected). . This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
-3. ([Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)) The bottom border of an image-in-frame-with-caption will coalesce with the top inline-border of a paragraph. In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders. This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
-4. ([Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)) The bottom border of a table-in-frame will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the table-in-frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders. This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3.
+2. #### In Writer, selecting the whole of an Image caption also selects the image
+
+> [Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)
+>
+> If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
+>
+> Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
+>
+> This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
+3. #### In Writer, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
+
+> [Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)
+>
+>In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
+>
+> This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
+4. #### In Writer, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
+
+>  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
+>
+> In other words, the below-frame spacing of the table-in-frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
+>
+> This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3.
 5. #### In Writer, the bottom border of a frame will coalesce with the top inline-border of a paragraph
 
 > [Bugzilla 164302](https://bugs.documentfoundation.org/show_bug.cgi?id=164302)
