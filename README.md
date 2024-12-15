@@ -332,7 +332,7 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
-2. #### In Writer, selecting the whole of an Image caption also selects the image
+2. #### In Writer v24.8.3.2, selecting the whole of an Image caption also selects the image
 
 > [Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)
 >
@@ -341,14 +341,14 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 > Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
 >
 > This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
-3. #### In Writer, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
+3. #### In Writer v24.8.3.2, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
 
 > [Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)
 >
 >In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
 > This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
-4. #### In Writer, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
+4. #### In Writer v24.8.3.2, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
 
 >  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
 >
@@ -362,14 +362,14 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 > The bottom border of a Sidebar (which is a frame that contains text) will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
 > This can be viewed within [bug5.odt](./bug5.odt) + [bug5.pdf](./bug5.pdf), and is almost certainly a dupe of bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
-6. #### Writer TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
+6. #### Writer v24.8.3.2 TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
 
 > [Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)
 > 
 > The Jump-Boxes (which are LO TextBoxes, known as “Drawing Objects” in the *Navigator*) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
 >
 > This can be viewed within [bug6.odt](./bug6.odt) + [bug6.pdf](./bug6.pdf).
-7. #### In Writer, Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
+7. #### In Writer v24.8.3.2, Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
 
 > [Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)
 > 
@@ -377,12 +377,12 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 > 
 > This can be viewed within [bug7.odt](./bug7.odt) + [bug7.pdf](./bug7.pdf). Note that the 2nd item is a dupe of bug#5.
 8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
-9. #### In Writer, Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
+9. #### In Writer v24.8.3.2, Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
 
 > [Bugzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306)
 >
 > Chapter Numbers (Heading Numbers in v24.8) will only work if the Headings are inserted into the document *after* the `menu:/Tools/Chapter / Heading Numbering…` is setup. If done in the reverse order, Chapter numbers will work with neither Fields nor Heading styles.
-10. #### In Writer, Heading Numbering will NOT work as serial caption fields in Master Documents
+10. #### In Writer v24.8.3.2, Heading Numbering will NOT work as serial caption fields in Master Documents
 >
 > [Bugzilla 164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307)
 >
