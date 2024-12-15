@@ -391,9 +391,11 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 > See any of 16 source documents ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt)) and the Master Document [‘Programming-In-Python3.odm’](/Programming-In-Python3.odm).
 11. #### ODM pagination differs from ODT pagination (re: Headings)     
 
-> A Heading paragraph preceded by a Page Break should NOT make use of any *Above* space-setting, meaning that the top border of the Heading will be flush with the bottom of the page Header. That is exactly how all ODT (text) documents behave by default. However, ODM (master) documents behave in the reverse manner, and add top border-space in all situations. Thus ODM pagination differs from ODT pagination (disastrous in edge conditions).
+> [Bugzilla 164336](https://bugs.documentfoundation.org/show_bug.cgi?id=164336)
 >
-> A report detailing + showing this is within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
+>A Heading paragraph preceded by a Page Break should NOT make use of any *Above* space-setting, meaning that the top border of the Heading will be flush with the bottom of the page Header. That is exactly how all ODT (text) documents behave by default. However, ODM (master) documents behave in the reverse manner, and add top border-space in all situations. Thus ODM pagination differs from ODT pagination (disastrous in edge conditions).
+>
+> A report detailing + showing this bug via screenshots can be viewed within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
 12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
 
 ## *Contact*
