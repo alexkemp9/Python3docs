@@ -363,7 +363,7 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 > A Heading paragraph preceded by a Page Break should NOT make use of any *Above* space-setting, meaning that the top border of the Heading will be flush with the bottom of the page Header. That is exactly how all ODT (text) documents behave by default. However, ODM (master) documents behave in the reverse manner, and add top border-space in all situations. Thus ODM pagination differs from ODT pagination (disastrous in edge conditions).
 >
 > A report detailing + showing this is within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
-12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Wot a nightmare).
+12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
