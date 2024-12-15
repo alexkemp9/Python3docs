@@ -330,7 +330,7 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
 
-All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames). In short, do not anchor a Frame to a page.
+All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
 2. #### In Writer, selecting the whole of an Image caption also selects the image
 
