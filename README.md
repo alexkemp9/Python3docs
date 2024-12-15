@@ -317,7 +317,7 @@ A [vital LO Wiki page on Page-Anchoring](https://wiki.documentfoundation.org/Faq
 
 It is obvious from the name that a Frame was originally designed to encapsulate an Image (putting a *“Frame around a Picture”*). In fact, the Wiki linked above states: *“Every image that is inserted into Writer is associated or assigned to the ‘Graphics’ Frame style”*. Also, the act of adding a Caption auto-adds a Frame to the object, with the caption placed within the Frame, either above or below the object.
 
-Checking the non-transfer Images above (all anchored to a Page) + the successfully-transferred Tables above (all anchored to a Paragraph, unlike other Tables) answers why those did / did not transfer.
+Checking the non-transfer Images above (all anchored to a Page) + the successfully-transferred Tables above (all anchored to a Paragraph, unlike other Tables) which answers why those did / did not transfer.
 
 The *Sidebars* are pure-Frame items that contain text. Once again, the couple that successfully transferred are anchored to a paragraph, whilst the others are all anchored to the page. There is a pattern emerging here.
 
@@ -338,11 +338,32 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 4. ([Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)) The bottom border of a table-in-frame will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the table-in-frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders. This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3.
 5. ([Bugzilla 164302](https://bugs.documentfoundation.org/show_bug.cgi?id=164302)) The bottom border of a Sidebar (which is a frame that contains text) will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.  This can be viewed within [bug5.odt](./bug5.odt) + [bug5.pdf](./bug5.pdf), and is almost certainly a dupe of bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
 6. ([Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)) The Jump-Boxes (which are LO TextBoxes, known as “Drawing Objects” in the *Navigator*) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work. This can be viewed within [bug6.odt](./bug6.odt) + [bug6.pdf](./bug6.pdf).
-7. ([Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)) The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space. This can be viewed within [bug7.odt](./bug7.odt) + [bug7.pdf](./bug7.pdf). Note that the 2nd item is a dupe of bug#5.
+7. #### Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
+
+> [Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)
+> 
+> The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space.
+> 
+> This can be viewed within [bug7.odt](./bug7.odt) + [bug7.pdf](./bug7.pdf). Note that the 2nd item is a dupe of bug#5.
 8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
-9. ([Bugzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306)) Chapter Numbers (Heading Numbers in v24.8) will only work if the Headings are inserted into the document *after* the `menu:/Tools/Chapter / Heading Numbering…` is setup. If done in the reverse order, Chapter numbers will work with neither Fields nor Heading styles.
-10. ([Bugzilla 164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307)) Carrying on from Bug#9, Chapter / Heading numbering does not work with Master Documents, being broken within each Master Chapter & also thoughout the Document. Whilst Chapter Numbers will show within the Master document Header as part of the *“Heading | Heading number and contents”* field, None of that number field will show as part of *Figure* nor *Table* serial-captions within the Master document, even though they are fully active in each source document. See any of 16 source documents ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt)) and the Master Document [‘Programming-In-Python3.odm’](/Programming-In-Python3.odm).
-11. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Wot a nightmare).
+9. #### In Writer Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
+
+> [Bugzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306)
+>
+> Chapter Numbers (Heading Numbers in v24.8) will only work if the Headings are inserted into the document *after* the `menu:/Tools/Chapter / Heading Numbering…` is setup. If done in the reverse order, Chapter numbers will work with neither Fields nor Heading styles.
+10. #### In contrast to [Buzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306), Heading Numbering will not work correctly in the Master Document
+>
+> [Bugzilla 164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307)
+>
+> Carrying on from Bug#9, Chapter / Heading numbering does not work with Master Documents, being broken within each Master Chapter & also thoughout the Document. Whilst Chapter Numbers will show within the Master document Header as part of the *“Heading | Heading number and contents”* field, None of that number field will show as part of *Figure* nor *Table* serial-captions within the Master document, even though they are fully active in each source document.
+>
+> See any of 16 source documents ([‘chapter_00.odt’](/chapter_00.odt) to  ([‘chapter_15.odt’](/chapter_15.odt)) and the Master Document [‘Programming-In-Python3.odm’](/Programming-In-Python3.odm).
+11. #### ODM pagination differs from ODT pagination (re: Headings)     
+
+> A Heading paragraph preceded by a Page Break should NOT make use of any *Above* space-setting, meaning that the top border of the Heading will be flush with the bottom of the page Header. That is exactly how all ODT (text) documents behave by default. However, ODM (master) documents behave in the reverse manner, and add top border-space in all situations. Thus ODM pagination differs from ODT pagination (disastrous in edge conditions).
+>
+> A report detailing + showing this is within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
+12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Wot a nightmare).
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
