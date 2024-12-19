@@ -332,7 +332,9 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
-***Dec 19 Update:*** The *“List of Tables, Sidebars + Figures”* in the Master Document ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) has had duplications throughout the end of the list. I could find no reason why until yesterday. Whilst updating page-links in *Chapter 10* (starts p445) I discovered that the 3 Images in that chapter were missing from the Master Document. Sure enough, all 3 were anchored to the Page rather than a paragraph, etc.. Changing the anchorage for all 3 + re-updating not only restored the images to the document, but also removed all the duplicates from the Tables’ list. I now need to re-find how I managed to originally add Sidebars within that List & it will be good to go.
+***Dec 19 Update:*** The *“List of Tables, Sidebars + Figures”* in the Master Document ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) has had duplications throughout the end of the list. I could find no reason why until yesterday. Whilst updating page-links in *Chapter 10* (starts p445) I discovered that the 3 Images in that chapter were missing from the Master Document. Sure enough, all 3 were anchored to the Page. Changing the anchorage for all 3 + re-updating not only restored the images to the document but also removed all dupes from the Tables’ list.
+
+If I can now re-find how I originally managed  add Sidebars within that List it will be good to go.
 
 2. #### In Writer v24.8.3.2, selecting the whole of an Image caption also selects the image
 
