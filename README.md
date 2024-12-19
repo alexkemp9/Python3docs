@@ -317,7 +317,7 @@ A [vital LO Wiki page on Page-Anchoring](https://wiki.documentfoundation.org/Faq
 
 It is obvious from the name that a Frame was originally designed to encapsulate an Image (putting a *“Frame around a Picture”*). In fact, the Wiki linked above states: *“Every image that is inserted into Writer is associated or assigned to the ‘Graphics’ Frame style”*. Also, the act of adding a Caption auto-adds a Frame to the object, with the caption placed within the Frame, either above or below the object.
 
-Checking the non-transfer Images above (all anchored to a Page) + the successfully-transferred Tables above (all anchored to a Paragraph, unlike other Tables) which answers why those did / did not transfer.
+Checking the non-transfer Images above, all were anchored to a Page. The successfully-transferred Tables above were all anchored to a Paragraph yet other Tables were not. This all answers why those items did (or did not) transfer.
 
 The *Sidebars* are pure-Frame items that contain text. Once again, the couple that successfully transferred are anchored to a paragraph, whilst the others are all anchored to the page. There is a pattern emerging here.
 
@@ -332,11 +332,15 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
+***Dec 19 Update:*** The *“List of Tables, Sidebars + Figures”* in the Master Document ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) has had duplications throughout the end of the list. I could find no reason why until yesterday. Whilst updating page-links in *Chapter 10* (starts p445) I discovered that the 3 Images in that chapter were missing from the Master Document. Sure enough, all 3 were anchored to the Page rather than a paragraph, etc.. Changing the anchorage for all 3 + re-updating not only restored the images to the document, but also removed all the duplicates from the Tables’ list. I now need to re-find how I managed to originally add Sidebars within that List & it will be good to go.
+
 2. #### In Writer v24.8.3.2, selecting the whole of an Image caption also selects the image
 
 > [Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)
 >
 > If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
+>
+> The Caption is enclosed within a Frame and should, therefore, be isolated from the Image (which also has it’s own Frame). Most certainly, any human Editor would expect to be able to be able to delete the Caption contents & leave the Image untouched. Somehow, the Caption text entity bleeds into the Image entity and that makes no sense. This is rather like selecting a single word in a sentence & then discovering that the system has selected the entire paragraph for you. In my mind, Frames should isolate entities one from the other, yet they appear to be performing the reverse act.
 >
 > Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
 >
