@@ -1,0 +1,35 @@
+(1st example page)
+⎡---<paragraph#1>
+|  ⎡---<frame#1(Picture+Caption)
+|  |  ⎡---<text-box#1>
+|  |  |  ⎡---<paragraph#2>
+|  |  |  |  ⎡---<frame#2(Picture)
+|  |  |  |  |  ---<image />
+|  |  |  |  ⎣---</frame#2>
+|  |  |  |     ⎡---<caption>(7 xml lines)
+|  |  |  |     ⎣---</caption>
+|  |  |  ⎣---</para#2>
+|  |  ⎣---</text-box#1>
+|  ⎣---</frame#1>
+⎣---</para#1>
+
+(last example page)
+⎡---<paragraph#1>
+|  ⎡---<frame#1(Picture+Caption)
+|  |  ⎡---<text-box#1>
+|  |  |  ⎡---<paragraph#2>
+|  |  |  |  ⎡---<frame#2(Picture)
+|  |  |  |  |  ---<image />
+|  |  |  |  ⎣---</frame#2>
+|  |  |  |     ⎡---<caption>(7 xml lines)
+|  |  |  |     ⎣---</caption>
+|  |  |  ⎣---</para#2>
+|  |  ⎣---</text-box#1>
+|  ⎣---</frame#1>
+|  x = "blue"
+⎣---</para#1>
+ ---<paragraph#3>y = "green"</para#3>
+ ---<paragraph#4>z = x</para#4>
+ ---<paragraph#5/>
+
+Diff of last page is that 1st line of text paragraph begins *before* close of image+caption paragraph. The rest is last 2 lines of text + closing paragraph#5 (for document).
