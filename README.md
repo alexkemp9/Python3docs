@@ -6,7 +6,8 @@ In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreo
 
 The above was all under LibreOffice v7.4.7.2.
   * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
-  * On [Nov 09](#09-nov-2024) the AppImage v7.2.3.2 finally gave error-free access to all ODTs.
+  * On [Nov 09](#2024-nov-09) the AppImage v7.2.3.2 finally gave mostly error-free access to all ODTs.
+  * On [Dec 22](#2024-dec-22) the AppImage v6.1.0.3 finally gave mostly bug-free access to all ODTs.
 
 ***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
 
@@ -75,13 +76,34 @@ total 927764
 -rwxr-xr-x 2 root  root  334357696 Nov 14 12:47 lo-24.8.AppImage
 -rwxr-xr-x 1 root  root  280609984 May 22  2024 lo-7.2.AppImage
 ```
+<a name="2024-dec-22"></a>
+The 2nd response to [BugZilla #164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295) suggested that LO-6.1.0.0 was bug-free, that the latest 25.2.0.0.beta1+ version is still affected + that the bad commit was made in 2019 at LO-6.5.
 
+soluzioniopen.com contains a large list of [LibreOffice old-version AppImages](https://libreoffice.soluzioniopen.com/old-versions/). On December 22 I installed the v6.1.0.3 AppImage. The old-style graphics were a little jarring, but it was *very* pleasant to be running a version of LibreOffice that was NOT riddled with bugs that are *“working as designed”* (Bug#2 is absent in that version, although the Frame error of Bug#3 is still present - see [The Bugs](#the-bugs)).
+
+These are the relevant files within /usr/local/bin:
+```
+$ la /usr/local/bin/*AppImage
+-rwxr-xr-x 2 root root 334357696 Nov 14 12:47 /usr/local/bin/LibreOffice-24.8.3.2.standard-x86_64.AppImage
+-rwxr-xr-x 2 root root 334357696 Nov 14 12:47 /usr/local/bin/lo-24.8.AppImage
+-rwxr-xr-x 1 root root 230778952 Aug  8  2018 /usr/local/bin/lo-6.1.AppImage
+-rwxr-xr-x 1 root root 280609984 May 22  2024 /usr/local/bin/lo-7.2.AppImage
+```
+
+…and these are the relevant files within /usr/share/applications:
+```
+$ la /usr/share/applications/lo*
+-rw-r--r-- 1 root root 21770 Nov  8 11:03 /usr/share/applications/lo-24.8-startcenter.desktop
+-rw-r--r-- 1 root root 21762 Dec 22 10:59 /usr/share/applications/lo-6.1-startcenter.desktop
+-rw-r--r-- 1 root root 21762 Nov  8 11:13 /usr/share/applications/lo-7.2-startcenter.desktop
+```
+The main usage-warning with multiple LO AppImages is to be careful that you shutdown completely from one version of LibreOffice before switching to another version, else you may suffer LO or even system-freeze.
 
 ## *Timeline*
 Here is a timeline of production of each of these documents, and how they are linked to each other.
 <a name="2024-august-00"></a>
 ### August 2024:
-* [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`     
+* The ultimate production of the Master Document: “Programming-In-Python3” ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) began with [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf) obtained at `https://cs.smu.ca/~porter/csc/227/ProgrammingInPython3.pdf`     
   (I wanted to learn Python 3)     
 > Note:
 <a name="2024-august-01"></a>
