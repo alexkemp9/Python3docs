@@ -77,9 +77,9 @@ total 927764
 -rwxr-xr-x 1 root  root  280609984 May 22  2024 lo-7.2.AppImage
 ```
 <a name="2024-dec-22"></a>
-The 2nd response to [BugZilla #164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295) suggested that LO-6.1.0.0 was bug-free, that the latest 25.2.0.0.beta1+ version is still affected + that the bad commit was made in 2019 at LO-6.5.
+The 2nd response to [BugZilla #164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295) suggested that LO-6.1.0.0.alpha0+ was bug-free, that the latest 25.2.0.0.beta1+ version is still affected + that the bad commit was made in Dec 2019 at LO-6.5.
 
-soluzioniopen.com contains a large list of [LibreOffice old-version AppImages](https://libreoffice.soluzioniopen.com/old-versions/). On December 22 I installed the v6.1.0.3 AppImage. The old-style graphics were a little jarring, but it was *very* pleasant to be running a version of LibreOffice that was NOT riddled with bugs that are *“working as designed”* (Bug#2 is absent in that version, although the Frame error of Bug#3 is still present - see [The Bugs](#the-bugs)).
+soluzioniopen.com contains a large list of [LibreOffice old-version AppImages](https://libreoffice.soluzioniopen.com/old-versions/). On December 22 I installed the v6.1.0.3 AppImage. The old-style graphics were a little jarring, but it was *very* pleasant to be running a version of LibreOffice that was NOT riddled with bugs that are *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)”*. Bug#2 ([pdf](./bug02%2B.pdf)) is absent in that version, although the Frame error of Bug#3 ([pdf](./bug03.pdf)) is present, meaning that it pre-dates the Caption bug - see [The Bugs](#the-bugs).
 
 These are the relevant files within /usr/local/bin:
 ```
@@ -336,7 +336,7 @@ The [current Libreoffice Help on Frames](https://help.libreoffice.org/latest/en-
 
 A [vital LO Wiki page on Page-Anchoring](https://wiki.documentfoundation.org/Faq/Writer/AnchoringAndPositioning) unambiguously points out that *"(page-anchored) objects present in text documents will disappear from the master documents referencing those text documents”*. Whoops. Well, it would have been nice to have been warned at the point of trying to paste / transfer, rather than just posting a Notice attached to a wall on the other side of the County.
 
-It is obvious from the name that a Frame was originally designed to encapsulate an Image (putting a *“Frame around a Picture”*). In fact, the Wiki linked above states: *“Every image that is inserted into Writer is associated or assigned to the ‘Graphics’ Frame style”*. Also, the act of adding a Caption auto-adds a Frame to the object, with the caption placed within the Frame, either above or below the object.
+It is obvious from the name that a Frame was originally designed to encapsulate an Image (putting a *“Frame around a Picture”*). In fact, the Wiki linked above states: *“Every image that is inserted into Writer is associated or assigned to the ‘Graphics’ Frame style”*. Also, the act of adding a Caption auto-adds a Frame to the object, with the caption placed within the Frame, either above or below the object. That does mean that every Image+Caption will auto-contain 2 Frames (and also 2 paragraphs + a text-box).
 
 Checking the non-transfer Images above, all were anchored to a Page. The successfully-transferred Tables above were all anchored to a Paragraph yet other Tables were not. This all answers why those items did (or did not) transfer.
 
