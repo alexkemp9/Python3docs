@@ -349,7 +349,7 @@ Use [the link](https://bugs.documentfoundation.org/enter_bug.cgi?product=LibreOf
 
 I wrote down some of the LO Bugs that I was experiencing, but only after the show-stopping bug. Here's my record:
 
-1. Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied.
+1. ~~Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied~~.
 
 All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
