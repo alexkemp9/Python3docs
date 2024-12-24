@@ -15,7 +15,7 @@ Note that my Devuan is currently Linux 5 daedalus, based on Debian stable, kerne
 
 It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to switch view to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
 
-**7 Nov update:** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
+***7 Nov update:*** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### Index:
 | The Files (1<sup>st</sup> Attempt at Production) | Information Link |
@@ -77,7 +77,7 @@ total 927764
 -rwxr-xr-x 1 root  root  280609984 May 22  2024 lo-7.2.AppImage
 ```
 <a name="2024-dec-22"></a>
-**22 Dec update:** The 2nd response to [BugZilla #164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295) said that LO-6.1.0.0.alpha0+ is bug-free, that the latest 25.2.0.0.beta1+ version is still affected + that the bad commit was made in Dec 2019 at LO-6.5. Hmm. 5 years with zero fix for the image Caption error.
+***22 Dec update:*** The 2nd response to [BugZilla #164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295) said that LO-6.1.0.0.alpha0+ is bug-free, that the latest 25.2.0.0.beta1+ version is still affected + that the bad commit was made in Dec 2019 at LO-6.5. Hmm. 5 years with zero fix for the image Caption error.
 
 soluzioniopen.com contains a large list of [LibreOffice old-version AppImages](https://libreoffice.soluzioniopen.com/old-versions/). On December 22 I installed the v6.1.0.3 AppImage. The old-style graphics were a little jarring, but it was *very* pleasant to be running a version of LibreOffice that was NOT riddled with bugs that are *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)™”*. Bug#2 ([pdf](./bug02%2B.pdf)) is absent in that version, although the Frame error of Bug#3 ([pdf](./bug03.pdf)) *is* present, meaning that it pre-dates the Caption bug - see [The Bugs](#the-bugs).
 
