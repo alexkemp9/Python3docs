@@ -1,7 +1,24 @@
-(1st example page)
+Keys
+----
+caption  == image+caption   (ex1 + 3 + 4)
+frame1   == image+caption   (ex1 + 3 + 4)
+frame2   == image+caption   (ex1 + 3 + 4)
+image    == image+caption   (ex1 + 3 + 4)
+para1    == image+caption   (ex1 + 3 + 4)
+para2    == image+caption   (ex1 + 3 + 4)
+para3    == plain text      (ex2)
+para4    == Code Box line 1 (ex2 + 3)
+para5    == Code Box line 2 (ex2 + 3 + 4)
+para6    == Code Box line 3 (ex2 + 3 + 4)
+para7    == plain text      (ex3, close para only)
+text-box == image+caption   (ex1 + 3 + 4)
+
+
+(1st example page:- image+caption only)
+---------------------------------------
 ⎡---<paragraph#1>
 |  ⎡---<frame#1(Picture+Caption)
-|  |  ⎡---<text-box#1>
+|  |  ⎡---<text-box>
 |  |  |  ⎡---<paragraph#2>
 |  |  |  |  ⎡---<frame#2(Picture)
 |  |  |  |  |  ---<image />
@@ -9,14 +26,26 @@
 |  |  |  |     ⎡---<caption>(7 xml lines)
 |  |  |  |     ⎣---</caption>
 |  |  |  ⎣---</para#2>
-|  |  ⎣---</text-box#1>
+|  |  ⎣---</text-box>
 |  ⎣---</frame#1>
 ⎣---</para#1>
 
-(last example page)
+
+(2nd example page:- 1 line of plain text + 3 lines of Code Box 2 text)
+----------------------------------------------------------------------
+<paragraph#3>
+Let’s look at a few tiny examples, and then discuss some of the details:
+</para#3>
+<paragraph#4>x = "blue"</para#4>
+<paragraph#5>y = "green"</para#5>
+<paragraph#6>z = x</para#6>
+
+
+(3rd example page:- image+caption + 1 line of plain text + 3 lines of Code Box 2 text)
+--------------------------------------------------------------------------------------
 ⎡---<paragraph#1>
 |  ⎡---<frame#1(Picture+Caption)
-|  |  ⎡---<text-box#1>
+|  |  ⎡---<text-box>
 |  |  |  ⎡---<paragraph#2>
 |  |  |  |  ⎡---<frame#2(Picture)
 |  |  |  |  |  ---<image />
@@ -24,12 +53,31 @@
 |  |  |  |     ⎡---<caption>(7 xml lines)
 |  |  |  |     ⎣---</caption>
 |  |  |  ⎣---</para#2>
-|  |  ⎣---</text-box#1>
+|  |  ⎣---</text-box>
+|  ⎣---</frame#1>
+⎣---</para#1>
+Let’s look at a few tiny examples, and then discuss some of the details:
+</para#7>
+<paragraph#4>x = "blue"</para#4>
+<paragraph#5>y = "green"</para#5>
+<paragraph#6>z = x</para#6>
+
+
+(4th example page:- image+caption + 3 lines of Code Box 2 text)
+---------------------------------------------------------------
+⎡---<paragraph#1>
+|  ⎡---<frame#1(Picture+Caption)
+|  |  ⎡---<text-box>
+|  |  |  ⎡---<paragraph#2>
+|  |  |  |  ⎡---<frame#2(Picture)
+|  |  |  |  |  ---<image />
+|  |  |  |  ⎣---</frame#2>
+|  |  |  |     ⎡---<caption>(7 xml lines)
+|  |  |  |     ⎣---</caption>
+|  |  |  ⎣---</para#2>
+|  |  ⎣---</text-box>
 |  ⎣---</frame#1>
 |  x = "blue"
 ⎣---</para#1>
- ---<paragraph#3>y = "green"</para#3>
- ---<paragraph#4>z = x</para#4>
- ---<paragraph#5/>
-
-Diff of last page is that 1st line of text paragraph begins *before* close of image+caption paragraph. The rest is last 2 lines of text + closing paragraph#5 (for document).
+ ---<paragraph#5>y = "green"</para#5>
+ ---<paragraph#6>z = x</para#6>
