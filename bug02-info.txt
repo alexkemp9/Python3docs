@@ -6,7 +6,7 @@ frame2   == image+caption  : p1 + 3 + 4
 image    == image+caption  : p1 + 3 + 4
 para1    == image+caption  : p1 + 3 + 4
 para2    == image+caption  : p1 + 3 + 4
-para3    == plain text     :(ex2)
+para3    == plain text     : p2
 para4    == Code Box line 1: p2 + 3
 para5    == Code Box line 2: p2 + 3 + 4
 para6    == Code Box line 3: p2 + 3 + 4
@@ -31,8 +31,8 @@ Example page#1:- image+caption only
 ⎣---</para#1>
 
 Encapsulations: image+caption:
-image  : p1◦fr1◦tb◦p2◦fr2◦< image >◦ fr2◦p2◦tb◦fr1◦p1◦
-caption: p1◦fr1◦tb◦p2◦    <caption>◦     p2◦tb◦fr1◦p1◦
+image  : p1◦ fr1◦tb◦p2◦fr2◦< image > ◦fr2◦p2◦tb◦fr1 ◦p1
+caption: p1◦ fr1◦tb◦p2◦    <caption>     ◦p2◦tb◦fr1 ◦p1
 
 
 Example page#2:- 1 line of plain text + 3 lines of Code Box 2 text
