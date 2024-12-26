@@ -357,17 +357,24 @@ All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frame
 
 If I can now re-find how I originally managed  add Sidebars within that List it will be good to go.
 
+### Bug #2
+
 2. #### In Writer v24.8.3.2, selecting the whole of an Image caption also selects the image
 
-> [Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)
+> [Bugzilla – Bug 164295](https://bugs.documentfoundation.org/show_bug.cgi?id=164295)
 >
-> If the caption is then deleted the image itself will also be deleted. The 1st letter needs to be de-selected to prevent that.
+> If the caption is then deleted the image itself will also be deleted.
 >
-> The Caption is enclosed within a Frame and should, therefore, be isolated from the Image (which also has it’s own Frame). Most certainly, any human Editor would expect to be able to be able to delete the Caption contents & leave the Image untouched. Somehow, the Caption text entity bleeds into the Image entity and that makes no sense. This is rather like selecting a single word in a sentence & then discovering that the system has selected the entire paragraph for you. In my mind, Frames should isolate entities one from the other, yet they appear to be performing the reverse act.
+> The Caption position relative to the Image is decided by a Frame that encloses the image. In their turn, both caption + framed image are enclosed within a Paragraph, and that paragraph is enclosed within a Text-box and, just in case you did NOT think that this was beginning to sound just like a Russian Doll, the text-box is also Framed.
+>
+> The image Frame is *supposed* to isolate image from caption and, most certainly, any human Editor would expect to be able to delete the Caption contents & leave the Image untouched. Somehow, the Caption text entity bleeds into the Image entity and that makes no sense. This is rather like selecting a single word in a sentence & then discovering that the system has selected the entire paragraph for you. In my mind, Frames should isolate entities one from the other, yet they appear to be performing the reverse act.
 >
 > Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
 >
 > This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
+
+The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3 significant responses and, if you have to this point been unable to understand why LibreOffice has been riddled with bugs for the last 5 years, you are about to discover the reason why:-
+
 3. #### In Writer v24.8.3.2, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
 
 > [Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)
