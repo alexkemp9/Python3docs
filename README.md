@@ -381,7 +381,7 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 - 2024-12-16: ***raal***: LO 6.1.0.0.alpha0+ unaffected by the bug
 - 2024-12-16: ***raal***: Bug began at commit 6.5 on Fri Dec 6 14:04:55 2019 +0100
   (raal asks Michael Stahl to take a look)
-- 2024-12-17: **Stahl***: this is working as designed.
+- 2024-12-17: ***Stahl***: this is working as designed.
 
 3. #### In Writer v24.8.3.2, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
 
