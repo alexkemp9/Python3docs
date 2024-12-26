@@ -37,6 +37,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Copy Errors|[Dec 07 2024](#2024-dec-07)|
 |Frame Stats|[Dec 08 2024](#2024-dec-08)|
 |Bug Docs|[Dec 10 2024](#the-bugs)|
+| Bug#02 | [Dec 26 2024](#bug-02)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -357,7 +358,7 @@ Many bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](
 
 If I can now re-find how I originally managed  add Sidebars within that List it will be good to go.
 
-### Bug #2
+### Bug #02
 
 2. #### In Writer v24.8.3.2, selecting the whole of an Image caption also selects the image
 
@@ -371,7 +372,7 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 >
 > Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
 >
-> ***Dec 2619 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
+> ***Dec 26 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
 > 
 > This can be viewed within [bug02.odt](./bug02.odt) + [bug02.pdf](./bug02.pdf); extended updates within [bug2+.odt](./bug02%2B.odt) + [bug2+.pdf](./bug02%2B.pdf)
 
