@@ -351,7 +351,7 @@ I wrote down some of the LO Bugs that I was experiencing, but only after the sho
 
 1. ~~Copy + Paste sometimes omits Tables. It seems that only Tables that are NOT encapsulated with a Frame will be copied~~.
 
-All the bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
+Many bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](#frames)). In short, do not anchor a Frame to a page.
 
 ***Dec 19 Update:*** The *“List of Tables, Sidebars + Figures”* in the Master Document ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) has had duplications throughout the end of the list. I could find no reason why until yesterday. Whilst updating page-links in *Chapter 10* (starts p445) I discovered that the 3 Images in that chapter were missing from the Master Document. Sure enough, all 3 were anchored to the Page. Changing the anchorage for all 3 + re-updating not only restored the images to the document but also removed all dupes from the Tables’ list.
 
@@ -365,15 +365,22 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 >
 > If the caption is then deleted the image itself will also be deleted.
 >
-> The Caption position relative to the Image is decided by a Frame that encloses the image. In their turn, both caption + framed image are enclosed within a Paragraph, and that paragraph is enclosed within a Text-box and, just in case you did NOT think that this was beginning to sound just like a Russian Doll, the text-box is also Framed.
+> The Caption position relative to the Image is decided by a Frame that encloses the image. In their turn, both caption + framed image are enclosed within a Paragraph, and that paragraph is enclosed within a Text-Box and, just in case you did NOT realise that this is just like a Russian Doll, the text-box is also Framed.
 >
 > The image Frame is *supposed* to isolate image from caption and, most certainly, any human Editor would expect to be able to delete the Caption contents & leave the Image untouched. Somehow, the Caption text entity bleeds into the Image entity and that makes no sense. This is rather like selecting a single word in a sentence & then discovering that the system has selected the entire paragraph for you. In my mind, Frames should isolate entities one from the other, yet they appear to be performing the reverse act.
 >
 > Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
 >
-> This can be viewed within [bug2.odt](./bug2.odt) + [bug2.pdf](./bug2.pdf).
+> ***Dec 2619 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
+> 
+> This can be viewed within [bug02.odt](./bug02.odt) + [bug02.pdf](./bug02.pdf); extended updates within [bug2+.odt](./bug02%2B.odt) + [bug2+.pdf](./bug02%2B.pdf)
 
-The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3 significant responses and, if you have to this point been unable to understand why LibreOffice has been riddled with bugs for the last 5 years, you are about to discover the reason why:-
+The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3 significant responses and, if you have to this point been unable to understand why LibreOffice has been riddled with bugs for the last 5 years, you are about to discover the reason why:-     
+- 2024-12-16: ***raal***: LO 25.2.0.0.beta1+ still affected by this bug
+- 2024-12-16: ***raal***: LO 6.1.0.0.alpha0+ unaffected by the bug
+- 2024-12-16: ***raal***: Bug began at commit 6.5 on Fri Dec 6 14:04:55 2019 +0100
+  (raal asks Michael Stahl to take a look)
+- 2024-12-17: **Stahl***: this is working as designed.
 
 3. #### In Writer v24.8.3.2, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
 
@@ -381,7 +388,7 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >
 >In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
-> This can be viewed within [bug3.odt](./bug3.odt) + [bug3.pdf](./bug3.pdf).
+> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).
 4. #### In Writer v24.8.3.2, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
 
 >  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
@@ -395,21 +402,21 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >
 > The bottom border of a Sidebar (which is a frame that contains text) will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
-> This can be viewed within [bug5.odt](./bug5.odt) + [bug5.pdf](./bug5.pdf), and is almost certainly a dupe of bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
+> This can be viewed within [bug05.odt](./bug05.odt) + [bug05.pdf](./bug05.pdf), and is almost certainly a dupe of bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
 6. #### Writer v24.8.3.2 TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
 
 > [Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)
 > 
 > The Jump-Boxes (which are LO TextBoxes, known as “Drawing Objects” in the *Navigator*) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
 >
-> This can be viewed within [bug6.odt](./bug6.odt) + [bug6.pdf](./bug6.pdf).
+> This can be viewed within [bug06.odt](./bug06.odt) + [bug06.pdf](./bug06.pdf).
 7. #### In Writer v24.8.3.2, Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
 
 > [Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)
 > 
 > The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space.
 > 
-> This can be viewed within [bug7.odt](./bug7.odt) + [bug7.pdf](./bug7.pdf). Note that the 2nd item is a dupe of bug#5.
+> This can be viewed within [bug07.odt](./bug07.odt) + [bug07.pdf](./bug07.pdf). Note that the 2nd item is a dupe of bug#5.
 8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
 9. #### In Writer v24.8.3.2, Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
 
