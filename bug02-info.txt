@@ -1,21 +1,21 @@
-Keys
-----
-caption  == image+caption   (ex1 + 3 + 4)
-frame1   == image+caption   (ex1 + 3 + 4)
-frame2   == image+caption   (ex1 + 3 + 4)
-image    == image+caption   (ex1 + 3 + 4)
-para1    == image+caption   (ex1 + 3 + 4)
-para2    == image+caption   (ex1 + 3 + 4)
-para3    == plain text      (ex2)
-para4    == Code Box line 1 (ex2 + 3)
-para5    == Code Box line 2 (ex2 + 3 + 4)
-para6    == Code Box line 3 (ex2 + 3 + 4)
-para7    == plain text      (ex3, close para only)
-text-box == image+caption   (ex1 + 3 + 4)
+Keys                         Pages
+========---------------------==========
+caption  == image+caption  : p1 + 3 + 4
+frame1   == image+caption  : p1 + 3 + 4
+frame2   == image+caption  : p1 + 3 + 4
+image    == image+caption  : p1 + 3 + 4
+para1    == image+caption  : p1 + 3 + 4
+para2    == image+caption  : p1 + 3 + 4
+para3    == plain text     :(ex2)
+para4    == Code Box line 1: p2 + 3
+para5    == Code Box line 2: p2 + 3 + 4
+para6    == Code Box line 3: p2 + 3 + 4
+para7    == plain text     : p3; close para only
+text-box == image+caption  : p1 + 3 + 4
 
 
-(1st example page:- image+caption only)
----------------------------------------
+Example page#1:- image+caption only
+===================================
 ⎡---<paragraph#1>
 |  ⎡---<frame#1(Picture+Caption)
 |  |  ⎡---<text-box>
@@ -30,9 +30,13 @@ text-box == image+caption   (ex1 + 3 + 4)
 |  ⎣---</frame#1>
 ⎣---</para#1>
 
+Encapsulations: image+caption:
+image  : p1◦fr1◦tb◦p2◦fr2◦< image >◦ fr2◦p2◦tb◦fr1◦p1◦
+caption: p1◦fr1◦tb◦p2◦    <caption>◦     p2◦tb◦fr1◦p1◦
 
-(2nd example page:- 1 line of plain text + 3 lines of Code Box 2 text)
-----------------------------------------------------------------------
+
+Example page#2:- 1 line of plain text + 3 lines of Code Box 2 text
+==================================================================
 <paragraph#3>
 Let’s look at a few tiny examples, and then discuss some of the details:
 </para#3>
@@ -40,9 +44,11 @@ Let’s look at a few tiny examples, and then discuss some of the details:
 <paragraph#5>y = "green"</para#5>
 <paragraph#6>z = x</para#6>
 
+Encapsulations: 4 lines of text
+Text   : <t3>◦<t4>◦<t5>◦<t6>◦
 
-(3rd example page:- image+caption + 1 line of plain text + 3 lines of Code Box 2 text)
---------------------------------------------------------------------------------------
+Example page#3:- image+caption + 1 line of plain text + 3 lines of Code Box 2 text
+==================================================================================
 ⎡---<paragraph#1>
 |  ⎡---<frame#1(Picture+Caption)
 |  |  ⎡---<text-box>
@@ -62,9 +68,17 @@ Let’s look at a few tiny examples, and then discuss some of the details:
 <paragraph#5>y = "green"</para#5>
 <paragraph#6>z = x</para#6>
 
+Encapsulations: image+caption+4 lines of text:
+image  : p1◦fr1◦tb◦p2◦fr2◦< image >◦ fr2◦p2◦tb◦fr1◦p1◦
+caption: p1◦fr1◦tb◦p2◦    <caption>◦     p2◦tb◦fr1◦p1◦
+Text   : t3 p7◦<t4>◦<t5>◦<t6>◦
 
-(4th example page:- image+caption + 3 lines of Code Box 2 text)
----------------------------------------------------------------
+Note: t3 is bare text; it has no opening paragraph
+    : p7 has zero opening paragraph, only closing para
+
+
+Example page#4:- image+caption + 3 lines of Code Box 2 text
+===========================================================
 ⎡---<paragraph#1>
 |  ⎡---<frame#1(Picture+Caption)
 |  |  ⎡---<text-box>
@@ -81,3 +95,10 @@ Let’s look at a few tiny examples, and then discuss some of the details:
 ⎣---</para#1>
  ---<paragraph#5>y = "green"</para#5>
  ---<paragraph#6>z = x</para#6>
+
+Encapsulations: image+caption+4 lines of text:
+image  : p1◦fr1◦tb◦p2◦fr2◦< image >◦ fr2◦p2◦tb◦fr1◦t4 p1◦
+caption: p1◦fr1◦tb◦p2◦    <caption>◦     p2◦tb◦fr1◦t4 p1◦
+Text   : t4 p1◦<t5>◦<t6>◦
+
+Note: t4 has zero opening nor closing paragraph, only bare text; it has been 'captured' by the image+caption entity & does not belong there
