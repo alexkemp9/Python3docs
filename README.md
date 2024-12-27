@@ -5,10 +5,10 @@
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
 The above was all under LibreOffice v7.4.7.2.
-  * On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
-  * On [Nov 09](#2024-nov-09) the AppImage v7.2.3.2 finally gave mostly error-free access to all ODTs.
-  * On [Dec 22](#2024-dec-22) the AppImage v6.1.0.3 finally gave mostly bug-free access to all ODTs.
-  * On [Dec 26](##bug-02) AppImages v5.0.6.3 and v4.0.0.3 both proved to be affected by Bug03. Not good for 7⅓ years. But not to worry: LibreOffice is *“working as designed”*™.
+  - On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
+  - On [Nov 09](#2024-nov-09) the AppImage v7.2.3.2 finally gave mostly error-free access to all ODTs.
+  - On [Dec 22](#2024-dec-22) the AppImage v6.1.0.3 finally gave mostly bug-free access to all ODTs.
+  - On [Dec 26](#bug-02) AppImages v5.0.6.3 and v4.0.0.3 both proved to be affected by Bug03. Not good for 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
 
 ***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
 
