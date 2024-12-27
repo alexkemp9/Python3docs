@@ -357,7 +357,7 @@ Many bug-issues on Frames have now (Dec 2024) been answered above (see [Frames](
 
 ***Dec 19 Update:*** The *“List of Tables, Sidebars + Figures”* in the Master Document ([ODM](/Programming-In-Python3.odm) / [PDF](/Programming-In-Python3.pdf)) has had duplications throughout the end of the list. I could find no reason why until yesterday. Whilst updating page-links in *Chapter 10* (starts p445) I discovered that the 3 Images in that chapter were missing from the Master Document. Sure enough, all 3 were anchored to the Page. Changing the anchorage for all 3 + re-updating not only restored the images to the document but also removed all dupes from the Tables’ list.
 
-If I can now re-find how I originally managed  add Sidebars within that List it will be good to go.
+If I can now re-find how I originally managed to add Sidebars within that List it will be good to go.
 
 ### Bug #02
 
@@ -375,6 +375,8 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 >
 >> ***Dec 26 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
 >>
+>> ***Dec 27 Update:*** content.xml within the bug02+ ODT is maintained within this github as [bug02+24.8-content.xml](./bug02%2B24.8-content.xml). In other words, the upto-date content file is extracted from that ODT and then stored under that name. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>> 
 >> The 4th example demonstrated within Bug02+ ([ODT](./bug02%2B.odt) • [PDF](./bug02%2B.pdf)) is actually a dupe of Bug#03 below. I've tested under both 5.0.6.3 and 4.0.0.3, and then the oldest version available (3.3.0.4) and all of these versions contain the bug.
 >>
 >>  In the *content.xml* the paragraph *xml* for the 1st line of the Code Box 2 gets stripped away & the text of that paragraph gets injected into the bottom of the image+caption xml instead (*inside* the outermost Frame). It should therefore be zero surprise that the top border of the *Code Box 2* text gets placed *above* the image+caption. This is a bad & obvious bug, and I am amazed that it goes back so far (the oldest available AppImages are dated Aug 12  2017 and they all contain this bug).
