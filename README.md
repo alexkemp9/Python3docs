@@ -377,10 +377,10 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 >>
 >> The 4th example demonstrated within Bug02+ ([ODT](./bug02%2B.odt) • [PDF](./bug02%2B.pdf)) is actually a dupe of Bug#03 below. I've tested under both 5.0.6.3 and 4.0.0.3, and then the oldest version available (3.3.0.4) and all of these versions contain the bug.
 >>
->>  In the *content.xml* the paragraph *xml* for the 1st line of the Code Box 2 gets stripped away & the text of that paragraph gets injected into the bottom of the image+caption xml instead (*inside* the outermost Frame). It should therefore be zero surprise that the top border of the *Code Box 2* text gets placed *above* the image+caption. This is a bad + obvious bug, and I am amazed that it goes back so far (the oldest AppImages are dated Aug 12  2017).
+>>  In the *content.xml* the paragraph *xml* for the 1st line of the Code Box 2 gets stripped away & the text of that paragraph gets injected into the bottom of the image+caption xml instead (*inside* the outermost Frame). It should therefore be zero surprise that the top border of the *Code Box 2* text gets placed *above* the image+caption. This is a bad & obvious bug, and I am amazed that it goes back so far (the oldest available AppImages are dated Aug 12  2017 and they all contain this bug).
 >>
 >> Seeing is believing     
->> (the top of the blue border is at the top of the screenshot, whilst the rest of the border is at the bottom):
+>> (the top of the *Code Box 2* paragraph’s blue border is at the top of the screenshot, whilst the rest of that border is at the bottom):
 >> 
 >> ![bug02+ + bug03](./screenshot_bug02-border-error-on-p10.jpg)     
 
