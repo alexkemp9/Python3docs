@@ -387,7 +387,7 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 > 
 > This can be viewed within [bug02.odt](./bug02.odt) + [bug02.pdf](./bug02.pdf); extended updates within [bug2+.odt](./bug02%2B.odt) + [bug2+.pdf](./bug02%2B.pdf)
 
-The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3 significant responses and, if you have to this point been unable to understand why LibreOffice has been riddled with bugs for the last 5 years, you are about to discover the reason why:-     
+The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3 significant responses and, if you have been unable to understand why LibreOffice has been riddled with bugs for the last 5 years, you are about to discover the reason why:-     
 - 2024-12-16: ***raal***: LO 25.2.0.0.beta1+ still affected by this bug
 - 2024-12-16: ***raal***: LO 6.1.0.0.alpha0+ unaffected by the bug
 - 2024-12-16: ***raal***: Bug began at commit 6.5 on Fri Dec 6 14:04:55 2019 +0100
