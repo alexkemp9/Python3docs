@@ -8,7 +8,7 @@ The above was all under LibreOffice v7.4.7.2.
   - On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
   - On [Nov 09](#2024-nov-09) the AppImage v7.2.3.2 finally gave mostly error-free access to all ODTs.
   - On [Dec 22](#2024-dec-22) the AppImage v6.1.0.3 finally gave mostly bug-free access to all ODTs.
-  - On [Dec 26](#bug-02) AppImages v5.0.6.3 and v4.0.0.3 both proved to be affected by Bug03. Not good for 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
+  - On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 and all proved to contain Bug03. Not good for more than 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
 
 ***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
 
@@ -375,9 +375,9 @@ If I can now re-find how I originally managed  add Sidebars within that List it 
 >
 >> ***Dec 26 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
 >>
->> The 4th example demonstrated within Bug02+ ([ODT](./bug02%2B.odt) • [PDF](./bug02%2B.pdf)) is actually a dupe of Bug#03 below. I've tested under both 5.0.6.3 and 4.0.0.3, and **both** of these versions are affected by the bug.
+>> The 4th example demonstrated within Bug02+ ([ODT](./bug02%2B.odt) • [PDF](./bug02%2B.pdf)) is actually a dupe of Bug#03 below. I've tested under both 5.0.6.3 and 4.0.0.3, and then the oldest version available (3.3.0.4) and all of these versions contain the bug.
 >>
->>  In the *content.xml* the paragraph *xml* for the 1st line of the Code Box 2 gets stripped away & the text of that paragraph gets injected into the bottom of the image+caption xml instead (*inside* the outermost Frame). It should therefore be zero surprise that the top border of the *Code Box 2* text gets placed *above* the image+caption. This is a bad + obvious bug, and I am amazed that it goes back so far (the AppImage is dated Aug 12  2017).
+>>  In the *content.xml* the paragraph *xml* for the 1st line of the Code Box 2 gets stripped away & the text of that paragraph gets injected into the bottom of the image+caption xml instead (*inside* the outermost Frame). It should therefore be zero surprise that the top border of the *Code Box 2* text gets placed *above* the image+caption. This is a bad + obvious bug, and I am amazed that it goes back so far (the oldest AppImages are dated Aug 12  2017).
 >>
 >> Seeing is believing     
 >> (the top of the blue border is at the top of the screenshot, whilst the rest of the border is at the bottom):
