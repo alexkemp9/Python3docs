@@ -39,6 +39,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Frame Stats|[Dec 08 2024](#2024-dec-08)|
 |Bug Docs|[Dec 10 2024](#the-bugs)|
 | Bug#02 | [Dec 26 2024](#bug-02)
+| Bug#03 | [Dec 29 2024](#bug-03)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
