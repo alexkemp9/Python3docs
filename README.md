@@ -372,11 +372,13 @@ If I can now re-find how I originally managed to add Sidebars within that List i
 >
 > The image Frame is *supposed* to isolate image from caption and, most certainly, any human Editor would expect to be able to delete the Caption contents & leave the Image untouched. Somehow, the Caption text entity bleeds into the Image entity and that makes no sense. This is rather like selecting a single word in a sentence & then discovering that the system has selected the entire paragraph for you. In my mind, Frames should isolate entities one from the other, yet they appear to be performing the reverse act.
 >
-> Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers the same problem. So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.
+> Whilst producing the bug-report document it was discovered that a paragraph-with-inline-border below the image (see bug#3 below) suffers a similar problem. ~~So, if the whole of the paragraph is selected, then the image+caption+paragraph will all be selected). Then, if the paragraph is deleted all 3 (image, caption + paragraph) will be deleted.~~
 >
 >> ***Dec 26 Update:*** content.xml within the bug02+ ODT indicates interference between the image+caption frame & the added lower paragraph. It may well be that the entire problem is a frame bug rather than an image or caption bug.
 >>
 >> ***Dec 27 Update:*** content.xml within the bug02+ ODT is maintained within this github as [bug02+24.8-content.xml](./bug02%2B24.8-content.xml). In other words, the upto-date content file is extracted from that ODT and then stored under that name. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>>
+>> ***Dec 29 Update:*** Since the Image+Caption are attached to a paragraph it is important to realise that selecting the whole of that paragraph & deleting it will, of course, also delete the image + caption, since it will delete *everything* that is within the paragraph. However, the 2nd issue discovered within Bug#02 is different from that. It is rather that the Image+Caption frame interferes with the borders of the text-objects that surround it. I've managed to isolate the issue & display it in a manner that it can be discerned & understood more clearly. That has been placed into [Bug#03](#bug-03) below.
 >> 
 >> The 4th example demonstrated within Bug02+ ([ODT](./bug02%2B.odt) • [PDF](./bug02%2B.pdf)) is actually a dupe of Bug#03 below. I've tested under both 5.0.6.3 and 4.0.0.3, and then the oldest version available (3.3.0.4) and all of these versions contain the bug.
 >>
@@ -403,11 +405,11 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 
 > [Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)
 >
->> ***Dec 29 Update:*** This is essentially the second report of Bug#2 above. However, the 1st +2nd reports for Bug#02 are independent of each other (to my best belief) so this one has been reported separate to Bug#02 as Bug#03. In addition, on 29 December I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>> ***Dec 29 Update:*** This is essentially the 4th example of Bug#02+ above. However, these 2 reports for Bug#02 are independent of each other (to my best belief) so this one has been reported separately as Bug#03. In addition, on 29 December I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
 >> 
->> The Image+Caption Frame “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or range to splitting off embedded borders from the text to which they are supposed to be attached to. This makes best sense when viewed, and I've spent a couple of days creating an ODT to allow that ([bug3+.odt](./bug03%2B.odt)).
+>> The Image+Caption Frame “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or become splitting off embedded borders from the text to which they are supposed to be attached. This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to allow that ([bug3+.odt](./bug03%2B.odt)).
 >
-> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).; extended updates within [bug3+.odt](./bug03%2B.odt) + [bug3+.pdf](./bug03%2B.pdf)
+> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).; extended updates are within [bug3+.odt](./bug03%2B.odt) + [bug3+.pdf](./bug03%2B.pdf)
 4. #### In Writer v24.8.3.2, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
 
 >  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
