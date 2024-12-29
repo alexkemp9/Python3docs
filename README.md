@@ -396,13 +396,17 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
   (raal asks Michael Stahl to take a look)
 - 2024-12-17: ***Stahl***: this is working as designed.
 
-3. #### In Writer v24.8.3.2, the bottom border of an Image-in-frame-with-caption coalesces with the top inline-border of a Paragraph below it
+### Bug #03
+
+3. #### In Writer v24.8.3.2, Image Frames Interfere with Adjoining Borders
 
 > [Bugzilla 164297](https://bugs.documentfoundation.org/show_bug.cgi?id=164297)
 >
->In other words, the below-paragraph spacing of an image will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
+>> ***Dec 29 Update:*** This is essentially the second report of Bug#2 above. However, the 1st +2nd reports for Bug#02 are independent of each other (to my best belief) so this one has been reported separate to Bug#02 as Bug#03. In addition, on 29 December I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>> 
+>> The Image+Caption Frame “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or range to splitting off embedded borders from the text to which they are supposed to be attached to. This makes best sense when viewed, and I've spent a couple of days creating an ODT to allow that ([bug3+.odt](./bug03%2B.odt)).
 >
-> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).
+> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).; extended updates within [bug3+.odt](./bug03%2B.odt) + [bug3+.pdf](./bug03%2B.pdf)
 4. #### In Writer v24.8.3.2, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
 
 >  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
