@@ -40,6 +40,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Bug Docs|[Dec 10 2024](#the-bugs)|
 | Bug#02 | [Dec 26 2024](#bug-02)
 | Bug#03 | [Dec 29 2024](#bug-03)
+| Bug#04 | [Dec 31 2024](#bug-04)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -407,16 +408,25 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >
 >> ***Dec 29 Update:*** This is essentially the 4th example of Bug#02+ above. However, these 2 reports for Bug#02 are independent of each other (to my best belief) so this one has been reported separately as Bug#03. In addition, on 29 December I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
 >> 
->> The Image+Caption Frame “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or become splitting off embedded borders from the text to which they are supposed to be attached. This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to allow that ([bug3+.odt](./bug03%2B.odt)).
+>> The Image+Caption Frame “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or become splitting off embedded borders from the text to which they are supposed to be attached. This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to show that ([bug3+.odt](./bug03%2B.odt)).
 >
-> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf).; extended updates are within [bug3+.odt](./bug03%2B.odt) + [bug3+.pdf](./bug03%2B.pdf)
-4. #### In Writer v24.8.3.2, the Bottom border of a Table-in-frame will coalesce with the top inline-border of a Paragraph
+> This can be viewed within [bug03.odt](./bug03.odt) + [bug03.pdf](./bug03.pdf); extended updates are within [bug3+.odt](./bug03%2B.odt) + [bug3+.pdf](./bug03%2B.pdf)
+
+### Bug #04
+
+4. #### In Writer v24.8.3.2, Table Frames Interfere with Adjoining Borders
 
 >  [Bugzilla 164298](https://bugs.documentfoundation.org/show_bug.cgi?id=164298)
 >
-> In other words, the below-frame spacing of the table-in-frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
+>> ***Dec 31 Update:*** This seems to essentially be identical to Bug#03+ above. On 31 December I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>>
+>> The Framed Table “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or become splitting off embedded borders from the text to which they are supposed to be attached.
+>>
+>> The clearest demonstration of the bug is when the below-frame spacing of the table-in-frame is added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
+>> 
+>>  This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to show that ([bug4+.odt](./bug04%2B.odt)).
 >
-> This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3.
+> This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3; extended updates are within [bug4+.odt](./bug04%2B.odt) + [bug4+.pdf](./bug04%2B.pdf).
 5. #### In Writer, the bottom border of a frame will coalesce with the top inline-border of a paragraph
 
 > [Bugzilla 164302](https://bugs.documentfoundation.org/show_bug.cgi?id=164302)
