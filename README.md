@@ -427,6 +427,11 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >>  This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to show that ([bug4+.odt](./bug04%2B.odt)).
 >
 > This can be viewed within [bug4.odt](./bug4.odt) + [bug4.pdf](./bug4.pdf), and is almost certainly a Frame bug rather than a Table bug, and thus a dupe of bug#3; extended updates are within [bug4+.odt](./bug04%2B.odt) + [bug4+.pdf](./bug04%2B.pdf).
+>>
+>> Seeing is believing     
+>> (the top of the *Code Box 2* paragraph’s blue border is at the top of the screenshot, whilst the rest of that border is at the bottom):
+>> 
+>> ![bug04+](./screenshot_bug04-border-error-on-p9.jpg)     
 5. #### In Writer, the bottom border of a frame will coalesce with the top inline-border of a paragraph
 
 > [Bugzilla 164302](https://bugs.documentfoundation.org/show_bug.cgi?id=164302)
