@@ -41,6 +41,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | Bug#02 | [Dec 26 2024](#bug-02)
 | Bug#03 | [Dec 29 2024](#bug-03)
 | Bug#04 | [Dec 31 2024](#bug-04)
+| Bug#05 | [Jan 01 2025](#bug-05)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -432,13 +433,27 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >> (the top of the *Code Box 2* paragraph’s blue border is near the top of the screenshot, whilst the rest of that border is at the bottom):
 >> 
 >> ![bug04+](./screenshot_bug04-border-error-on-p9.jpg)     
-5. #### In Writer, the bottom border of a frame will coalesce with the top inline-border of a paragraph
+
+### Bug #05
+5. #### In Writer, Text Frames Interfere with Adjoining Borders
 
 > [Bugzilla 164302](https://bugs.documentfoundation.org/show_bug.cgi?id=164302)
 >
+>> ***Jan 01 Update:*** This seems to essentially be identical to Bugs #02, #03 + #04 above. I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>>
+>> The SideBar (a Text Frame) “Interferes” with adjoining borders. The bug occurs with anything that is framed and is positioned next to something with a border. The interference ranges from changing bottom- or top-spacing, and can be minor or become splitting off embedded borders from the text to which they are supposed to be attached.
+>>
+>> The clearest demonstration of the bug is when the below-frame spacing of the text frame is shown to be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders, due to the 2nd entity being a blue-bordered text paragraph.
+>> 
+>>  This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to show that ([bug5+.odt](./bug05%2B.odt)).
 > The bottom border of a Sidebar (which is a frame that contains text) will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
-> This can be viewed within [bug05.odt](./bug05.odt) + [bug05.pdf](./bug05.pdf), and is almost certainly a dupe of bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
+> This can be viewed within [bug05.odt](./bug05.odt) + [bug05.pdf](./bug05.pdf), and is almost certainly a dupe of bug#2 + bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
+>>
+>> Seeing is believing     
+>> (the top of the *Code Box 2* paragraph’s blue border is near the top of the screenshot, whilst the rest of that border is at the bottom):
+>> 
+>> ![bug05+](./screenshot_bug05-border-error-on-p9.jpg) 
 6. #### Writer v24.8.3.2 TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
 
 > [Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)
