@@ -42,6 +42,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | Bug#03 | [Dec 29 2024](#bug-03)
 | Bug#04 | [Dec 31 2024](#bug-04)
 | Bug#05 | [Jan 01 2025](#bug-05)
+| Bug#06 | [Jan 02 2025](#bug-06)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -453,7 +454,9 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >> Seeing is believing     
 >> (the top of the *Code Box 2* paragraph’s blue border is near the top of the screenshot, whilst the rest of that border is at the bottom):
 >> 
->> ![bug05+](./screenshot_bug05-border-error-on-p9.jpg) 
+>> ![bug06+](./screenshot_bug06-table-on-p4.jpg)     
+
+### Bug #06
 6. #### Writer v24.8.3.2 TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
 
 > [Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)
