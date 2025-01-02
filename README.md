@@ -449,21 +449,31 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >>  This makes best sense when viewed in place, and I've spent a couple of days creating an ODT to show that ([bug5+.odt](./bug05%2B.odt)).
 > The bottom border of a Sidebar (which is a frame that contains text) will coalesce with the top inline-border of a paragraph. In other words, the below-frame spacing of the frame will be added to the internal top-spacing  of the next paragraph, rather than being placed between the two entity’s borders.
 >
-> This can be viewed within [bug05.odt](./bug05.odt) + [bug05.pdf](./bug05.pdf), and is almost certainly a dupe of bug#2 + bug#3 + bug#4. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
+> This can be viewed within [bug05.odt](./bug05.odt) + [bug05.pdf](./bug05.pdf), and is almost certainly a dupe of bug#2 + bug#3 + bug#4; extended updates are within [bug5+.odt](./bug05%2B.odt) + [bug5+.pdf](./bug05%2B.pdf).. An example can also be seen on p293 of [‘3_new.pdf’](3_new.pdf).
 >>
 >> Seeing is believing     
 >> (the top of the *Code Box 2* paragraph’s blue border is near the top of the screenshot, whilst the rest of that border is at the bottom):
 >> 
->> ![bug06+](./screenshot_bug06-table-on-p4.jpg)     
+>> ![bug06+](./screenshot_bug05-border-error-on-p9.jpg)     
 
 ### Bug #06
-6. #### Writer v24.8.3.2 TextBoxes  will not allow some keyboard shortcuts, although the same menu selection WILL work
+6. #### In Writer, Text Box Menu, Keyboard Commands differ in Efficacy
 
 > [Bugzilla 164303](https://bugs.documentfoundation.org/show_bug.cgi?id=164303)
-> 
-> The Jump-Boxes (which are LO TextBoxes, known as “Drawing Objects” in the *Navigator*) will not allow some keyboard shortcuts, although the menu WILL work. An example is that `menu:Edit | Paste Special | Paste Unformatted Text` DOES work, but `Shift+Ctrl+Alt+V` does NOT work.
 >
-> This can be viewed within [bug06.odt](./bug06.odt) + [bug06.pdf](./bug06.pdf).
+>> ***Jan 02 Update:*** This is a minor bug, but a small bug is nevertheless a bug. I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>>
+>> The original Python3 PDF had “Jump-boxes” scattered in each margin throughout the document. These contained links to refer the current text to other sections in the document. However, those links were text-only and were NOT hyperlinks. I resolved to update the document from the 18th to the 21st Century. Frames are the obvious method to do that, but it is not possible to give rounded corners to Frames, so I used Text Boxes instead. I quickly dioscovered that each time I attempted a Keyboard shortcut to paste plain-text into the Box (using `<shift>+<ctrl>+<alt>+V`) it resulted in just a `V` being pasted instead. A bug!
+>>
+>> LO Text Boxes are known as “*Drawing Objects*” in the *Navigator* and have never allowed some keyboard shortcuts since `Paste Unformatted Text` was first introduced at 6.1.0.3. I made the Bug#06 report to BugZilla on 2024-12-12 & received a deafening silence until the Admin said “*needs a response*”. The response was vacuous, so I've completed an update.
+>
+> This can be viewed within [bug06.odt](./bug06.odt) + [bug06.pdf](./bug06.pdf); extended updates are within [bug06+.odt](./bug06%2B.odt) + [bug06+.pdf](./bug06%2B.pdf)..     
+>>
+>> Seeing is believing     
+>> (a tabulation of the way that this bug has become endemic within LibreOffice since the introduction of *Paste Unformatted Text* at version 6.1.0.3):
+>> 
+>> ![bug06+](./screenshot_bug06-table-on-p4.jpg)
+
 7. #### In Writer v24.8.3.2, Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
 
 > [Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)
@@ -471,7 +481,7 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 > The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space.
 > 
 > This can be viewed within [bug07.odt](./bug07.odt) + [bug07.pdf](./bug07.pdf). Note that the 2nd item is a dupe of bug#5.
-8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8).
+8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8). 
 9. #### In Writer v24.8.3.2, Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
 
 > [Bugzilla 164306](https://bugs.documentfoundation.org/show_bug.cgi?id=164306)
