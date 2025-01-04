@@ -43,6 +43,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | Bug#04 | [Dec 31 2024](#bug-04)
 | Bug#05 | [Jan 01 2025](#bug-05)
 | Bug#06 | [Jan 02 2025](#bug-06)
+| Bug#07 | [Jan 04 2025](#bug-07)
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -208,7 +209,7 @@ One common theme between the original errors & the Master document errors was tr
 <a name="2024-dec-07"></a>
 In the following tabulation I used the Status bar (bottom left) +  the Writer *Navigator* (switch it on/off with Function Key #5 (`F5`) or `menu:/View/Navigator`) to measure the stats of various components of [1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt) under both LO 7.2.3.2 + 24.8.3.2. The entire document was then selected using both `Ctrl-A` & mechanical selection with mouse (word & character stats were identical in both cases) & copied using `Ctrl-C`. That was then pasted into a new, blank sheet using `Shift-Ctrl-V (select LO doc)` and measured again.
 ### Copying Errors
-| 7.2.3.2 |Original | Copy | Diff | % |
+| 7.2.3.2 | Original | Copy | Diff | % |
 |:---:|---: |---:|---:|---:|
 | Pages | 666 | 556 | -110| -17% |
 | Words | 232,206 | 226,263 | -5,943 | -2.6%  |
@@ -467,20 +468,41 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >>
 >> LO Text Boxes are known as “*Drawing Objects*” in the *Navigator* and have never allowed some keyboard shortcuts since `Paste Unformatted Text` was first introduced at 6.1.0.3. I made the Bug#06 report to BugZilla on 2024-12-12 & received a deafening silence until the Admin said “*needs a response*”. The response was vacuous, so I've completed an update.
 >
-> This can be viewed within [bug06.odt](./bug06.odt) + [bug06.pdf](./bug06.pdf); extended updates are within [bug06+.odt](./bug06%2B.odt) + [bug06+.pdf](./bug06%2B.pdf)..     
+> This can be viewed within [bug06.odt](./bug06.odt) + [bug06.pdf](./bug06.pdf); extended updates are within [bug06+.odt](./bug06%2B.odt) + [bug06+.pdf](./bug06%2B.pdf).     
 >>
 >> Seeing is believing     
 >> (a tabulation of the way that this bug has become endemic within LibreOffice since the introduction of *Paste Unformatted Text* at version 6.1.0.3):
 >> 
->> ![bug06+](./screenshot_bug06-table-on-p4.jpg)
+>> ![bug06+](./screenshot_bug06-table-on-p4.jpg)     
 
-7. #### In Writer v24.8.3.2, Interference Between Frame Borders, Heading Borders & Paragraph Borders, Top & Bottom
+### Bug #07
+7. #### In Writer v24.8.3.2, Frame Borders Wrongly Interfere with Adjacent Borders, Top & Bottom
 
 > [Bugzilla 164304](https://bugs.documentfoundation.org/show_bug.cgi?id=164304)
+>
+>> ***Jan 04 Update:*** This has existed within Writer since the 3.3.0.4 grandfather version & continues within the latest release. I managed to complete a fuller & better ODT + PDF report. The ODT itself was edited + saved under 24.8.3.2. `menu:Help | About LibreOffice` shows [Build](https://gerrit.libreoffice.org/gitweb?p=core.git;a=log;h=48a6bac9e7e268aeb4c3483fcf825c94556d9f92).
+>>
+>> This is the 4th Frame bug reported so far in this document. Others are:
+
+| Bug Report | Title |
+|:---:|:--- |
+| [Bug#03](#bug-03) | Image Frame with Paragraphs |
+| [Bug#04](#bug-04) | Table Frame with Paragraphs |
+| [Bug#05](#bug-05) | Text Frame with Paragraphs |
+| [Bug#07](#bug-07) | Text Frame with Headers |
+
+>>
+>> I made the Bug#07 report to BugZilla on 2024-12-12 & received a deafening silence until the Admin said “*needs a response*”. The response to that call was vacuous, so I've completed an update.
 > 
 > The top border of a Frame will interfere with the bottom border of a Heading. In addition, the bottom border of the same Frame will coalesce with the top inline-border of a paragraph. In other words, the top & bottom borders of the Frame are interfering with both other entity’s borders, and not respecting their personal space.
 > 
-> This can be viewed within [bug07.odt](./bug07.odt) + [bug07.pdf](./bug07.pdf). Note that the 2nd item is a dupe of bug#5.
+> This can be viewed within [bug07.odt](./bug07.odt) + [bug07.pdf](./bug07.pdf); extended updates are within [bug07+.odt](./bug07%2B.odt) + [bug07+.pdf](./bug07%2B.pdf). Note that the 2nd item is a dupe of bug#5.     
+>>
+>> Seeing is believing     
+>> (a screen snapshot of the final page within the PDF):
+>> 
+>> ![bug07+](./screenshot_bug07-frame-on-p4.jpg)
+
 8. In contrast to #6, under v7 `Ctrl+-` (insert soft Hyphen) DOES work inside a Jump-Box / TextBox, and the word breaks as desired, but no hyphen is inserted at the break. Using the menu is an identical result. Within the document itself this action works as expected. An example can be seen in the jumpbox at #4 (on the LHS of the sidebar on p293 of [‘3_new.pdf’](3_new.pdf), where a soft hyphen has been inserted between 'trans' + 'late'. The word is broken as desired, but no hyphen is inserted (this is fixed in v24.8). 
 9. #### In Writer v24.8.3.2, Chapter / Heading Numbers setup is only effective if zero Headers are created *before* Setup is completed
 
