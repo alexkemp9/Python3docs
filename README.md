@@ -38,6 +38,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Copy Errors|[Dec 07 2024](#2024-dec-07)|
 |Frame Stats|[Dec 08 2024](#2024-dec-08)|
 |Bug Docs|[Dec 10 2024](#the-bugs)|
+|Success! |[Jan 06 2025](#success)|
 | Bug#02 | [Dec 26 2024](#bug-02)
 | Bug#03 | [Dec 29 2024](#bug-03)
 | Bug#04 | [Dec 31 2024](#bug-04)
@@ -139,7 +140,7 @@ Here is a timeline of production of each of these documents, and how they are li
 >
 <a name="2024-oct-19"></a>
 * Work began to convert [‘2_scratch.odt’](/2_scratch.odt) into [‘3_new.odt’](/3_new.odt) and thus into [‘3_new.pdf’](3_new.pdf)
-> After changing all problematic draw-elements on each page into PNG images, I was then able to produce the “Contents at a Glance” (p3 of [‘0_ProgrammingInPython3.pdf’](/0_ProgrammingInPython3.pdf)) without any problems. It seemed to me that I should produce a “List of Tables, Sidebars + Figures” first, then a Contents listing, and finally add a “Contents at a Glance” page. The last act would be to correct the jump targets for all forward-jump boxes + correct all Chapter links in the text. The first part (Tables listing) went without problems. However, after completing that LO simply refused to produce any Contents, though without any error message.
+> After changing all problematic draw-elements on each page into PNG images, I was then able to produce the “Contents at a Glance” (p3 of [‘’](/)) without any problems. It seemed to me that I should produce a “List of Tables, Sidebars + Figures” first, then a Contents listing, and finally add a “Contents at a Glance” page. The last act would be to correct the jump targets for all forward-jump boxes + correct all Chapter links in the text. The first part (Tables listing) went without problems. However, after completing that LO simply refused to produce any Contents, though without any error message.
 ### 25 Oct 2024:
 * (the day before my 75th birthday) My entire computer crashed & burned as I loaded up [‘3_new.odt’](/3_new.odt) to try (yet again) to produce a Contents listing. In a state of disbelief I shut the computer down via the physical power button. Devuan successfully auto-restored the Journal on restart. In a state of some shock — I was used to this with Windows, but thought that I had left it all behind with Linux — I tried again with nothing else loaded. Just a second or two after loading up ‘3_new.odt’ the mouse stopped moving & everything froze. I got to the command line with `Ctrl-Alt-F1`, logged in & entered `startx` to get back to the desktop then shut down normally.
 * My final act on this occasion  was to use `libreoffice --convert-to pdf:writer_pdf_Export 3_new.odt` in a terminal to get a PDF (which was successful).
@@ -170,7 +171,7 @@ I changed all 57 Introduction paragraphs in *3_new.odt* from *"Default Paragraph
 
 ## Interim Summary:
 
-1. The first line of construction clearly had hit a brick wall (4 months: *[0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf)* through to *[4_paragraph-fix.odt](/4_paragraph-fix.odt)*).     
+1. The first line of construction clearly had hit a brick wall (4 months: *[](/)* through to *[4_paragraph-fix.odt](/4_paragraph-fix.odt)*).     
 2. The second line of construction had also hit yet another brick wall (11 days: *[‘1_Programming-In-Python3.odt’](/1_Programming-In-Python3.odt)* to *[2_paragraph-fixes.odt](/2_paragraph-fixes.odt)*).     
 3. I don't like hitting brick walls. I needed to take another route, so decided to do this via a Master Document instead.
  ### 27 Nov 2024:
@@ -350,6 +351,14 @@ Checking the non-transfer Images above, all were anchored to a Page. The success
 The *Sidebars* are pure-Frame items that contain text. Once again, the couple that successfully transferred are anchored to a paragraph, whilst the others are all anchored to the page. There is a pattern emerging here.
 
 I did not bother checking the Drawing Objects that were framed. I got disenchanted very early on with the way that they became hobos & wandered all over the pages, and thus converted all of them into PNG files to stop their vagrant manner.
+
+## Success     
+I can well understand that you may not have read every one of the statements above, written as I tried, in the face of (what seemed like) every obstacle possible, to add functional page-links into [0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf). So, a brief summary follows but first! I've finally done it. Lots more to follow, including the need to add it to a Release.
+<details>
+           <summary>The Start</summary>
+           <p>See [August 202](#2024-august-00)  *Timeline*
+
+</details>
 
 ## The Bugs
 Use [the link](https://bugs.documentfoundation.org/enter_bug.cgi?product=LibreOffice;bug_status=UNCONFIRMED;version=?) on the Libreoffice Wiki page [How to Report Bugs in LibreOffice](https://wiki.documentfoundation.org/QA/BugReport) to go to Bugzilla to report an LO Bug, since the [report page from Bugzilla](https://bugs.documentfoundation.org/enter_bug.cgi?product=LibreOffice&format=guided) has a blocking bug of it's own (it always says that the 'Version' has NOT been entered, even if it has) (oh, the irony).
