@@ -38,7 +38,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Copy Errors|[Dec 07 2024](#2024-dec-07)|
 |Frame Stats|[Dec 08 2024](#2024-dec-08)|
 |Bug Docs|[Dec 10 2024](#the-bugs)|
-|Success! |[Jan 06 2025](#success)|
+|***Success!*** |[Jan 06 2025](#success)|
 | Bug#02 | [Dec 26 2024](#bug-02)
 | Bug#03 | [Dec 29 2024](#bug-03)
 | Bug#04 | [Dec 31 2024](#bug-04)
@@ -353,11 +353,10 @@ The *Sidebars* are pure-Frame items that contain text. Once again, the couple th
 I did not bother checking the Drawing Objects that were framed. I got disenchanted very early on with the way that they became hobos & wandered all over the pages, and thus converted all of them into PNG files to stop their vagrant manner.
 
 ## Success     
-I can well understand that you may not have read every one of the statements above, written as I tried, in the face of (what seemed like) every obstacle possible, to add functional page-links into [0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf). So, a brief summary follows but first! I've finally done it. Lots more to follow, including the need to add it to a Release.
+I can well understand that you may not have read every one of the statements above. They were written as I tried to add functional page-links into [0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf). The bottom line is that I've finally done it. Lots more to follow, including the need to add it to a Release. First a quick summary:
 <details>
            <summary>The Start</summary>
-           <p>See [August 202](#2024-august-00)  *Timeline*
-
+           <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
 </details>
 
 ## The Bugs
