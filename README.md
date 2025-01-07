@@ -38,13 +38,13 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 |Copy Errors|[Dec 07 2024](#2024-dec-07)|
 |Frame Stats|[Dec 08 2024](#2024-dec-08)|
 |Bug Docs|[Dec 10 2024](#the-bugs)|
-|***Success!*** |[Jan 06 2025](#success)|
 | Bug#02 | [Dec 26 2024](#bug-02)
 | Bug#03 | [Dec 29 2024](#bug-03)
 | Bug#04 | [Dec 31 2024](#bug-04)
 | Bug#05 | [Jan 01 2025](#bug-05)
 | Bug#06 | [Jan 02 2025](#bug-06)
 | Bug#07 | [Jan 04 2025](#bug-07)
+|***Success!*** |[Jan 06 2025](#success)|
 
 ### *Intentions*
 The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
@@ -352,13 +352,6 @@ The *Sidebars* are pure-Frame items that contain text. Once again, the couple th
 
 I did not bother checking the Drawing Objects that were framed. I got disenchanted very early on with the way that they became hobos & wandered all over the pages, and thus converted all of them into PNG files to stop their vagrant manner.
 
-## Success     
-I can well understand that you may not have read every one of the statements above. They were written as I tried to add functional page-links into [0_ProgrammingInPython3.pdf](/0_ProgrammingInPython3.pdf). The bottom line is that I've finally done it. Lots more to follow, including the need to add it to a Release. First a quick summary:
-<details>
-           <summary>The Start</summary>
-           <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
-</details>
-
 ## The Bugs
 Use [the link](https://bugs.documentfoundation.org/enter_bug.cgi?product=LibreOffice;bug_status=UNCONFIRMED;version=?) on the Libreoffice Wiki page [How to Report Bugs in LibreOffice](https://wiki.documentfoundation.org/QA/BugReport) to go to Bugzilla to report an LO Bug, since the [report page from Bugzilla](https://bugs.documentfoundation.org/enter_bug.cgi?product=LibreOffice&format=guided) has a blocking bug of it's own (it always says that the 'Version' has NOT been entered, even if it has) (oh, the irony).
 
@@ -532,6 +525,25 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >
 > A report detailing + showing this bug via screenshots can be viewed within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
 12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
+
+## Success     
+I can well understand that you may not have read every one of the statements above. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary:
+<details>
+           <summary>The Start</summary><br />       
+           <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>0_ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
+</details>
+<details>
+           <summary>Step 1: Two Near Misses & A Car Crash</summary><br />       
+           <p><i>0_ProgrammingInPython3.pdf</i> proved NOT to have clickable links. I tried to add functional page-links into <i>1_Programming-In-Python3.odt</i>.</p>
+           <p>See <a href=#17-oct-2024>17 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/1_Programming-In-Python3.odt>1_Programming-In-Python3.odt</a>.</p>
+           <p>See <a href=#19-oct-2024>19 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid again as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/2_scratch.odt>2_scratch.odt</a>.</p>
+           <p>See <a href=#25-oct-2024>25 October 2024</a>. The whole computer siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/3_new.odt>3_new.odt</a>.</p>
+</details>
+<details>
+           <summary>Step 2: Autopsy</summary><br />       
+          <p>See <a href=#appimage-installation>AppImage Installations</a>. What was locking the program & even the computer up so tight? A combo of my own mistakes & LibreOffice being riddled with bugs appeared to be part of the problem.</p>
+          <p>Simple advice: Do not use the <i>Default Paragraph Style</i> (use Body Text, or design your own); do not attach a <a href=#frames>frame</a> (nor anything else) to a page (attach to a paragraph, whatever).</p>
+</details>
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
