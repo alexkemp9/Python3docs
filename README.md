@@ -535,14 +535,20 @@ I can well understand that you may not have read every one of the statements abo
 <details>
            <summary>Step 1: Two Near Misses & A Car Crash</summary><br />       
            <p><i>0_ProgrammingInPython3.pdf</i> proved NOT to have clickable links. I tried to add functional page-links into <i>1_Programming-In-Python3.odt</i>.</p>
-           <p>See <a href=#17-oct-2024>17 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/1_Programming-In-Python3.odt>1_Programming-In-Python3.odt</a>.</p>
-           <p>See <a href=#19-oct-2024>19 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid again as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/2_scratch.odt>2_scratch.odt</a>.</p>
-           <p>See <a href=#25-oct-2024>25 October 2024</a>. The whole computer siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/3_new.odt>3_new.odt</a>.</p>
+           <p>See <a href=#2024-oct-17>17 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/1_Programming-In-Python3.odt>1_Programming-In-Python3.odt</a>.</p>
+           <p>See <a href=#2024-oct-19>19 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid again as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/2_scratch.odt>2_scratch.odt</a>.</p>
+           <p>See <a href=#2024-oct-25>25 October 2024</a>. The whole computer siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/3_new.odt>3_new.odt</a>.</p>
 </details>
 <details>
            <summary>Step 2: Autopsy</summary><br />       
           <p>See <a href=#appimage-installation>AppImage Installations</a>. What was locking the program & even the computer up so tight? A combo of my own mistakes & LibreOffice being riddled with bugs appeared to be part of the problem.</p>
           <p>Simple advice: Do not use the <i>Default Paragraph Style</i> (use Body Text, or design your own); do not attach a <a href=#frames>frame</a> (nor anything else) to a page (attach to a paragraph, whatever).</p>
+</details>
+<details>
+           <summary>Step 3: Almost-Fix, Thwarted by Bugs</summary><br />       
+          <p>See <a href=#2024-nov-27>27 November 2024</a>. A single multi-chapter ODT was failing, so I switched to create individual Chapters united under the umbrella of a Master Document. It almost worked.</p>
+          <p>I could not persuade the Master Document to reproduce the <a href=https://help.libreoffice.org/7.1/en-US/text/swriter/guide/captions_numbers.html>chapter-numbering</a> that was present within each Chapter ODT for Images, Tables, etc..</p>
+         <p><i>chapter_01.odt</i>, as an example, had images that had captions numbered <i>Figure 1.1</i>, <i>Figure 1.2</i>, and so on. In <i>chapter_02.odt</i> the image captions numbered <i>Figure 2.1</i>, and so on. The Master Document turned all that into <i>Figure 1</i>, <i>Figure 2</i>, and so on as a simple sequential number throughout the entire document. This was a bad bug and I reported it as <a href=https://bugs.documentfoundation.org/show_bug.cgi?id=164307>BugZilla 164307</a>. My report was ignored.</p>
 </details>
 
 ## *Contact*
