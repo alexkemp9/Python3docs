@@ -527,7 +527,8 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
 
 ## Success     
-I can well understand that you may not have read every one of the statements above. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary:
+<a name="2025-dec-06"></a>
+I can well understand that you may not have read every one of the statements above. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller explanation of the setup in the final section:
 <details>
            <summary>The Start</summary><br />       
            <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>0_ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
@@ -549,6 +550,17 @@ I can well understand that you may not have read every one of the statements abo
           <p>See <a href=#2024-nov-27>27 November 2024</a>. A single multi-chapter ODT was failing, so I switched to create individual Chapters united under the umbrella of a Master Document. It almost worked.</p>
           <p>I could not persuade the Master Document to reproduce the <a href=https://help.libreoffice.org/7.1/en-US/text/swriter/guide/captions_numbers.html>chapter-numbering</a> that was present within each Chapter ODT for Images, Tables, etc..</p>
          <p><i>chapter_01.odt</i>, as an example, had images that had captions numbered <i>Figure 1.1</i>, <i>Figure 1.2</i>, and so on. In <i>chapter_02.odt</i> the image captions numbered <i>Figure 2.1</i>, and so on. The Master Document turned all that into <i>Figure 1</i>, <i>Figure 2</i>, and so on as a simple sequential number throughout the entire document. This was a bad bug and I reported it as <a href=https://bugs.documentfoundation.org/show_bug.cgi?id=164307>BugZilla 164307</a>. My report was ignored.</p>
+</details>
+<details>
+           <summary>Step 4: Finally Fixed, Bugs Swatted En-Route</summary><br />       
+          <p>See <a href=#2025-dec-06>06 December 2025</a>. My time during Step#3 above was spent removing every bug that I could find from each Chapter + placing Bookmarks into each Chapter so that the page-links could become effective.</p>
+          <p>It dawned on me one evening that it should now be possible to assemble all the Chapters by hand & have a fully functioning Book!. That turned out to be true, although LibreOffice still had some midges right at the end to cause mayhem.</p>
+          <p>The document <i>Programming-In-Python3 odt</i> was created. The 1st act was to import all styles from <i>chapter_15.odt</i>. The <i>First Page</i> + <i>Inside Cover</i> styles were acquired from the ODM, as was the first + second page content. Next it was important to make sure that <i>Heading Numbering</i> was setup before any chapters were added.</p>
+         <p>The Introduction chapter (<i>chapter_00.odt</i>) was setup in the same way for all chapters: <pre>menu:Insert | More Breaks | Manual Break…</pre> was used to create a <i>Page Break</i> with <i>First Introduction Page</i> as the style. Each Chapter has a unique Page style.</p>
+          <p>There were minor glitches along the way, but nothing major and it was all done very quickly since all the ingredients were already in place. The big bug arrived at the very end.</p>
+          <p>After <i>Epilogue</i> + <i>Bibliography</i> were in place the Contents Index (page ii at the beginning) was created. A little after this I realised that all the Chapter / Header numbering in Images, etc. had switched itself OFF & the document now looked just like the Master Document did after auto-import. I have zero idea as to the exact action that caused this, but suspect that it may have been adding the index.</p>
+          <p>Arghh!</p>
+          <p>The difference between an ODT and an ODM is that the latter is read-only. Because this document was an ODT I could edit it. Selecting the 1st image number (it is a Field) and using &lt;Shift>-F10 (same as right-click in my Linux Desktop) then <i>Edit Fields…</i> showed that the Heading Number level selector was now empty. Restoring the value to “Level 1” and &lt;OK> restored the chapter numbering not just for that Image but for everything throughout the document. Hey, we were back in business.</p>
 </details>
 
 ## *Contact*
