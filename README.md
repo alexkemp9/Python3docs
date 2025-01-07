@@ -527,7 +527,7 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
 
 ## Success     
-<a name="2025-dec-06"></a>
+<a name="2025-jan-06"></a>
 I can well understand that you may not have read every one of the statements above. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller explanation of the setup in the final section:
 <details>
            <summary>The Start</summary><br />       
@@ -553,7 +553,7 @@ I can well understand that you may not have read every one of the statements abo
 </details>
 <details>
            <summary>Step 4: Finally Fixed, Bugs Swatted En-Route</summary><br />       
-          <p>See <a href=#2025-dec-06>06 December 2025</a>. My time during Step#3 above was spent removing every bug that I could find from each Chapter + placing Bookmarks into each Chapter so that the page-links could become effective.</p>
+          <p>See <a href=#2025-dec-06>06 January 2025</a>. My time during Step#3 above was spent removing every bug that I could find from each Chapter + placing Bookmarks into each Chapter so that the page-links could become effective.</p>
           <p>It dawned on me one evening that it should now be possible to assemble all the Chapters by hand & have a fully functioning Book!. That turned out to be true, although LibreOffice still had some midges right at the end to cause mayhem.</p>
           <p>The document <i>Programming-In-Python3 odt</i> was created. The 1st act was to import all styles from <i>chapter_15.odt</i>. The <i>First Page</i> + <i>Inside Cover</i> styles were acquired from the ODM, as was the first + second page content. Next it was important to make sure that <i>Heading Numbering</i> was setup before any chapters were added.</p>
          <p>The Introduction chapter (<i>chapter_00.odt</i>) was setup in the same way for all chapters: <pre>menu:Insert | More Breaks | Manual Break…</pre> was used to create a <i>Page Break</i> with <i>First Introduction Page</i> as the style. Each Chapter has a unique Page style.</p>
