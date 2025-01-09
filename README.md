@@ -562,6 +562,62 @@ I can well understand that you may not have read every one of the statements abo
           <p>Arghh!</p>
           <p>The difference between an ODT and an ODM is that the latter is read-only. Because this document was an ODT I could edit it. Selecting the 1st image number (it is a Field) and using &lt;Shift>-F10 (same as right-click in my Linux Desktop) then <i>Edit Fields…</i> showed that the Heading Number level selector was now empty. Restoring the value to “Level 1” and &lt;OK> restored the chapter numbering not just for that Image but for everything throughout the document. Hey, we were back in business.</p>
 </details>
+<details>
+           <summary>Step 5: Polishing</summary><br />       
+          <p>Finishing off often takes longer than Preparation & Action.</p>
+          <p>My reason for starting was that the many (so-called) Hyperlinks in the original PDF were not actually active jumps. I had resolved to fix that.</p>
+         <p>I got <i>0_ProgrammingInPython3.pdf</i> in August 2024. Finally, 4 months later, I had a stylish update in <i>Programming-In-Python3 odt</i>, but it still did not have accurate page-numbers for the target of the links. The technique that I had deployed reported the target-page as counted from the beginning of the document. I needed the hyperlink button to report the target as reported on the link-page. That meant changing <i>thousands</i> of hyperlinks. Oh dear; better to get it right first time.</p>
+         <p>The Links fell into 2 groups: hyperlinks in the body of the text, and Jumpboxes (the latter positioned in the margins of the text). It is 9&nbsp;January 2024 and I've finished the body-text jumps. It was possible to insert a <i>Field | More Fields…</i> that reported the target book page number and also to place that field into the Hyperlink. Thus, if more pages are added or removed the page# in the jump will auto-change. The Jumpboxes — which are Writer Text Boxes — do not accept Fields as active fields; they only accept the Field text content.</p>
+        <p>It has taken me an entire day to edit 2 chapters worth of Jumpboxes. It takes 25 steps involving 32 key presses or mouse click to edit each Jumpbox. There are 30&nbsp;Jumpboxes in Chapter&nbsp;1 & 18&nbsp;chapters in total. Yikes. This is what it looks like:
+        <pre>What it takes to update each Jumpbox
+------------------------------------
+Example: "p051 jump" (1st jumpbox in Chapter 2 Data Types on Page#51)
+
+With Navigator launched (<F5>) & 'Drawing Objects' expanded:
+(each Jumpbox is a Writer Text Box)
+
+• Select jumpbox
+• In Navigator, Mouse right-click | Edit…
+&nbsp;&nbsp;(cursor is now inside the jumpbox +           )
+&nbsp;&nbsp;(positioned at end of all contents            )
+&nbsp;&nbsp;(this is the end of the hyperlink in each jumpbox)
+• Press <Home> key
+• Hold down <Shift> key + press <End> key
+• Press <Ctrl>+k
+&nbsp;&nbsp;(same as menu:Edit | Hyperlink)
+• Target: 0.0.0.Piece #2: Object References|outline
+• press <Close> button
+• press <Esc> key
+• choose an empty line in the text
+• Press <Alt>+i keys then <d> then <m>
+&nbsp;&nbsp;(same as menu:Insert | Field | More Fields…              )
+&nbsp;&nbsp;(Care! in Linux <Ctrl>+<F2> will switch to the 2nd screen)
+• Select Type:Headings and Refer using:Page number (unstyled) in the Dialog
+• Choose 'Piece #2: Object References' under Selection
+• Press the <Insert> button then <Close>
+• Select the Field just inserted into the Text & press <Ctrl>+x or <Shift>+<Delete>
+&nbsp;&nbsp;(this both puts the field into the Clipboard and removes it from the text)
+• Select same jumpbox
+• In Navigator, Mouse right-click | Edit
+• Press <Home> key†
+• Press <Ctrl>+k
+• Click in Text:
+• Press <Home> key
+• Hold down <Shift> key & press <right-arrow> to select all numbers
+&nbsp;&nbsp;(numbers at the beginning of the Hyperlink refer to the page number)
+• Press <Ctrl>+v
+&nbsp;&nbsp;(although it is pasting a Field, it only pastes the text-content, which is the page number)
+&nbsp;&nbsp;(note that the previous number was the page as measured from the beginning of the document)
+&nbsp;&nbsp;(which is NOT the number shown in the page                                                )
+• Press <Enter> key or <OK> button
+• Press <Esc> key
+• Choose the next jumpbox in the Navigator & do it all over again.
+
+†It may seem peverse to first go to the beginning of the Hyperlink & only then select it. However, 
+ there is a bug in Writer Text boxes, and possibly normal text as well. If the Hyperlink is selected
+ from the End (rhs in Western text) and is then edited, when the <OK> button is pressed it enters a
+ *2nd* copy of the Hyperlink after the first. Thus, go to the beginning first.</pre></p>
+</details>
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
