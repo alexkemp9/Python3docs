@@ -573,7 +573,7 @@ I can well understand that you may not have read every one of the statements abo
 ------------------------------------
 Example: "p051 jump" (1st jumpbox in Chapter 2 Data Types on Page#51)
 
-With Navigator launched (<F5>) & 'Drawing Objects' expanded:
+With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
 (each Jumpbox is a Writer Text Box)
 
 • Select jumpbox
@@ -581,41 +581,41 @@ With Navigator launched (<F5>) & 'Drawing Objects' expanded:
 &nbsp;&nbsp;(cursor is now inside the jumpbox +           )
 &nbsp;&nbsp;(positioned at end of all contents            )
 &nbsp;&nbsp;(this is the end of the hyperlink in each jumpbox)
-• Press <Home> key
-• Hold down <Shift> key + press <End> key
-• Press <Ctrl>+k
+• Press &lt;Home> key
+• Hold down &lt;Shift> key + press &lt;End> key
+• Press &lt;Ctrl>+k
 &nbsp;&nbsp;(same as menu:Edit | Hyperlink)
 • Target: 0.0.0.Piece #2: Object References|outline
-• press <Close> button
-• press <Esc> key
+• press &lt;Close> button
+• press &lt;Esc> key
 • choose an empty line in the text
-• Press <Alt>+i keys then <d> then <m>
+• Press &lt;Alt>+i keys then &lt;d> then &lt;m>
 &nbsp;&nbsp;(same as menu:Insert | Field | More Fields…              )
-&nbsp;&nbsp;(Care! in Linux <Ctrl>+<F2> will switch to the 2nd screen)
+&nbsp;&nbsp;(Care! in Linux &lt;Ctrl>+&lt;F2> will switch to the 2nd screen)
 • Select Type:Headings and Refer using:Page number (unstyled) in the Dialog
 • Choose 'Piece #2: Object References' under Selection
-• Press the <Insert> button then <Close>
-• Select the Field just inserted into the Text & press <Ctrl>+x or <Shift>+<Delete>
+• Press the &lt;Insert> button then &lt;Close>
+• Select the Field just inserted into the Text & press &lt;Ctrl>+x or &lt;Shift>+&lt;Delete>
 &nbsp;&nbsp;(this both puts the field into the Clipboard and removes it from the text)
 • Select same jumpbox
 • In Navigator, Mouse right-click | Edit
-• Press <Home> key†
-• Press <Ctrl>+k
+• Press &lt;Home> key†
+• Press &lt;Ctrl>+k
 • Click in Text:
-• Press <Home> key
-• Hold down <Shift> key & press <right-arrow> to select all numbers
+• Press &lt;Home> key
+• Hold down &lt;Shift> key & press &lt;right-arrow> to select all numbers
 &nbsp;&nbsp;(numbers at the beginning of the Hyperlink refer to the page number)
-• Press <Ctrl>+v
+• Press &lt;Ctrl>+v
 &nbsp;&nbsp;(although it is pasting a Field, it only pastes the text-content, which is the page number)
 &nbsp;&nbsp;(note that the previous number was the page as measured from the beginning of the document)
 &nbsp;&nbsp;(which is NOT the number shown in the page                                                )
-• Press <Enter> key or <OK> button
-• Press <Esc> key
+• Press &lt;Enter> key or &lt;OK> button
+• Press &lt;Esc> key
 • Choose the next jumpbox in the Navigator & do it all over again.
 
 †It may seem peverse to first go to the beginning of the Hyperlink & only then select it. However, 
  there is a bug in Writer Text boxes, and possibly normal text as well. If the Hyperlink is selected
- from the End (rhs in Western text) and is then edited, when the <OK> button is pressed it enters a
+ from the End (rhs in Western text) and is then edited, when the &lt;OK> button is pressed it enters a
  *2nd* copy of the Hyperlink after the first. Thus, go to the beginning first.</pre></p>
 </details>
 
