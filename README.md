@@ -44,6 +44,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | Bug#05 | [Jan 01 2025](#bug-05)
 | Bug#06 | [Jan 02 2025](#bug-06)
 | Bug#07 | [Jan 04 2025](#bug-07)
+|[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
 |***Success!*** |[Jan 06 2025](#success)|
 
 ### *Intentions*
@@ -620,7 +621,11 @@ With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
 
 </details>
 
-*Monday 13 January 2025*     
+<a name="2025-jan-13"></a>
+### January 2025:
+
+Programming-In-Python3.pdf is now 90% complete & part of the releases (starting at 0.3-gamma) for download.
+
 Checking & fixing all the Jump-Boxes has been quite a slog
 (a Jump-Box is a Text Box that contains a HyperLink to another part of the document).     
 
@@ -631,7 +636,7 @@ The original author of this document produced identically-named Headings. An exa
 - 14 Introduction to Parsing | Pythonic Parsing with PyParsing | Simple Key–Value Data Parsing | p543
 - 14 Introduction to Parsing | Lex/Yacc-Style Parsing with ply | Simple Key–Value Data Parsing | p559
 
-The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that not all links will work.
+The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example).
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
