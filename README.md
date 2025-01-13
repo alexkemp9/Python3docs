@@ -617,7 +617,21 @@ With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
  there is a bug in Writer Text boxes, and possibly normal text as well. If the Hyperlink is selected
  from the End (rhs in Western text) and is then edited, when the &lt;OK> button is pressed it enters a
  *2nd* copy of the Hyperlink after the first. Thus, go to the beginning first.</pre></p>
+
 </details>
+
+*Monday 13 January 2025*     
+Checking & fixing all the Jump-Boxes has been quite a slog
+(a Jump-Box is a Text Box that contains a HyperLink to another part of the document).     
+
+The raft of endemic bugs in LibreOffice has almost broken me. I discovered yet another near the end of this latest update:
+
+The original author of this document produced identically-named Headings. An example (not the only one) is:     
+- 14 Introduction to Parsing | Writing Handcrafted Parsers | Simple Key–Value Data Parsing | p523
+- 14 Introduction to Parsing | Pythonic Parsing with PyParsing | Simple Key–Value Data Parsing | p543
+- 14 Introduction to Parsing | Lex/Yacc-Style Parsing with ply | Simple Key–Value Data Parsing | p559
+
+The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that not all links will work.
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
