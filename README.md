@@ -1,22 +1,121 @@
-# *Source Docs for Bug-Hunting*
-## *(original: Documentation for Python v3)*
+# Documentation for Python v3
+## (*previous: Source Docs for Bug-Hunting*)
+
+## Success     
+<a name="2025-jan-06"></a>
+I can well understand that you may not read every one of the statements below. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller explanation of the setup in the final section (*‘Polishing’*):
+<details>
+           <summary>The Start</summary><br />       
+           <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>0_ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
+</details>
+<details>
+           <summary>Step 1: Two Near Misses & A Car Crash</summary><br />       
+           <p><i>0_ProgrammingInPython3.pdf</i> proved NOT to have clickable links. I tried to add functional page-links into <i>1_Programming-In-Python3.odt</i>.</p>
+           <p>See <a href=#2024-oct-17>17 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/1_Programming-In-Python3.odt>1_Programming-In-Python3.odt</a>.</p>
+           <p>See <a href=#2024-oct-19>19 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid again as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/2_scratch.odt>2_scratch.odt</a>.</p>
+           <p>See <a href=#2024-oct-25>25 October 2024</a>. The whole computer siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/3_new.odt>3_new.odt</a>.</p>
+</details>
+<details>
+           <summary>Step 2: Autopsy</summary><br />       
+          <p>See <a href=#appimage-installation>AppImage Installations</a>. What was locking the program & even the computer up so tight? A combo of my own mistakes & LibreOffice being riddled with bugs appeared to be part of the problem.</p>
+          <p>Simple advice: Do not use the <i>Default Paragraph Style</i> (use Body Text, or design your own); do not attach a <a href=#frames>frame</a> (nor anything else) to a page (attach to a paragraph, etc.).</p>
+</details>
+<details>
+           <summary>Step 3: Almost-Fix, Thwarted by Bugs</summary><br />       
+          <p>See <a href=#2024-nov-27>27 November 2024</a>. A single multi-chapter ODT was failing, so I switched to create individual Chapters united under the umbrella of a Master Document. It almost worked.</p>
+          <p>I could not persuade the Master Document to reproduce the <a href=https://help.libreoffice.org/7.1/en-US/text/swriter/guide/captions_numbers.html>chapter-numbering</a> that was present within each Chapter ODT for Images, Tables, etc..</p>
+         <p><i>chapter_01.odt</i>, as an example, had images that had captions numbered <i>Figure 1.1</i>, <i>Figure 1.2</i>, and so on. In <i>chapter_02.odt</i> the image captions numbered <i>Figure 2.1</i>, and so on. The Master Document turned all that into <i>Figure 1</i>, <i>Figure 2</i>, and so on as a simple sequential number throughout the entire document. This was a bad bug and I reported it as <a href=https://bugs.documentfoundation.org/show_bug.cgi?id=164307>BugZilla 164307</a>. My report was ignored.</p>
+</details>
+<details>
+           <summary>Step 4: Finally Fixed, Bugs Swatted En-Route</summary><br />       
+          <p>See <a href=#2025-dec-06>06 January 2025</a>. My time during Step#3 above was spent removing every bug that I could find from each Chapter + placing Bookmarks into each Chapter so that the page-links could become effective.</p>
+          <p>It dawned on me one evening that it should now be possible to assemble all the Chapters by hand & have a fully functioning Book!. That turned out to be true, although LibreOffice still had some midges right at the end to cause mayhem.</p>
+          <p>The document <i>Programming-In-Python3 odt</i> was created. The 1st act was to import all styles from <i>chapter_15.odt</i>. The <i>First Page</i> + <i>Inside Cover</i> styles were acquired from the ODM, as was the first + second page content. Next it was important to make sure that <i>Heading Numbering</i> was setup before any chapters were added.</p>
+         <p>The Introduction chapter (<i>chapter_00.odt</i>) was setup in the same way for all chapters: <pre>menu:Insert | More Breaks | Manual Break…</pre> was used to create a <i>Page Break</i> with <i>First Introduction Page</i> as the style. Each Chapter has a unique Page style.</p>
+          <p>There were minor glitches along the way, but nothing major and it was all done very quickly since all the ingredients were already in place. The big bug arrived at the very end.</p>
+          <p>After <i>Epilogue</i> + <i>Bibliography</i> were in place the Contents Index (page ii at the beginning) was created. A little after this I realised that all the Chapter / Header numbering in Images, etc. had switched itself OFF & the document now looked just like the Master Document did after auto-import. I have zero idea as to the exact action that caused this, but suspect that it may have been adding the index.</p>
+          <p>Arghh!</p>
+          <p>The difference between an ODT and an ODM is that the latter is read-only. Because this document was an ODT I could edit it. Selecting the 1st image number (it is a Field) and using &lt;Shift>-F10 (same as right-click in my Linux Desktop) then <i>Edit Fields…</i> showed that the Heading Number level selector was now empty. Restoring the value to “Level 1” and &lt;OK> restored the chapter numbering not just for that Image but for everything throughout the document. Hey, we were back in business.</p>
+</details>
+<details>
+           <summary>Step 5: Polishing</summary><br />       
+          <p>Finishing off often takes longer than Preparation & Action.</p>
+          <p>My reason for starting was that the many (so-called) Hyperlinks in the original PDF were not actually active jumps. I had resolved to fix that.</p>
+         <p>I got <i>0_ProgrammingInPython3.pdf</i> in August 2024. Finally, 4 months later, I had a stylish update in <i>Programming-In-Python3 odt</i>, but it still did not have accurate page-numbers for the target of the links. The technique that I had deployed reported the target-page as counted from the beginning of the document. I needed the hyperlink button to report the target as reported on the link-page. That meant changing <i>thousands</i> of hyperlinks. Oh dear; better to get it right first time.</p>
+         <p>The Links fell into 2 groups: hyperlinks in the body of the text, and Jumpboxes (the latter positioned in the margins of the text). It is 9&nbsp;January 2024 and I've finished the body-text jumps. It was possible to insert a <i>Field | More Fields…</i> that reported the target book page number and also to place that field into the Hyperlink. Thus, if more pages are added or removed the page# in the jump will auto-change. The Jumpboxes — which are Writer Text Boxes — do not accept Fields as active fields; they only accept the Field text content.</p>
+        <p>It has taken me an entire day to edit 2 chapters worth of Jumpboxes. It takes 25 steps involving 32 key presses or mouse click to edit each Jumpbox. There are 30&nbsp;Jumpboxes in Chapter&nbsp;1 & 18&nbsp;chapters in total. Yikes. This is what it looks like:
+        <pre>What it takes to update each Jumpbox
+------------------------------------
+Example: "p051 jump" (1st jumpbox in Chapter 2 Data Types on Page#51)
+
+With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
+(each Jumpbox is a Writer Text Box)
+
+• Select jumpbox
+• In Navigator, Mouse right-click | Edit…
+&nbsp;&nbsp;(cursor is now inside the jumpbox +           )
+&nbsp;&nbsp;(positioned at end of all contents            )
+&nbsp;&nbsp;(this is the end of the hyperlink in each jumpbox)
+• Press &lt;Home> key
+• Hold down &lt;Shift> key + press &lt;End> key
+• Press &lt;Ctrl>+k
+&nbsp;&nbsp;(same as menu:Edit | Hyperlink)
+• Target: 0.0.0.Piece #2: Object References|outline
+• press &lt;Close> button
+• press &lt;Esc> key
+• choose an empty line in the text
+• Press &lt;Alt>+i keys then &lt;d> then &lt;m>
+&nbsp;&nbsp;(same as menu:Insert | Field | More Fields…              )
+&nbsp;&nbsp;(Care! in Linux &lt;Ctrl>+&lt;F2> will switch to the 2nd screen)
+• Select Type:Headings and Refer using:Page number (unstyled) in the Dialog
+• Choose 'Piece #2: Object References' under Selection
+• Press the &lt;Insert> button then &lt;Close>
+• Select the Field just inserted into the Text & press &lt;Ctrl>+x or &lt;Shift>+&lt;Delete>
+&nbsp;&nbsp;(this both puts the field into the Clipboard and removes it from the text)
+• Select same jumpbox
+• In Navigator, Mouse right-click | Edit
+• Press &lt;Home> key†
+• Press &lt;Ctrl>+k
+• Click in Text:
+• Press &lt;Home> key
+• Hold down &lt;Shift> key & press &lt;right-arrow> to select all numbers
+&nbsp;&nbsp;(numbers at the beginning of the Hyperlink refer to the page number)
+• Press &lt;Ctrl>+v
+&nbsp;&nbsp;(although it is pasting a Field, it only pastes the text-content, which is the page number)
+&nbsp;&nbsp;(note that the previous number was the page as measured from the beginning of the document)
+&nbsp;&nbsp;(which is NOT the number shown in the page                                                )
+• Press &lt;Enter> key or &lt;OK> button
+• Press &lt;Esc> key
+• Choose the next jumpbox in the Navigator & do it all over again.
+
+†It may seem peverse to first go to the beginning of the Hyperlink & only then select it. However, 
+ there is a bug in Writer Text boxes, and possibly normal text as well. If the Hyperlink is selected
+ from the End (rhs in Western text) and is then edited, when the &lt;OK> button is pressed it enters a
+ *2nd* copy of the Hyperlink after the first. Thus, go to the beginning first.</pre></p>
+
+</details>
+
+<a name="2025-jan-13"></a>
+### January 2025:
+
+Programming-In-Python3.pdf is now 90% complete & a part of the [releases for download](./releases) (starting at 0.3-gamma).
+
+Checking & fixing all the Jump-Boxes has been quite a slog     
+(a Jump-Box is a Writer Text Box that contains a HyperLink to another part of the document).     
+
+The raft of endemic bugs in LibreOffice has almost broken me. I discovered yet another near the end of this latest update:
+
+The original author produced identically-named Headings. An example (not the only one) is:     
+- 14 Introduction to Parsing | Writing Handcrafted Parsers | Simple Key–Value Data Parsing | p523
+- 14 Introduction to Parsing | Pythonic Parsing with PyParsing | Simple Key–Value Data Parsing | p543
+- 14 Introduction to Parsing | Lex/Yacc-Style Parsing with ply | Simple Key–Value Data Parsing | p559
+
+The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example).
 
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
 The above was all under LibreOffice v7.4.7.2.
-  - On [Nov 06](#appimage-installation) an AppImage v24.8.2.1 install (updated to v24.8.3.2 on Nov 14) allowed temporary access to the ODT.
-  - On [Nov 09](#2024-nov-09) the AppImage v7.2.3.2 finally gave mostly error-free access to all ODTs.
-  - On [Dec 22](#2024-dec-22) the AppImage v6.1.0.3 finally gave mostly bug-free access to all ODTs.
-  - On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. Not good for more than 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
-
-***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
-
-Note that my Devuan is currently Linux 5 daedalus, based on Debian stable, kernel 6.11.5+bpo-amd64 + fully updated each day.
-
-It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to switch view to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
-
-***7 Nov update:*** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### Index:
 | The Files (1<sup>st</sup> Attempt at Production) | Information Link |
@@ -44,11 +143,21 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 | Bug#05 | [Jan 01 2025](#bug-05)
 | Bug#06 | [Jan 02 2025](#bug-06)
 | Bug#07 | [Jan 04 2025](#bug-07)
-|[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
 |***Success!*** |[Jan 06 2025](#success)|
+|[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
+
+- On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. Not good for more than 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
+
+***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
+
+Note that my Devuan is currently Linux 5 daedalus, based on Debian stable, kernel 6.11.5+bpo-amd64 + fully updated each day.
+
+It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-stats kept varying, as did the final page number. In addition, *Figure 15.1* kept intruding into the last pages, then was displayed within multiple other pages (the only action from me was to switch view to the last two pages). Fig 15.1 is shown on p563 of [“3_new.pdf”](/3_new.pdf), and that is completely wrong. It is not where it is supposed to be, nor where I placed it. Yet another bug.
+
+***7 Nov update:*** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### *Intentions*
-The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it has actually become is a reference for Bug Reports to Libreoffice (LO).
+The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it then became is a reference for Bug Reports to Libreoffice (LO). Those reports have been almost entirely ignored, so in Jan 2025 it has reverted to being a place to obtain *Programming-In-Python3 pdf* (download from [releases](./releases)).
 
 When it became impossible to load the ODTs it was not possible to document the bug(s). So, in that situation I thought that access to the raw documents would help others with better tools than me to find those bugs.
 
@@ -526,117 +635,6 @@ The bug was reported to BugZilla on Dec 12 2024. 2 weeks later there have been 3
 >
 > A report detailing + showing this bug via screenshots can be viewed within [bug11.odt](./bug11.odt) + [bug11.pdf](./bug11.pdf).
 12. The bottom of an image-in-frame-with-caption will coalesce with the top of a table-in-frame. (I do not have an example of this to show as I went through the entire document re-arranging the text to prevent it occurring; attempting to make an example as with earlier bugs caused Libreoffice to freeze. Aaargh!).
-
-## Success     
-<a name="2025-jan-06"></a>
-I can well understand that you may not have read every one of the statements above. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller explanation of the setup in the final section:
-<details>
-           <summary>The Start</summary><br />       
-           <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>0_ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
-</details>
-<details>
-           <summary>Step 1: Two Near Misses & A Car Crash</summary><br />       
-           <p><i>0_ProgrammingInPython3.pdf</i> proved NOT to have clickable links. I tried to add functional page-links into <i>1_Programming-In-Python3.odt</i>.</p>
-           <p>See <a href=#2024-oct-17>17 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/1_Programming-In-Python3.odt>1_Programming-In-Python3.odt</a>.</p>
-           <p>See <a href=#2024-oct-19>19 October 2024</a>. LibreOffice 7.2.4.7 siezed up solid again as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/2_scratch.odt>2_scratch.odt</a>.</p>
-           <p>See <a href=#2024-oct-25>25 October 2024</a>. The whole computer siezed up solid as I tried to update <a href=https://github.com/alexkemp9/Python3docs/blob/main/3_new.odt>3_new.odt</a>.</p>
-</details>
-<details>
-           <summary>Step 2: Autopsy</summary><br />       
-          <p>See <a href=#appimage-installation>AppImage Installations</a>. What was locking the program & even the computer up so tight? A combo of my own mistakes & LibreOffice being riddled with bugs appeared to be part of the problem.</p>
-          <p>Simple advice: Do not use the <i>Default Paragraph Style</i> (use Body Text, or design your own); do not attach a <a href=#frames>frame</a> (nor anything else) to a page (attach to a paragraph, whatever).</p>
-</details>
-<details>
-           <summary>Step 3: Almost-Fix, Thwarted by Bugs</summary><br />       
-          <p>See <a href=#2024-nov-27>27 November 2024</a>. A single multi-chapter ODT was failing, so I switched to create individual Chapters united under the umbrella of a Master Document. It almost worked.</p>
-          <p>I could not persuade the Master Document to reproduce the <a href=https://help.libreoffice.org/7.1/en-US/text/swriter/guide/captions_numbers.html>chapter-numbering</a> that was present within each Chapter ODT for Images, Tables, etc..</p>
-         <p><i>chapter_01.odt</i>, as an example, had images that had captions numbered <i>Figure 1.1</i>, <i>Figure 1.2</i>, and so on. In <i>chapter_02.odt</i> the image captions numbered <i>Figure 2.1</i>, and so on. The Master Document turned all that into <i>Figure 1</i>, <i>Figure 2</i>, and so on as a simple sequential number throughout the entire document. This was a bad bug and I reported it as <a href=https://bugs.documentfoundation.org/show_bug.cgi?id=164307>BugZilla 164307</a>. My report was ignored.</p>
-</details>
-<details>
-           <summary>Step 4: Finally Fixed, Bugs Swatted En-Route</summary><br />       
-          <p>See <a href=#2025-dec-06>06 January 2025</a>. My time during Step#3 above was spent removing every bug that I could find from each Chapter + placing Bookmarks into each Chapter so that the page-links could become effective.</p>
-          <p>It dawned on me one evening that it should now be possible to assemble all the Chapters by hand & have a fully functioning Book!. That turned out to be true, although LibreOffice still had some midges right at the end to cause mayhem.</p>
-          <p>The document <i>Programming-In-Python3 odt</i> was created. The 1st act was to import all styles from <i>chapter_15.odt</i>. The <i>First Page</i> + <i>Inside Cover</i> styles were acquired from the ODM, as was the first + second page content. Next it was important to make sure that <i>Heading Numbering</i> was setup before any chapters were added.</p>
-         <p>The Introduction chapter (<i>chapter_00.odt</i>) was setup in the same way for all chapters: <pre>menu:Insert | More Breaks | Manual Break…</pre> was used to create a <i>Page Break</i> with <i>First Introduction Page</i> as the style. Each Chapter has a unique Page style.</p>
-          <p>There were minor glitches along the way, but nothing major and it was all done very quickly since all the ingredients were already in place. The big bug arrived at the very end.</p>
-          <p>After <i>Epilogue</i> + <i>Bibliography</i> were in place the Contents Index (page ii at the beginning) was created. A little after this I realised that all the Chapter / Header numbering in Images, etc. had switched itself OFF & the document now looked just like the Master Document did after auto-import. I have zero idea as to the exact action that caused this, but suspect that it may have been adding the index.</p>
-          <p>Arghh!</p>
-          <p>The difference between an ODT and an ODM is that the latter is read-only. Because this document was an ODT I could edit it. Selecting the 1st image number (it is a Field) and using &lt;Shift>-F10 (same as right-click in my Linux Desktop) then <i>Edit Fields…</i> showed that the Heading Number level selector was now empty. Restoring the value to “Level 1” and &lt;OK> restored the chapter numbering not just for that Image but for everything throughout the document. Hey, we were back in business.</p>
-</details>
-<details>
-           <summary>Step 5: Polishing</summary><br />       
-          <p>Finishing off often takes longer than Preparation & Action.</p>
-          <p>My reason for starting was that the many (so-called) Hyperlinks in the original PDF were not actually active jumps. I had resolved to fix that.</p>
-         <p>I got <i>0_ProgrammingInPython3.pdf</i> in August 2024. Finally, 4 months later, I had a stylish update in <i>Programming-In-Python3 odt</i>, but it still did not have accurate page-numbers for the target of the links. The technique that I had deployed reported the target-page as counted from the beginning of the document. I needed the hyperlink button to report the target as reported on the link-page. That meant changing <i>thousands</i> of hyperlinks. Oh dear; better to get it right first time.</p>
-         <p>The Links fell into 2 groups: hyperlinks in the body of the text, and Jumpboxes (the latter positioned in the margins of the text). It is 9&nbsp;January 2024 and I've finished the body-text jumps. It was possible to insert a <i>Field | More Fields…</i> that reported the target book page number and also to place that field into the Hyperlink. Thus, if more pages are added or removed the page# in the jump will auto-change. The Jumpboxes — which are Writer Text Boxes — do not accept Fields as active fields; they only accept the Field text content.</p>
-        <p>It has taken me an entire day to edit 2 chapters worth of Jumpboxes. It takes 25 steps involving 32 key presses or mouse click to edit each Jumpbox. There are 30&nbsp;Jumpboxes in Chapter&nbsp;1 & 18&nbsp;chapters in total. Yikes. This is what it looks like:
-        <pre>What it takes to update each Jumpbox
-------------------------------------
-Example: "p051 jump" (1st jumpbox in Chapter 2 Data Types on Page#51)
-
-With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
-(each Jumpbox is a Writer Text Box)
-
-• Select jumpbox
-• In Navigator, Mouse right-click | Edit…
-&nbsp;&nbsp;(cursor is now inside the jumpbox +           )
-&nbsp;&nbsp;(positioned at end of all contents            )
-&nbsp;&nbsp;(this is the end of the hyperlink in each jumpbox)
-• Press &lt;Home> key
-• Hold down &lt;Shift> key + press &lt;End> key
-• Press &lt;Ctrl>+k
-&nbsp;&nbsp;(same as menu:Edit | Hyperlink)
-• Target: 0.0.0.Piece #2: Object References|outline
-• press &lt;Close> button
-• press &lt;Esc> key
-• choose an empty line in the text
-• Press &lt;Alt>+i keys then &lt;d> then &lt;m>
-&nbsp;&nbsp;(same as menu:Insert | Field | More Fields…              )
-&nbsp;&nbsp;(Care! in Linux &lt;Ctrl>+&lt;F2> will switch to the 2nd screen)
-• Select Type:Headings and Refer using:Page number (unstyled) in the Dialog
-• Choose 'Piece #2: Object References' under Selection
-• Press the &lt;Insert> button then &lt;Close>
-• Select the Field just inserted into the Text & press &lt;Ctrl>+x or &lt;Shift>+&lt;Delete>
-&nbsp;&nbsp;(this both puts the field into the Clipboard and removes it from the text)
-• Select same jumpbox
-• In Navigator, Mouse right-click | Edit
-• Press &lt;Home> key†
-• Press &lt;Ctrl>+k
-• Click in Text:
-• Press &lt;Home> key
-• Hold down &lt;Shift> key & press &lt;right-arrow> to select all numbers
-&nbsp;&nbsp;(numbers at the beginning of the Hyperlink refer to the page number)
-• Press &lt;Ctrl>+v
-&nbsp;&nbsp;(although it is pasting a Field, it only pastes the text-content, which is the page number)
-&nbsp;&nbsp;(note that the previous number was the page as measured from the beginning of the document)
-&nbsp;&nbsp;(which is NOT the number shown in the page                                                )
-• Press &lt;Enter> key or &lt;OK> button
-• Press &lt;Esc> key
-• Choose the next jumpbox in the Navigator & do it all over again.
-
-†It may seem peverse to first go to the beginning of the Hyperlink & only then select it. However, 
- there is a bug in Writer Text boxes, and possibly normal text as well. If the Hyperlink is selected
- from the End (rhs in Western text) and is then edited, when the &lt;OK> button is pressed it enters a
- *2nd* copy of the Hyperlink after the first. Thus, go to the beginning first.</pre></p>
-
-</details>
-
-<a name="2025-jan-13"></a>
-### January 2025:
-
-Programming-In-Python3.pdf is now 90% complete & part of the releases (starting at 0.3-gamma) for download.
-
-Checking & fixing all the Jump-Boxes has been quite a slog
-(a Jump-Box is a Text Box that contains a HyperLink to another part of the document).     
-
-The raft of endemic bugs in LibreOffice has almost broken me. I discovered yet another near the end of this latest update:
-
-The original author of this document produced identically-named Headings. An example (not the only one) is:     
-- 14 Introduction to Parsing | Writing Handcrafted Parsers | Simple Key–Value Data Parsing | p523
-- 14 Introduction to Parsing | Pythonic Parsing with PyParsing | Simple Key–Value Data Parsing | p543
-- 14 Introduction to Parsing | Lex/Yacc-Style Parsing with ply | Simple Key–Value Data Parsing | p559
-
-The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example).
 
 ## *Contact*
 Send feedback via the [dev1galaxy.org forum](https://dev1galaxy.org/viewtopic.php?id=6915).
