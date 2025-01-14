@@ -98,7 +98,7 @@ With Navigator launched (&lt;F5>) & 'Drawing Objects' expanded:
 <a name="2025-jan-13"></a>
 ### January 2025:
 
-Programming-In-Python3.pdf is now 90% complete & a part of the [releases for download](./releases) (starting at 0.3-gamma).
+Programming-In-Python3.pdf is now 90% complete & a part of the [releases for download](https://github.com/alexkemp9/Python3docs/releases) (starting at 0.3-gamma).
 
 Checking & fixing all the Jump-Boxes has been quite a slog     
 (a Jump-Box is a Writer Text Box that contains a HyperLink to another part of the document).     
@@ -157,9 +157,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 ***7 Nov update:*** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### *Intentions*
-The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it then became is a reference for Bug Reports to Libreoffice (LO). Those reports have been almost entirely ignored, so in Jan 2025 it has reverted to being a place to obtain *Programming-In-Python3 pdf* (download from [releases](./releases)).
-
-When it became impossible to load the ODTs it was not possible to document the bug(s). So, in that situation I thought that access to the raw documents would help others with better tools than me to find those bugs.
+The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it then became is a reference for Bug Reports to Libreoffice (LO). Those reports have been almost entirely ignored, so in Jan 2025 it has reverted to being a place to obtain *Programming-In-Python3 pdf* ([download from releases](https://github.com/alexkemp9/Python3docs/releases)).
 
 ### *Versions*
 These are my current LO + OS versions:
