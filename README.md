@@ -3,7 +3,7 @@
 
 ## Success     
 <a name="2025-jan-06"></a>
-I can well understand that you may not read every one of the statements below. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller explanation of the setup in the final section (*‘Polishing’*):
+I can well understand that you may not read every one of the statements below. The bottom line is that I've finally got a functional Programming-In-Python3 pdf. First a quick summary, with a fuller (incredibly boring) explanation of the last steps in the final section (*‘Polishing’*):
 <details>
            <summary>The Start</summary><br />       
            <p>See <a href=#2024-august-00>August 2024</a> in <a href=#timeline>The Timeline</a>. I wanted to learn Python & obtained <i>0_ProgrammingInPython3.pdf</i> at https://cs.smu.ca/~porter/.</p>
@@ -110,12 +110,13 @@ The original author produced identically-named Headings. An example (not the onl
 - 14 Introduction to Parsing | Pythonic Parsing with PyParsing | Simple Key–Value Data Parsing | p543
 - 14 Introduction to Parsing | Lex/Yacc-Style Parsing with ply | Simple Key–Value Data Parsing | p559
 
-The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example).
+The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example why a bug report is a waste of time).
 
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
-The above was all under LibreOffice v7.4.7.2.
+The above was all under LibreOffice v7.4.7.2.     
+(v24.8.2.1 shows similar behaviour)
 
 ### Index:
 | The Files (1<sup>st</sup> Attempt at Production) | Information Link |
@@ -124,6 +125,7 @@ The above was all under LibreOffice v7.4.7.2.
 |[ProgrammingInPython3.txt](Texts/ProgrammingInPython3.txt)|[August 2024 #1](#2024-august-01)|
 |[1_Programming-In-Python3.odt](/1_Programming-In-Python3.odt)|[August 2024 #2](#2024-august-02)|
 |[1_Programming-In-Python3.pdf](/1_Programming-In-Python3.pdf)|[August 2024 #2](#2024-august-02)|
+| (I caught Covid) |   |
 |[2_scratch.odt](/2_scratch.odt)|[Oct 17 2024](#2024-oct-17)|
 |[2_scratch.pdf](/2_scratch.pdf)|[Oct 17 2024](#2024-oct-17)|
 |[3_new.odt](/3_new.odt)|[Oct 19 2024](#2024-oct-19)|
@@ -146,7 +148,7 @@ The above was all under LibreOffice v7.4.7.2.
 |***Success!*** |[Jan 06 2025](#success)|
 |[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
 
-- On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. Not good for more than 7⅓ years. But not to worry: LibreOffice is “*working as designed*”™.
+- On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. So, buggy from the start & now buggy for 7+ years. But not to worry: LibreOffice is *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)™”*.
 
 ***Dec 06 Update:*** Whilst attempting to compile the [tabulation of files + Chapter / Header Numbering](#2024-dec-06) my Devuan system locked up solid immediately after loading *4_paragraph-fix.odt*, and I had to use `Ctrl-Alt-F1` yet again to escape; this was under v7.2.3.2 Libreoffice. I cannot fathom this bug (or set of bugs, whatever it is). It's behaviour changes from day to day.
 
@@ -157,7 +159,7 @@ It was still as buggy as can be under the 24.8.2 AppImage: the Status Bar Page-s
 ***7 Nov update:*** The 24.8.2 AppImage version of Libreoffice has proven to be almost identical to the 7.4.7 version. After about 2 minutes the whole of LibreOffice dies & goes stiff. The only thing that I can do is to force-close the window. Not good.
 
 ### *Intentions*
-The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it then became is a reference for Bug Reports to Libreoffice (LO). Those reports have been almost entirely ignored, so in Jan 2025 it has reverted to being a place to obtain *Programming-In-Python3 pdf* ([download from releases](https://github.com/alexkemp9/Python3docs/releases)).
+The original intention of these documents was to show off how wonderful my updates to the Python3 PDF were. What it then became is a reference for Bug Reports to Libreoffice (LO). Those reports have been almost entirely ignored, so in Jan 2025 it has reverted to being a place to obtain *Programming-In-Python3 pdf* (download [from releases](https://github.com/alexkemp9/Python3docs/releases)).
 
 ### *Versions*
 These are my current LO + OS versions:
