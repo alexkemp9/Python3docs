@@ -1,48 +1,273 @@
-# Symbols
-+;;;;0;0
-!=;;;;0;0
-+=;;;;0;0
--;;;;0;0
--=;;;;0;0
-/;;;;0;0
-/=;;;;0;0
-//;;;;0;0
-//=;;;;0;0
-<;;;;0;0
-<<;;;;0;0
-<<=;;;;0;0
-<=;;;;0;0
-=;;;;0;0
-==;;;;0;0
->;;;;0;0
->=;;;;0;0
->>;;;;0;0
-#;;;;0;0
-%;;;;0;0
-%=;;;;0;0
-&;;;;0;0
-&=;;;;0;0
-();;;;0;0
-*;;;;0;0
-*=;;;;0;0
-**;;;;0;0
-**=;;;;0;0
->>=;;;;0;0
-@;;;;0;0
-[];;;;0;0
-\n;;;;0;0
-^;;;;0;0
-^=;;;;0;0
-_;;;;0;0
-|;;;;0;0
-|=;;;;0;0
-~;;;;0;0
-+=;;;;0;0
+# Concordance File format: Search term ; Alternative entry ; 1st key ; 2nd key ; Match case ; Word only
+#                        :             ; show in Index     ;         ;         ;            ;
+#
+# See also               : howto-produce-an-alphabetical-index.txt
+#
+__abs__();;;;0;0
+__add__();;;;0;0
 __all__;;;;0;0
-__and__;;;;0;0
+__and__();;;;0;0
 __annotations__;;;;0;0
+__bool__();;;;0;0
+__call__;;;;0;0
+__class__;;;;0;0
+__dict__;;;;0;0
+__doc__;;;;0;0
+__file__;;;;0;0
+__module__;;;;0;0
+__name__;;;;0;0
+private;;;;0;0
+__slots__;;;;0;0
+# A
+ABCMeta;;;;0;0
+abs();;;;0;0
+abspath();;;;0;0
+Abstract Base Class;;;;0;0
+abstractmethod();;;;0;0
+abstractproperty();;;;0;0
+Abstract Syntax Tree;;;;0;0
+access control;;;;0;0
+acos();;;;0;0
+acosh();;;;0;0
 aggregating;;;;0;0
 aifc;;;;0;0
 algorithm;algorithms;;;0;0
+all();;;;0;0
 alternation;;;;0;0
 annotations;;;;0;0
+append();;;;0;0
+any();;;;0;0
+as_integer_ratio();;;;0;0
+ascii();;;;0;0
+asin();;;;0;0
+asinh();;;;0;0
+askopenfilename();;;;0;0
+asksaveasfilename();;;;0;0
+askyesno();;;;0;0
+askyesnocancel();;;;0;0
+AssertionError;;;;0;0
+asynchat;;;;0;0
+asyncore;;;;0;0
+atan();;;;0;0
+atan2();;;;0;0
+atanh();;;;0;0
+attrgetter();;;;0;0
+asin();;;;0;0
+asinh();;;;0;0
+attribute access methods;;;;0;0
+AttributeError;;;;0;0
+audioop module;;;;0;0
+augmented assignment;;;;0;0
+# B
+backtrace;;;;0;0
+backups;;;;0;0
+base64 module;;;;0;0
+basename();;;;0;0
+Berkeley DB;;;;0;0
+bin();;;;0;0
+binary data;;;;0;0
+binary ﬁles;;;;0;0
+binary numbers;;;;0;0
+binary search;;;;0;0
+bisect module;;;;0;0
+bit_length();;;;0;0
+bitwise operators;;;;0;0
+Backus–Naur Form;;;;0;0
+bool();;;;0;0
+Boolean expressions;;;;0;0
+break;;;;0;0
+#
+# Built-In Functions
+abs();;Built-In Functions;;0;0
+all();;Built-In Functions;;0;0
+any();;Built-In Functions;;0;0
+ascii();;Built-In Functions;;0;0
+bin();;Built-In Functions;;0;0
+bool();;Built-In Functions;;0;0
+chr();;Built-In Functions;;0;0
+classmethod();;Built-In Functions;;0;0
+compile();;Built-In Functions;;0;0
+complex();;Built-In Functions;;0;0
+delattr();;Built-In Functions;;0;0
+dict();;Built-In Functions;;0;0
+dir();;Built-In Functions;;0;0
+divmod();;Built-In Functions;;0;0
+enumerate();;Built-In Functions;;0;0
+eval();;Built-In Functions;;0;0
+filter();;Built-In Functions;;0;0
+float();;Built-In Functions;;0;0
+format();;Built-In Functions;;0;0
+frozenset();;Built-In Functions;;0;0
+getattr();;Built-In Functions;;0;0
+globals();;Built-In Functions;;0;0
+hasattr();;Built-In Functions;;0;0
+hash();;Built-In Functions;;0;0
+help();;Built-In Functions;;0;0
+hex();;Built-In Functions;;0;0
+id();;Built-In Functions;;0;0
+__import__()();;Built-In Functions;;0;0
+input();;Built-In Functions;;0;0
+int();;Built-In Functions;;0;0
+isinstance();;Built-In Functions;;0;0
+issubclass();;Built-In Functions;;0;0
+iter();;Built-In Functions;;0;0
+len();;Built-In Functions;;0;0
+list();;Built-In Functions;;0;0
+locals();;Built-In Functions;;0;0
+map();;Built-In Functions;;0;0
+max();;Built-In Functions;;0;0
+min();;Built-In Functions;;0;0
+next();;Built-In Functions;;0;0
+oct();;Built-In Functions;;0;0
+ord();;Built-In Functions;;0;0
+pow();;Built-In Functions;;0;0
+print();;Built-In Functions;;0;0
+property();;Built-In Functions;;0;0
+range();;Built-In Functions;;0;0
+repr();;Built-In Functions;;0;0
+reversed();;Built-In Functions;;0;0
+round();;Built-In Functions;;0;0
+set();;Built-In Functions;;0;0
+setattr();;Built-In Functions;;0;0
+sorted();;Built-In Functions;;0;0
+staticmethod();;Built-In Functions;;0;0
+str();;Built-In Functions;;0;0
+sum();;Built-In Functions;;0;0
+super();;Built-In Functions;;0;0
+tuple();;Built-In Functions;;0;0
+type();;Built-In Functions;;0;0
+vars();;Built-In Functions;;0;0
+zip();;Built-In Functions;;0;0
+# end Built-In Functions
+byte-code;;;;0;0
+byte order;;;;0;0
+#
+# Bytearray Types
+append();;Bytearray Types;;0;0
+capitalize();;Bytearray Types;;0;0
+center();;Bytearray Types;;0;0
+count();;Bytearray Types;;0;0
+decode();;Bytearray Types;;0;0
+endswith();;Bytearray Types;;0;0
+expandtabs();;Bytearray Types;;0;0
+extend();;Bytearray Types;;0;0
+find();;Bytearray Types;;0;0
+fromhex();;Bytearray Types;;0;0
+index();;Bytearray Types;;0;0
+insert();;Bytearray Types;;0;0
+isalnum();;Bytearray Types;;0;0
+isalpha();;Bytearray Types;;0;0
+isdigit();;Bytearray Types;;0;0
+islower();;Bytearray Types;;0;0
+isspace();;Bytearray Types;;0;0
+istitle();;Bytearray Types;;0;0
+isupper();;Bytearray Types;;0;0
+join();;Bytearray Types;;0;0
+ljust();;Bytearray Types;;0;0
+lower();;Bytearray Types;;0;0
+lstrip();;Bytearray Types;;0;0
+partition();;Bytearray Types;;0;0
+pop();;Bytearray Types;;0;0
+remove();;Bytearray Types;;0;0
+replace();;Bytearray Types;;0;0
+reverse();;Bytearray Types;;0;0
+rfind();;Bytearray Types;;0;0
+rindex();;Bytearray Types;;0;0
+rjust();;Bytearray Types;;0;0
+rpartition();;Bytearray Types;;0;0
+rsplit();;Bytearray Types;;0;0
+rstrip();;Bytearray Types;;0;0
+split();;Bytearray Types;;0;0
+splitlines();;Bytearray Types;;0;0
+startswith();;Bytearray Types;;0;0
+strip();;Bytearray Types;;0;0
+swapcase();;Bytearray Types;;0;0
+title();;Bytearray Types;;0;0
+translate();;Bytearray Types;;0;0
+upper();;Bytearray Types;;0;0
+zfill();;Bytearray Types;;0;0
+# end Bytearray Types
+#
+# File Extensions
+.bz2;;File_Extensions;;0;0
+.csv;;File_Extensions;;0;0
+.gz;;File_Extensions;;0;0
+.ini;;File_Extensions;;0;0
+.m3u;;File_Extensions;;0;0
+.pls;;File_Extensions;;0;0
+.py;;File_Extensions;;0;0
+.pyc;;File_Extensions;;0;0
+.pyo;;File_Extensions;;0;0
+.pyw;;File_Extensions;;0;0
+.svg;;File_Extensions;;0;0
+.tar;;File_Extensions;;0;0
+.tar.gz;;File_Extensions;;0;0
+.tar.bz2;;File_Extensions;;0;0
+.tgz;;File_Extensions;;0;0
+.wav;;File_Extensions;;0;0
+.xpm;;File_Extensions;;0;0
+.zip;;File_Extensions;;0;0
+# end File Extensions
+#
+# Files
+Abstract.py;;Files;;0;0
+bigdigits.py;;Files;;0;0
+BikeStock.py;;Files;;0;0
+BinaryRecordFile.py;;Files;;0;0
+blocks.py;;Files;;0;0
+bookmarks-tk.pyw;;Files;;0;0
+car_registration.py;;Files;;0;0
+car_registration_server.py;;Files;;0;0
+CharGrid.py;;Files;;0;0
+checktags.py;;Files;;0;0
+convert-incidents.py;;Files;;0;0
+csv2html.py;;Files;;0;0
+csv2html2_opt.py;;Files;;0;0
+digit_names.py;;Files;;0;0
+dvds-dbm.py;;Files;;0;0
+dvds-sql.py;;Files;;0;0
+external_sites.py;;Files;;0;0
+ExternalStorage.py;;Files;;0;0
+finddup.py;;Files;;0;0
+findduplicates.py;;Files;;0;0
+first-order-logic.py;;Files;;0;0
+FuzzyBool.py;;Files;;0;0
+FuzzyBoolAlt.py;;Files;;0;0
+generate_grid.py;;Files;;0;0
+generate_test_names1.py;;Files;;0;0
+generate_test_names2.py;;Files;;0;0
+generate_usernames.py;;Files;;0;0
+grepword.py;;Files;;0;0
+grepword-m.py;;Files;;0;0
+grepword-p.py;;Files;;0;0
+grepword-t.py;;Files;;0;0
+html2text.py;;Files;;0;0
+Image.py;;Files;;0;0
+IndentedList.py;;Files;;0;0
+interest-tk.pyw;;Files;;0;0
+magic-numbers.py;;Files;;0;0
+make_html_skeleton.py;;Files;;0;0
+noblanks.py;;Files;;0;0
+playlists.py;;Files;;0;0
+print_unicode.py;;Files;;0;0
+Property.py;;Files;;0;0
+quadratic.py;;Files;;0;0
+Shape.py;;Files;;0;0
+ShapeAlt.py;;Files;;0;0
+SortedDict.py;;Files;;0;0
+SortedList.py;;Files;;0;0
+SortKey.py;;Files;;0;0
+statistics.py;;Files;;0;0
+TextFilter.py;;Files;;0;0
+TextUtil.py;;Files;;0;0
+uniquewords1.py;;Files;;0;0
+uniquewords2.py;;Files;;0;0
+untar.py;;Files;;0;0
+Valid.py;;Files;;0;0
+XmlShadow.py;;Files;;0;0
+# end Files
+len();;;;0;0
+min();;;;0;0
+max();;;;0;0
+sndhdr module;;;;0;0
+sum();;;;0;0

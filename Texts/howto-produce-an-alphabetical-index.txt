@@ -12,7 +12,7 @@ Steps to produce the Alphabetical Index:
 4. index.sdi was produced from preconcordance.txt as follows:
    $ while read -r line; do read a b <<< "$line"; echo "$b;;;;0;0">>index.sdi; done < preconcordance.txt;
    # (the text ";;;;0;0" provides all-zeroed defaults for the rest of the line)
-   # (manually edited to add () to functions)
+   # (in the end I manually added the old-file index entries)
 5. Using a sdi file whilst creating an Alphabetical Index will lead to a similar 'Edit dialog':
    https://ask.libreoffice.org/t/how-do-i-save-a-text-file-as-a-sdi-file-so-writer-will-pick-it-up-as-a-concordance-file/62350/4
    # (I never found the way to auto-save that file other than as explained at #4)
