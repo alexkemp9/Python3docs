@@ -18,7 +18,9 @@ __module__;;;;0;0
 __name__;;;;0;0
 private;;;;0;0
 __slots__;;;;0;0
+#
 # A
+#
 ABCMeta;;;;0;0
 abs();;;;0;0
 abspath();;;;0;0
@@ -58,7 +60,9 @@ attribute access methods;;;;0;0
 AttributeError;;;;0;0
 audioop module;;;;0;0
 augmented assignment;;;;0;0
+#
 # B
+#
 backtrace;;;;0;0
 backups;;;;0;0
 base64 module;;;;0;0
@@ -142,72 +146,78 @@ zip();;Built-In Functions;;0;0
 byte-code;;;;0;0
 byte order;;;;0;0
 #
-# Bytearray Types
-append();;Bytearray Types;;0;0
-capitalize();;Bytearray Types;;0;0
-center();;Bytearray Types;;0;0
-count();;Bytearray Types;;0;0
-decode();;Bytearray Types;;0;0
-endswith();;Bytearray Types;;0;0
-expandtabs();;Bytearray Types;;0;0
-extend();;Bytearray Types;;0;0
-find();;Bytearray Types;;0;0
-fromhex();;Bytearray Types;;0;0
-index();;Bytearray Types;;0;0
-insert();;Bytearray Types;;0;0
-isalnum();;Bytearray Types;;0;0
-isalpha();;Bytearray Types;;0;0
-isdigit();;Bytearray Types;;0;0
-islower();;Bytearray Types;;0;0
-isspace();;Bytearray Types;;0;0
-istitle();;Bytearray Types;;0;0
-isupper();;Bytearray Types;;0;0
-join();;Bytearray Types;;0;0
-ljust();;Bytearray Types;;0;0
-lower();;Bytearray Types;;0;0
-lstrip();;Bytearray Types;;0;0
-partition();;Bytearray Types;;0;0
-pop();;Bytearray Types;;0;0
-remove();;Bytearray Types;;0;0
-replace();;Bytearray Types;;0;0
-reverse();;Bytearray Types;;0;0
-rfind();;Bytearray Types;;0;0
-rindex();;Bytearray Types;;0;0
-rjust();;Bytearray Types;;0;0
-rpartition();;Bytearray Types;;0;0
-rsplit();;Bytearray Types;;0;0
-rstrip();;Bytearray Types;;0;0
-split();;Bytearray Types;;0;0
-splitlines();;Bytearray Types;;0;0
-startswith();;Bytearray Types;;0;0
-strip();;Bytearray Types;;0;0
-swapcase();;Bytearray Types;;0;0
-title();;Bytearray Types;;0;0
-translate();;Bytearray Types;;0;0
-upper();;Bytearray Types;;0;0
-zfill();;Bytearray Types;;0;0
-# end Bytearray Types
+# Bytearray Type Functions
+append();;Bytearray Type Functions;;0;0
+capitalize();;Bytearray Type Functions;;0;0
+center();;Bytearray Type Functions;;0;0
+count();;Bytearray Type Functions;;0;0
+decode();;Bytearray Type Functions;;0;0
+endswith();;Bytearray Type Functions;;0;0
+expandtabs();;Bytearray Type Functions;;0;0
+extend();;Bytearray Type Functions;;0;0
+find();;Bytearray Type Functions;;0;0
+fromhex();;Bytearray Type Functions;;0;0
+index();;Bytearray Type Functions;;0;0
+insert();;Bytearray Type Functions;;0;0
+isalnum();;Bytearray Type Functions;;0;0
+isalpha();;Bytearray Type Functions;;0;0
+isdigit();;Bytearray Type Functions;;0;0
+islower();;Bytearray Type Functions;;0;0
+isspace();;Bytearray Type Functions;;0;0
+istitle();;Bytearray Type Functions;;0;0
+isupper();;Bytearray Type Functions;;0;0
+join();;Bytearray Type Functions;;0;0
+ljust();;Bytearray Type Functions;;0;0
+lower();;Bytearray Type Functions;;0;0
+lstrip();;Bytearray Type Functions;;0;0
+partition();;Bytearray Type Functions;;0;0
+pop();;Bytearray Type Functions;;0;0
+remove();;Bytearray Type Functions;;0;0
+replace();;Bytearray Type Functions;;0;0
+reverse();;Bytearray Type Functions;;0;0
+rfind();;Bytearray Type Functions;;0;0
+rindex();;Bytearray Type Functions;;0;0
+rjust();;Bytearray Type Functions;;0;0
+rpartition();;Bytearray Type Functions;;0;0
+rsplit();;Bytearray Type Functions;;0;0
+rstrip();;Bytearray Type Functions;;0;0
+split();;Bytearray Type Functions;;0;0
+splitlines();;Bytearray Type Functions;;0;0
+startswith();;Bytearray Type Functions;;0;0
+strip();;Bytearray Type Functions;;0;0
+swapcase();;Bytearray Type Functions;;0;0
+title();;Bytearray Type Functions;;0;0
+translate();;Bytearray Type Functions;;0;0
+upper();;Bytearray Type Functions;;0;0
+zfill();;Bytearray Type Functions;;0;0
+# end Bytearray Type Functions
+.bz2;;;;0;0
+bz2 module;;;;0;0
 #
-# File Extensions
-.bz2;;File_Extensions;;0;0
-.csv;;File_Extensions;;0;0
-.gz;;File_Extensions;;0;0
-.ini;;File_Extensions;;0;0
-.m3u;;File_Extensions;;0;0
-.pls;;File_Extensions;;0;0
-.py;;File_Extensions;;0;0
-.pyc;;File_Extensions;;0;0
-.pyo;;File_Extensions;;0;0
-.pyw;;File_Extensions;;0;0
-.svg;;File_Extensions;;0;0
-.tar;;File_Extensions;;0;0
-.tar.gz;;File_Extensions;;0;0
-.tar.bz2;;File_Extensions;;0;0
-.tgz;;File_Extensions;;0;0
-.wav;;File_Extensions;;0;0
-.xpm;;File_Extensions;;0;0
-.zip;;File_Extensions;;0;0
-# end File Extensions
+# C
+#
+calcsize();;;;0;0
+#
+# Extensions (TLE for Files)
+.bz2;;Extensions;;0;0
+.csv;;Extensions;;0;0
+.gz;;Extensions;;0;0
+.ini;;Extensions;;0;0
+.m3u;;Extensions;;0;0
+.pls;;Extensions;;0;0
+.py;;Extensions;;0;0
+.pyc;;Extensions;;0;0
+.pyo;;Extensions;;0;0
+.pyw;;Extensions;;0;0
+.svg;;Extensions;;0;0
+.tar;;Extensions;;0;0
+.tar.gz;;Extensions;;0;0
+.tar.bz2;;Extensions;;0;0
+.tgz;;Extensions;;0;0
+.wav;;Extensions;;0;0
+.xpm;;Extensions;;0;0
+.zip;;Extensions;;0;0
+# end Extensions (TLE for Files)
 #
 # Files
 Abstract.py;;Files;;0;0
