@@ -3,21 +3,23 @@
 #
 # See also               : howto-produce-an-alphabetical-index.txt
 #
-__abs__();;;;0;0
-__add__();;;;0;0
-__all__;;;;0;0
-__and__();;;;0;0
-__annotations__;;;;0;0
-__bool__();;;;0;0
-__call__;;;;0;0
-__class__;;;;0;0
-__dict__;;;;0;0
-__doc__;;;;0;0
-__file__;;;;0;0
-__module__;;;;0;0
-__name__;;;;0;0
-private;;;;0;0
-__slots__;;;;0;0
+# Attributes
+#
+__abs__();;Attributes;;0;0
+__add__();;Attributes;;0;0
+__all__;;Attributes;;0;0
+__and__();;Attributes;;0;0
+__annotations__;;Attributes;;0;0
+__bool__();;Attributes;;0;0
+__call__;;Attributes;;0;0
+__class__;;Attributes;;0;0
+__dict__;;Attributes;;0;0
+__doc__;;Attributes;;0;0
+__file__;;Attributes;;0;0
+__module__;;Attributes;;0;0
+__name__;;Attributes;;0;0
+private;;Attributes;;0;0
+__slots__;;Attributes;;0;0
 #
 # A
 #
@@ -25,6 +27,7 @@ ABCMeta;;;;0;0
 abs();;;;0;0
 abspath();;;;0;0
 Abstract Base Class;;;;0;0
+Abstract.py;;;;0;0
 abstractmethod();;;;0;0
 abstractproperty();;;;0;0
 Abstract Syntax Tree;;;;0;0
@@ -65,18 +68,24 @@ augmented assignment;;;;0;0
 #
 backtrace;;;;0;0
 backups;;;;0;0
+Backus–Naur Form;;;;0;0
 base64 module;;;;0;0
 basename();;;;0;0
 Berkeley DB;;;;0;0
+bigdigits.py;;;;0;0
+BikeStock.py;;;;0;0
 bin();;;;0;0
 binary data;;;;0;0
 binary ﬁles;;;;0;0
 binary numbers;;;;0;0
 binary search;;;;0;0
+BinaryRecordFile.py;;;;0;0
 bisect module;;;;0;0
 bit_length();;;;0;0
 bitwise operators;;;;0;0
-Backus–Naur Form;;;;0;0
+blocks.py;;;;0;0
+bookmarks-tk.pyw;;;;0;0
+__bool__();;;;0;0
 bool();;;;0;0
 Boolean expressions;;;;0;0
 break;;;;0;0
@@ -109,7 +118,7 @@ hash();;Built-In Functions;;0;0
 help();;Built-In Functions;;0;0
 hex();;Built-In Functions;;0;0
 id();;Built-In Functions;;0;0
-__import__()();;Built-In Functions;;0;0
+__import__();;Built-In Functions;;0;0
 input();;Built-In Functions;;0;0
 int();;Built-In Functions;;0;0
 isinstance();;Built-In Functions;;0;0
@@ -145,6 +154,7 @@ zip();;Built-In Functions;;0;0
 # end Built-In Functions
 byte-code;;;;0;0
 byte order;;;;0;0
+bytearray;;;;0;0
 #
 # Bytearray Type Functions
 append();;Bytearray Type Functions;;0;0
@@ -197,6 +207,50 @@ bz2 module;;;;0;0
 # C
 #
 calcsize();;;;0;0
+calendar;;;;0;0
+__call__();;;;0;0
+call();;;;0;0
+callable;;;;0;0
+capitalize();;;;0;0
+car_registration.py;;;;0;0
+car_registration_server.py;;;;0;0
+center();;;;0;0
+CharGrid.py;;;;0;0
+checktags.py;;;;0;0
+classmethod();;;;0;0
+clear();;;;0;0
+close();;;;0;0
+cmath module;;;;0;0
+collections module;;;;0;0
+compile();;;;0;0
+complex();;;;0;0
+connection object;;;;0;0
+convert-incidents.py;;;;0;0
+coroutines;;;;0;0
+count();;;;0;0
+csv2html.py;;;;0;0
+csv2html2_opt.py;;;;0;0
+cursor object;;;;0;0
+#
+# D
+#
+decode();;;;0;0
+defaultdict;;;;0;0
+delattr();;;;0;0
+dict();;;;0;0
+digit_names.py;;;;0;0
+dir();;;;0;0
+divmod();;;;0;0
+dvds-dbm.py;;;;0;0
+dvds-sql.py;;;;0;0
+#
+# E
+#
+endswith();;;;0;0
+enumerate();;;;0;0
+eval();;;;0;0
+expandtabs();;;;0;0
+extend();;;;0;0
 #
 # Extensions (TLE for Files)
 .bz2;;Extensions;;0;0
@@ -218,6 +272,12 @@ calcsize();;;;0;0
 .xpm;;Extensions;;0;0
 .zip;;Extensions;;0;0
 # end Extensions (TLE for Files)
+#
+external_sites.py;;;;0;0
+ExternalStorage.py;;;;0;0
+#
+# F
+#
 #
 # Files
 Abstract.py;;Files;;0;0
@@ -276,8 +336,179 @@ untar.py;;Files;;0;0
 Valid.py;;Files;;0;0
 XmlShadow.py;;Files;;0;0
 # end Files
+filter();;;;0;0
+find();;;;0;0
+finddup.py;;;;0;0
+findduplicates.py;;;;0;0
+first-order-logic.py;;;;0;0
+float();;;;0;0
+format();;;;0;0
+fromhex();;;;0;0
+frozenset();;;;0;0
+FuzzyBool.py;;;;0;0
+FuzzyBoolAlt.py;;;;0;0
+#
+# G
+#
+generate_grid.py;;;;0;0
+generate_test_names1.py;;;;0;0
+generate_test_names2.py;;;;0;0
+generate_usernames.py;;;;0;0
+getattr();;;;0;0
+globals();;;;0;0
+grepword.py;;;;0;0
+grepword-m.py;;;;0;0
+grepword-p.py;;;;0;0
+grepword-t.py;;;;0;0
+#
+# H
+#
+hasattr();;;;0;0
+hash();;;;0;0
+help();;;;0;0
+hex();;;;0;0
+html2text.py;;;;0;0
+#
+# I
+#
+id();;;;0;0
+Image.py;;;;0;0
+IndentedList.py;;;;0;0
+index();;;;0;0
+input();;;;0;0
+insert();;;;0;0
+int();;;;0;0
+interest-tk.pyw;;;;0;0
+isalnum();;;;0;0
+isalpha();;;;0;0
+isdigit();;;;0;0
+isinstance();;;;0;0
+islower();;;;0;0
+isspace();;;;0;0
+issubclass();;;;0;0
+istitle();;;;0;0
+isupper();;;;0;0
+iter();;;;0;0
+#
+# J
+#
+join();;;;0;0
+#
+# K
+#
+#
+# L
+#
 len();;;;0;0
-min();;;;0;0
+list();;;;0;0
+ljust();;;;0;0
+locals();;;;0;0
+lower();;;;0;0
+lstrip();;;;0;0
+#
+# M
+#
+magic-numbers.py;;;;0;0
+make_html_skeleton.py;;;;0;0
+map();;;;0;0
 max();;;;0;0
+min();;;;0;0
+#
+# N
+#
+next();;;;0;0
+noblanks.py;;;;0;0
+#
+# O
+#
+oct();;;;0;0
+ord();;;;0;0
+#
+# P
+#
+partition();;;;0;0
+playlists.py;;Files;;0;0
+print_unicode.py;;;;0;0
+pop();;;;0;0
+pow();;;;0;0
+print();;;;0;0
+property();;;;0;0
+Property.py;;;;0;0
+#
+# Q
+#
+quadratic.py;;;;0;0
+#
+# R
+#
+range();;;;0;0
+remove();;;;0;0
+replace();;;;0;0
+repr();;;;0;0
+rfind();;;;0;0
+reverse();;;;0;0
+reversed();;;;0;0
+rindex();;;;0;0
+rjust();;;;0;0
+round();;;;0;0
+rpartition();;;;0;0
+rsplit();;;;0;0
+rstrip();;;;0;0
+#
+# S
+#
+set();;;;0;0
+setattr();;;;0;0
+Shape.py;;;;0;0
+ShapeAlt.py;;;;0;0
 sndhdr module;;;;0;0
+sorted();;;;0;0
+SortedDict.py;;;;0;0
+SortedList.py;;;;0;0
+SortKey.py;;;;0;0
+split();;;;0;0
+splitlines();;;;0;0
+startswith();;;;0;0
+staticmethod();;;;0;0
+statistics.py;;;;0;0
+str();;;;0;0
+strip();;;;0;0
 sum();;;;0;0
+super();;;;0;0
+swapcase();;;;0;0
+#
+# T
+#
+TextFilter.py;;;;0;0
+TextUtil.py;;;;0;0
+title();;;;0;0
+translate();;;;0;0
+tuple();;;;0;0
+type();;;;0;0
+#
+# U
+#
+uniquewords1.py;;;;0;0
+uniquewords2.py;;;;0;0
+untar.py;;;;0;0
+upper();;;;0;0
+#
+# V
+#
+Valid.py;;;;0;0
+vars();;;;0;0
+#
+# W
+#
+#
+# X
+#
+XmlShadow.py;;;;0;0
+#
+# Y
+#
+#
+Z
+#
+zfill();;;;0;0chr();;;;0;0
+zip();;;;0;0
