@@ -1,16 +1,12 @@
 # Concordance File format: Search term ; Alternative entry ; 1st key ; 2nd key ; Match case ; Word only
-#                        :             ; show in Index     ;         ;         ;            ;
+#                        :             ; show this on page ;         ;         ;            ;
 #
 # See also               : howto-produce-an-alphabetical-index.txt
 #
-# Attributes
+# Attributes:
 #
-__abs__();;Attributes;;0;0
-__add__();;Attributes;;0;0
 __all__;;Attributes;;0;0
-__and__();;Attributes;;0;0
 __annotations__;;Attributes;;0;0
-__bool__();;Attributes;;0;0
 __call__;;Attributes;;0;0
 __class__;;Attributes;;0;0
 __dict__;;Attributes;;0;0
@@ -24,16 +20,19 @@ __slots__;;Attributes;;0;0
 # A
 #
 ABCMeta;;;;0;0
+__abs__(;__abs__();;;0;0
 abs();;;;0;0
-abspath();;;;0;0
+abspath(;abspath();;;0;0
 Abstract Base Class;;;;0;0
 Abstract.py;;;;0;0
 abstractmethod();;;;0;0
 abstractproperty();;;;0;0
 Abstract Syntax Tree;;;;0;0
 access control;;;;0;0
-acos();;;;0;0
-acosh();;;;0;0
+acos(;acos();;;0;0
+acosh(;acosh();;;0;0
+__add__();;Attributes;;0;0
+add(;add();;;0;0
 aggregating;;;;0;0
 aifc;;;;0;0
 algorithm;algorithms;;;0;0
@@ -41,24 +40,25 @@ all();;;;0;0
 alternation;;;;0;0
 annotations;;;;0;0
 append();;;;0;0
+__and__();;;;0;0
 any();;;;0;0
 as_integer_ratio();;;;0;0
 ascii();;;;0;0
-asin();;;;0;0
-asinh();;;;0;0
-askopenfilename();;;;0;0
-asksaveasfilename();;;;0;0
-askyesno();;;;0;0
-askyesnocancel();;;;0;0
+asin(;asin();;;0;0
+asinh(;asinh();;;0;0
+askopenfilename(;askopenfilename();;;0;0
+asksaveasfilename(;asksaveasfilename();;;0;0
+askyesno(;askyesno();;;0;0
+askyesnocancel(;askyesnocancel();;;0;0
 AssertionError;;;;0;0
-asynchat;;;;0;0
-asyncore;;;;0;0
-atan();;;;0;0
-atan2();;;;0;0
-atanh();;;;0;0
+asynchat;asynchat module;;;0;0
+asyncore;asyncore module;;;0;0
+atan(;atan();;;0;0
+atan2(;atan2();;;0;0
+atanh(;atanh();;;0;0
 attrgetter();;;;0;0
-asin();;;;0;0
-asinh();;;;0;0
+asin(;asin();;;0;0
+asinh(;asinh();;;0;0
 attribute access methods;;;;0;0
 AttributeError;;;;0;0
 audioop module;;;;0;0
@@ -251,10 +251,26 @@ copy();;;;0;0
 copysign;;;;0;0
 coroutines;;;;0;0
 count();;;;0;0
+cProfile module;;;;0;0
+CREATE TABLE;;;;0;0
 csv module;;;;0;0
 csv2html.py;;;;0;0
 csv2html2_opt.py;;;;0;0
+ctypes module;;;;0;0
 cursor object;;;;0;0
+#
+# Cursor Object Attributes and Methods
+arraysize;;Cursor Object Attributes and Methods;;0;0
+close();;Cursor Object Attributes and Methods;;0;0
+description;;Cursor Object Attributes and Methods;;0;0
+execute(;execute();Cursor Object Attributes and Methods;;0;0
+executemany(;executemany();Cursor Object Attributes and Methods;;0;0
+fetchall();;Cursor Object Attributes and Methods;;0;0
+fetchmany(;fetchmany();Cursor Object Attributes and Methods;;0;0
+fetchone();;Cursor Object Attributes and Methods;;0;0
+rowcount;;Cursor Object Attributes and Methods;;0;0
+# end Cursor Object Attributes and Methods
+#
 cursor();;;;0;0
 #
 # D
@@ -276,6 +292,8 @@ dvds-sql.py;;;;0;0
 endswith();;;;0;0
 enumerate();;;;0;0
 eval();;;;0;0
+execute();;;;0;0
+executemany;;;;0;0
 expandtabs();;;;0;0
 extend();;;;0;0
 #
@@ -305,6 +323,9 @@ ExternalStorage.py;;;;0;0
 #
 # F
 #
+fetchall();;;;0;0
+fetchmany();;;;0;0
+fetchone();;;;0;0
 #
 # Files
 Abstract.py;;Files;;0;0
@@ -428,6 +449,7 @@ join();;;;0;0
 #
 len();;;;0;0
 list();;;;0;0
+list type;;;;0;0
 ljust();;;;0;0
 locals();;;;0;0
 lower();;;;0;0
@@ -491,6 +513,7 @@ rstrip();;;;0;0
 #
 # S
 #
+send();;;;0;0
 set();;;;0;0
 setattr();;;;0;0
 Shape.py;;;;0;0
@@ -511,6 +534,7 @@ statistics.py;;;;0;0
 __complex__;;Special Methods;;0;0
 # end Special Methods
 str();;;;0;0
+str type;;;;0;0
 strip();;;;0;0
 sum();;;;0;0
 super();;;;0;0
@@ -524,6 +548,7 @@ TextUtil.py;;;;0;0
 title();;;;0;0
 translate();;;;0;0
 tuple();;;;0;0
+tuple type;;;;0;0
 type();;;;0;0
 #
 # U
