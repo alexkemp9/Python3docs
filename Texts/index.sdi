@@ -74,7 +74,7 @@ basename();;;;0;0
 Berkeley DB;;;;0;0
 bigdigits.py;;;;0;0
 BikeStock.py;;;;0;0
-bin();;;;0;0
+bin(;bin();;;0;0
 binary data;;;;0;0
 binary ﬁles;;;;0;0
 binary numbers;;;;0;0
@@ -95,7 +95,7 @@ abs();;Built-In Functions;;0;0
 all();;Built-In Functions;;0;0
 any();;Built-In Functions;;0;0
 ascii();;Built-In Functions;;0;0
-bin();;Built-In Functions;;0;0
+bin(;bin();Built-In Functions;;0;0
 bool();;Built-In Functions;;0;0
 chr();;Built-In Functions;;0;0
 classmethod();;Built-In Functions;;0;0
@@ -131,7 +131,7 @@ map();;Built-In Functions;;0;0
 max();;Built-In Functions;;0;0
 min();;Built-In Functions;;0;0
 next();;Built-In Functions;;0;0
-oct();;Built-In Functions;;0;0
+oct(;oct();Built-In Functions;;0;0
 ord();;Built-In Functions;;0;0
 pow();;Built-In Functions;;0;0
 print();;Built-In Functions;;0;0
@@ -149,7 +149,7 @@ sum();;Built-In Functions;;0;0
 super();;Built-In Functions;;0;0
 tuple();;Built-In Functions;;0;0
 type();;Built-In Functions;;0;0
-vars();;Built-In Functions;;0;0
+vars(;vars();Built-In Functions;;0;0
 zip();;Built-In Functions;;0;0
 # end Built-In Functions
 byte-code;;;;0;0
@@ -199,7 +199,7 @@ swapcase();;Bytearray Type Functions;;0;0
 title();;Bytearray Type Functions;;0;0
 translate();;Bytearray Type Functions;;0;0
 upper();;Bytearray Type Functions;;0;0
-zfill();;Bytearray Type Functions;;0;0
+zfill(;zfill();Bytearray Type Functions;;0;0
 # end Bytearray Type Functions
 .bz2;;;;0;0
 bz2 module;;;;0;0
@@ -421,6 +421,7 @@ html2text.py;;;;0;0
 #
 id();;;;0;0
 Image.py;;;;0;0
+__import__();;;;0;0
 IndentedList.py;;;;0;0
 index();;;;0;0
 input();;;;0;0
@@ -473,7 +474,7 @@ noblanks.py;;;;0;0
 #
 # O
 #
-oct();;;;0;0
+oct(;oct();;;0;0
 ord();;;;0;0
 OrderedDict();;;;0;0
 os module;;;;0;0
@@ -562,7 +563,7 @@ upper();;;;0;0
 # V
 #
 Valid.py;;;;0;0
-vars();;;;0;0
+vars(;vars();;;0;0
 #
 # W
 #
@@ -576,5 +577,5 @@ XmlShadow.py;;;;0;0
 #
 Z
 #
-zfill();;;;0;0chr();;;;0;0
+zfill(;zfill();;;0;0
 zip();;;;0;0
