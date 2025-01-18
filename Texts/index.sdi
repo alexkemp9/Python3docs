@@ -19,33 +19,39 @@ __slots__;;Attributes;;0;0
 #
 # A
 #
-ABCMeta;;;;0;0
+# abc module
+ABCMeta;;abc module;;0;0
+abstractmethod();@abstractmethod();abc module;;0;0
+abstractproperty();;abc module;;0;0
+# end abc module
+#
 __abs__(;__abs__();;;0;0
-abs();;;;0;0
+abs();abs() (Built-In);;;0;0
 abspath(;abspath();;;0;0
-Abstract Base Class;;;;0;0
+Abstract Base Class;Abstract Base Class (ABC);;;0;0
 Abstract.py;;;;0;0
-abstractmethod();;;;0;0
+Abstract Syntax Tree;Abstract Syntax Tree (AST);;;0;0
+abstractmethod();@abstractmethod();;;0;0
 abstractproperty();;;;0;0
-Abstract Syntax Tree;;;;0;0
+keyboard accelerator;accelerator,keyboard;;;0;0
 access control;;;;0;0
-acos(;acos();;;0;0
-acosh(;acosh();;;0;0
+acos(;acos() (math Module);;;0;0
+acosh(;acosh() (math Module);;;0;0
 __add__();;Attributes;;0;0
 add(;add();;;0;0
 aggregating;;;;0;0
 aifc;;;;0;0
 algorithm;algorithms;;;0;0
-all();;;;0;0
+all();all() (Built-In);;;0;0
 alternation;;;;0;0
 annotations;;;;0;0
-append();;;;0;0
+append();append() (Bytearray Types);;;0;0
 __and__();;;;0;0
-any();;;;0;0
+any();any() (Built-In);;;0;0
 as_integer_ratio();;;;0;0
-ascii();;;;0;0
-asin(;asin();;;0;0
-asinh(;asinh();;;0;0
+ascii();ascii() (Built-In);;;0;0
+asin(;asin() (math Module);;;0;0
+asinh(;asinh() (math Module);;;0;0
 askopenfilename(;askopenfilename();;;0;0
 asksaveasfilename(;asksaveasfilename();;;0;0
 askyesno(;askyesno();;;0;0
@@ -53,12 +59,10 @@ askyesnocancel(;askyesnocancel();;;0;0
 AssertionError;;;;0;0
 asynchat;asynchat module;;;0;0
 asyncore;asyncore module;;;0;0
-atan(;atan();;;0;0
-atan2(;atan2();;;0;0
-atanh(;atanh();;;0;0
+atan(;atan() (math Module);;;0;0
+atan2(;atan2() (math Module);;;0;0
+atanh(;atanh() (math Module);;;0;0
 attrgetter();;;;0;0
-asin(;asin();;;0;0
-asinh(;asinh();;;0;0
 attribute access methods;;;;0;0
 AttributeError;;;;0;0
 audioop module;;;;0;0
@@ -74,7 +78,7 @@ basename();;;;0;0
 Berkeley DB;;;;0;0
 bigdigits.py;;;;0;0
 BikeStock.py;;;;0;0
-bin(;bin();;;0;0
+bin(;bin() (Built-In);;;0;0
 binary data;;;;0;0
 binary ﬁles;;;;0;0
 binary numbers;;;;0;0
@@ -86,7 +90,7 @@ bitwise operators;;;;0;0
 blocks.py;;;;0;0
 bookmarks-tk.pyw;;;;0;0
 __bool__();;;;0;0
-bool();;;;0;0
+bool();bool() (Built-In);;;0;0
 Boolean expressions;;;;0;0
 break;;;;0;0
 #
@@ -152,6 +156,7 @@ type();;Built-In Functions;;0;0
 vars(;vars();Built-In Functions;;0;0
 zip();;Built-In Functions;;0;0
 # end Built-In Functions
+#
 byte-code;;;;0;0
 byte order;;;;0;0
 bytearray;;;;0;0
@@ -201,7 +206,11 @@ translate();;Bytearray Type Functions;;0;0
 upper();;Bytearray Type Functions;;0;0
 zfill(;zfill();Bytearray Type Functions;;0;0
 # end Bytearray Type Functions
-.bz2;;;;0;0
+#
+# Bytes Type Functions
+capitalize();;Bytes Type Functions;;0;0
+# end Bytes Type Functions
+#
 bz2 module;;;;0;0
 #
 # C
@@ -211,22 +220,22 @@ calendar;;;;0;0
 __call__();;;;0;0
 call();;;;0;0
 callable;;;;0;0
-capitalize();;;;0;0
+capitalize();capitalize() (Bytearray Types + Byte Types);;;0;0
 car_registration.py;;;;0;0
 car_registration_server.py;;;;0;0
 category(;category();;;0;0
-ceil();;;;0;0
-center();;;;0;0
+ceil(;ceil() (math Module);;;0;0
+center();center() (Bytearray Types);;;0;0
 cgitb module;;;;0;0
 character encodings;;;;0;0
 chdir();;;;0;0
 CharGrid.py;;;;0;0
 checktags.py;;;;0;0
 choice();;;;0;0
-chr();;;;0;0
+chr();chr() (Built-In);;;0;0
 class decorators;;;;0;0
 class methods;;;;0;0
-classmethod();;;;0;0
+classmethod();classmethod() (Built-In);;;0;0
 class variables;;;;0;0
 clear();;;;0;0
 close();;;;0;0
@@ -236,8 +245,8 @@ combining functions;;;;0;0
 command-line arguments;;;;0;0
 commit();;;;0;0
 comparing strings;;;;0;0
-compile();;;;0;0
-complex();;;;0;0
+compile();compile() (Built-In);;;0;0
+complex();complex() (Built-In);;;0;0
 __complex__(;__complex__();;;0;0
 configparser module;;;;0;0
 conﬁguration ﬁles;;;;0;0
@@ -252,11 +261,11 @@ Coordinated Universal Time;;;;0;0
 copy module;;;;0;0
 copy();;;;0;0
 __copy__();;;;0;0
-copysign(;copysign();;;0;0
+copysign(;copysign() (math Module);;;0;0
 coroutines;;;;0;0
-cos(;cos();;;0;0
-cosh(;cosh();;;0;0
-count();;;;0;0
+cos(;cos() (math Module);;;0;0
+cosh(;cosh() (math Module);;;0;0
+count();count() (Bytearray Types);;;0;0
 cProfile module;;;;0;0
 CREATE TABLE;;;;0;0
 csv module;;;;0;0
@@ -281,27 +290,32 @@ cursor();;;;0;0
 #
 # D
 #
-decode();;;;0;0
+decode();decode() (Bytearray Types);;;0;0
 deepcopy();;;;0;0
 defaultdict;;;;0;0
-delattr();;;;0;0
+degrees(;degrees() (math Module);;;0;0
+delattr();delattr() (Built-In);;;0;0
 deque type;;;;0;0
-dict();;;;0;0
+dict();dict() (Built-In);;;0;0
 digit_names.py;;;;0;0
-dir();;;;0;0
-divmod();;;;0;0
+dir();dir() (Built-In);;;0;0
+dirname(;dirname();;;0;0
+divmod();divmod() (Built-In);;;0;0
 dvds-dbm.py;;;;0;0
 dvds-sql.py;;;;0;0
 #
 # E
 #
-endswith();;;;0;0
-enumerate();;;;0;0
-eval();;;;0;0
+constant e;e (Constant) (math Module);;;0;0
+endswith();endswith() (Bytearray Types);;;0;0
+enumerate();enumerate() (Built-In);;;0;0
+eval();eval() (Built-In);;;0;0
 execute();;;;0;0
 executemany;;;;0;0
-expandtabs();;;;0;0
-extend();;;;0;0
+exists();;;;0;0
+exp(;exp() (math Module);;;0;0
+expandtabs();expandtabs() (Bytearray Types);;;0;0
+extend();extend() (Bytearray Types);;;0;0
 #
 # Extensions (TLE for Files)
 .bz2;;Extensions;;0;0
@@ -329,6 +343,8 @@ ExternalStorage.py;;;;0;0
 #
 # F
 #
+fabs(;fabs() (math Module);;;0;0
+factorial(;factorial() (math Module);;;0;0;
 fetchall();;;;0;0
 fetchmany();;;;0;0
 fetchone();;;;0;0
@@ -390,15 +406,19 @@ untar.py;;Files;;0;0
 Valid.py;;Files;;0;0
 XmlShadow.py;;Files;;0;0
 # end Files
-filter();;;;0;0
-find();;;;0;0
+filter();filter() (Built-In);;;0;0
+find();find() (Bytearray Types);;;0;0
 finddup.py;;;;0;0
 findduplicates.py;;;;0;0
 first-order-logic.py;;;;0;0
-float();;;;0;0
-format();;;;0;0
-fromhex();;;;0;0
-frozenset();;;;0;0
+float();float() (Built-In);;;0;0
+floor(;floor() (math Module);;;0;0
+fmod(;fmod() (math Module);;;0;0
+format();format() (Built-In);;;0;0
+frexp(;frexp() (math Module);;;0;0
+fromhex();fromhex() (Bytearray Types);;;0;0
+frozenset();frozenset() (Built-In);;;0;0
+fsum(;fsum() (math Module);;;0;0
 FuzzyBool.py;;;;0;0
 FuzzyBoolAlt.py;;;;0;0
 #
@@ -408,8 +428,10 @@ generate_grid.py;;;;0;0
 generate_test_names1.py;;;;0;0
 generate_test_names2.py;;;;0;0
 generate_usernames.py;;;;0;0
-getattr();;;;0;0
-globals();;;;0;0
+getattr();getattr() (Built-In);;;0;0
+getmtime(;getmtime();;;0;0
+getsize();;;;0;0
+globals();globals() (Built-In);;;0;0
 grepword.py;;;;0;0
 grepword-m.py;;;;0;0
 grepword-p.py;;;;0;0
@@ -417,83 +439,151 @@ grepword-t.py;;;;0;0
 #
 # H
 #
-hasattr();;;;0;0
-hash();;;;0;0
-help();;;;0;0
-hex();;;;0;0
+hasattr();hasattr() (Built-In);;;0;0
+hash();hash() (Built-In);;;0;0
+help();help() (Built-In);;;0;0
+hex();hex() (Built-In);;;0;0
 html2text.py;;;;0;0
+hypot(;hypot() (math Module);;;0;0
 #
 # I
 #
-id();;;;0;0
+id();id() (Built-In);;;0;0
 Image.py;;;;0;0
-__import__();;;;0;0
+__import__();__import__() (Built-In);;;0;0
 IndentedList.py;;;;0;0
-index();;;;0;0
-input();;;;0;0
-insert();;;;0;0
-int();;;;0;0
+index();index() (Bytearray Types);;;0;0
+input();input() (Built-In);;;0;0
+insert();insert() (Bytearray Types);;;0;0
+int();int() (Built-In);;;0;0
 interest-tk.pyw;;;;0;0
-isalnum();;;;0;0
-isalpha();;;;0;0
-isdigit();;;;0;0
-isinstance();;;;0;0
-islower();;;;0;0
-isspace();;;;0;0
-issubclass();;;;0;0
-istitle();;;;0;0
-isupper();;;;0;0
-iter();;;;0;0
+isalnum();isalnum() (Bytearray Types);;;0;0
+isalpha();isalpha() (Bytearray Types);;;0;0
+isdigit();isdigit() (Bytearray Types);;;0;0
+isdir();;;;0;0
+isfile();;;;0;0
+isinf(;isinf() (math Module);;;0;0
+isinstance();isinstance() (Built-In);;;0;0
+islower();islower() (Bytearray Types);;;0;0
+isnan(;isnan() (math Module);;;0;0
+isspace();isspace() (Bytearray Types);;;0;0
+issubclass();issubclass() (Built-In);;;0;0
+istitle();istitle() (Bytearray Types);;;0;0
+isupper();isupper() (Bytearray Types);;;0;0
+iter();iter() (Built-In);;;0;0
 #
 # J
 #
-join();;;;0;0
+join();join() (Bytearray Types);;;0;0
 #
 # K
 #
+keyboard accelerator;keyboard accelerator;;;0;0
 #
 # L
 #
-len();;;;0;0
-list();;;;0;0
+ldexp(;ldexp() (math Module);;;0;0
+len();len() (Built-In);;;0;0
+list();list() (Built-In);;;0;0
 list type;;;;0;0
-ljust();;;;0;0
-locals();;;;0;0
-lower();;;;0;0
-lstrip();;;;0;0
+ljust();ljust() (Bytearray Types);;;0;0
+locals();locals() (Built-In);;;0;0
+log(;log() (math Module);;;0;0
+log10(;log10() (math Module);;;0;0
+log1p(;log1p() (math Module);;;0;0
+lower();lower( (Bytearray Types));;;0;0
+lstrip();lstrip() (Bytearray Types);;;0;0
 #
 # M
 #
 magic-numbers.py;;;;0;0
 make_html_skeleton.py;;;;0;0
-map();;;;0;0
-max();;;;0;0
-min();;;;0;0
+map();map() (Built-In);;;0;0
+modf(;modf() (math Module);;;0;0
+#
+# math Module
+acos(;acos();math Module;;0;0
+acosh(;acosh();math Module;;0;0
+asin(;asin();math Module;;0;0
+asinh(;asinh();math Module;;0;0
+atan(;atan();math Module;;0;0
+atan2(;atan2();math Module;;0;0
+atanh(;atanh();math Module;;0;0
+ceil(;ceil();math Module;;;0;0
+copysign(;copysign();math Module;;0;0
+cos(;cos();math Module;;0;0
+cosh(;cosh();math Module;;0;0
+degrees(;degrees();math Module;;0;0
+constant e;e (Constant);math Module;;0;0
+exp(;exp();math Module;;0;0
+fabs(;fabs();math Module;;0;0
+factorial(;factorial();math Module;;0;0;
+floor(;floor();math Module;;0;0
+fmod(;fmod();math Module;;0;0
+frexp(;frexp();math Module;;0;0
+fsum(;fsum();math Module;;0;0
+Math Module’s Functions and Constants;Table of Functions and Constants;math Module;;0;0
+hypot(;hypot();math Module;;0;0
+isinf(;isinf();math Module;;0;0
+isnan(;isnan();math Module;;0;0
+ldexp(;ldexp();math Module;;0;0
+log(;log();math Module;;0;0
+log10(;log10();math Module;;0;0
+log1p(;log1p();math Module;;0;0
+modf(;modf();math Module;;0;0
+constant π;pi (constant π);math Module;;0;0
+pow(;pow();math Module;;0;0
+radians(;radians();math Module;;0;0
+sin(;sin();math Module;;0;0
+sinh(;sinh();math Module;;0;0
+sqrt(;sqrt();math Module;;0;0
+tan(;tan();math Module;;0;0
+tanh(;tanh();math Module;;0;0
+trunc(;trunc();math Module;;0;0
+# end math Module
+#
+max();max() (Built-In);;;0;0
+min();min() (Built-In);;;0;0
 MutableMapping;;;;0;0
 MutableSequence;;;;0;0
 #
 # N
 #
 namedtuple();;;;0;0
-next();;;;0;0
+next();next() (Built-In);;;0;0
 noblanks.py;;;;0;0
 #
 # O
 #
-oct(;oct();;;0;0
-ord();;;;0;0
+oct(;oct() (Built-In);;;0;0
+ord();ord() (Built-In);;;0;0
 OrderedDict();;;;0;0
 os module;;;;0;0
 #
+os.path module;os.path Module;;;0;0
+abspath(;abspath();os.path Module;;0;0
+basename();;os.path Module;;0;0
+dirname(;dirname();os.path Module;;0;0
+exists();;os.path Module;;0;0
+getmtime(;getmtime();os.path Module;;0;0
+getsize();;os.path Module;;0;0
+isdir();;os.path Module;;0;0
+isfile();;os.path Module;;0;0
+join();;os.path Module;;0;0
+split();;os.path Module;;0;0
+splitext();;os.path Module;;0;0
+# end os.path Module
+#
+#
 # P
 #
-partition();;;;0;0
-playlists.py;;Files;;0;0
+partition();partition() (Bytearray Types);;;0;0
+playlists.py;;;;0;0
 print_unicode.py;;;;0;0
-pop();;;;0;0
-pow();;;;0;0
-print();;;;0;0
-property();;;;0;0
+pop();pop() (Bytearray Types);;;0;0
+pow(;pow() (Built-In) + math Module);;;0;0
+print();print() (Built-In);;;0;0
+property();property() (Built-In);;;0;0
 Property.py;;;;0;0
 #
 # Q
@@ -502,61 +592,69 @@ quadratic.py;;;;0;0
 #
 # R
 #
-range();;;;0;0
-remove();;;;0;0
-replace();;;;0;0
-repr();;;;0;0
+radians(;radians() (math Module);;;0;0
+range();range() (Built-In);;;0;0
+remove();remove() (Bytearray Types);;;0;0
+replace();replace() (Bytearray Types);;;0;0
+repr();repr() (Built-In);;;0;0
 re module;;;;0;0
-reverse();;;;0;0
-reversed();;;;0;0
-rfind();;;;0;0
-rindex();;;;0;0
-rjust();;;;0;0
+reverse();reverse() (Bytearray Types);;;0;0
+reversed();reversed() (Built-In);;;0;0
+rfind();rfind() (Bytearray Types);;;0;0
+rindex();rindex() (Bytearray Types);;;0;0
+rjust();rjust() (Bytearray Types);;;0;0
 rollback();;;;0;0
-round();;;;0;0
-rpartition();;;;0;0
-rsplit();;;;0;0
-rstrip();;;;0;0
+round();round() (Built-In);;;0;0
+rpartition();rpartition() (Bytearray Types);;;0;0
+rsplit();rsplit() (Bytearray Types);;;0;0
+rstrip();rstrip (Bytearray Types);;;0;0
 #
 # S
 #
 send();;;;0;0
-set();;;;0;0
-setattr();;;;0;0
+set();set() (Built-In);;;0;0
+setattr();setattr() (Built-In);;;0;0
 Shape.py;;;;0;0
 ShapeAlt.py;;;;0;0
+sin(;sin() (math Module);;;0;0
+sinh(;sinh() (math Module);;;0;0
 sndhdr module;;;;0;0
-sorted();;;;0;0
+sorted();sorted() (Built-In);;;0;0
 SortedDict.py;;;;0;0
 SortedList.py;;;;0;0
 SortKey.py;;;;0;0
-split();;;;0;0
-splitlines();;;;0;0
+split();split() (Bytearray Types);;;0;0
+splitlines();splitlines() (Bytearray Types);;;0;0
+splitext();;;;0;0
 sqlite3 module;;;;0;0
-startswith();;;;0;0
-staticmethod();;;;0;0
+sqrt(;sqrt() (math Module);;;0;0
+startswith();startswith() (Bytearray Types);;;0;0
+staticmethod();staticmethod() (Built-In);;;0;0
 statistics.py;;;;0;0
 #
 # Special Methods
 __complex__(;__complex__();Special Methods;;0;0
 # end Special Methods
-str();;;;0;0
+str();str() (Built-In);;;0;0
 str type;;;;0;0
-strip();;;;0;0
-sum();;;;0;0
-super();;;;0;0
-swapcase();;;;0;0
+strip();strip() (Bytearray Types);;;0;0
+sum();sum() (Built-In);;;0;0
+super();super() (Built-In);;;0;0
+swapcase();swapcase() (Bytearray Types);;;0;0
 sys.argv;;;;0;0
 #
 # T
 #
+tan(;tan() (math Module);;;0;0
+tanh(;tanh() (math Module);;;0;0
 TextFilter.py;;;;0;0
 TextUtil.py;;;;0;0
-title();;;;0;0
-translate();;;;0;0
-tuple();;;;0;0
+title();title() (Bytearray Types);;;0;0
+translate();translate() (Bytearray Types);;;0;0
+trunc(;trunc() (math Module);;;0;0
+tuple();tuple() (Built-In);;;0;0
 tuple type;;;;0;0
-type();;;;0;0
+type();type() (Built-In);;;0;0
 #
 # U
 #
@@ -564,12 +662,12 @@ unicodedata module;;;;0;0
 uniquewords1.py;;;;0;0
 uniquewords2.py;;;;0;0
 untar.py;;;;0;0
-upper();;;;0;0
+upper();upper() (Bytearray Types);;;0;0
 #
 # V
 #
 Valid.py;;;;0;0
-vars(;vars();;;0;0
+vars(;vars() (Built-In);;;0;0
 #
 # W
 #
@@ -583,5 +681,5 @@ XmlShadow.py;;;;0;0
 #
 Z
 #
-zfill(;zfill();;;0;0
-zip();;;;0;0
+zfill(;zfill() (Bytearray Types);;;0;0
+zip();zip() (Built-In);;;0;0
