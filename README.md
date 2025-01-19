@@ -117,9 +117,9 @@ The Contents utility has zero problem with this, but the Hyperlink process (`Ctr
 
 LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index. You can play along with this by making use of *Programming-In-Python3.odt* from the latest [v0.5-eta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-eta).
 
-A file called [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
+A file called [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (the file is plain-text, though GitHub may not be aware of that) (LibreOffice calls it a [Concordance file](https://help.libreoffice.org/latest/gu/text/swriter/01/04120250.html?&DbPAR=SHARED&System=UNIX)). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
 
-So what is the problem? The problem comes if you change the SDI file contents, and it comes in 2 ways:     
+So what is the problem? The problem comes if you change the SDI file contents, and it comes in 2 main ways with a 3rd wrinkle:     
 1. You delete some entries.     
 Those fields will NOT be deleted from the document, which means that you will acquire ghost Index entries.
 
@@ -127,7 +127,7 @@ Those fields will NOT be deleted from the document, which means that you will ac
 The original fields will NOT be deleted from the document & there is every chance that you will end up with 2 entries with identical results stacked on top of each other, as different fields for the same document text.
 
 3. Different Index results may be stacked on top of each other (above what is above) due to an incompetant LO search algorithm.     
-The perfect example currently in *Programming-In-Python3.odt* is *“print()”*. There are 3 different Index fields stacked on top of this word in addition to the issues at (2) above:
+One perfect example currently in *Programming-In-Python3.odt* is *“print()”*. There are 3 different Index fields stacked on top of this word in addition to the issues at (2) above:
 - *print()* (expected)
 - *int()* (not expected)
 - *()* also not expected, and supposedly removed from the Index
