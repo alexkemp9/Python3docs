@@ -123,8 +123,14 @@ So what is the problem? The problem comes if you change the SDI file contents, a
 1. You delete some entries.     
 Those fields will NOT be deleted from the document, which means that you will acquire ghost Index entries.
 
-2.  You change some existing entries.
-The original fields will NOT be deleted from the document & there is every chance that you will end up with 2 entries with identical results, but different text.
+2. You change some existing entries.
+The original fields will NOT be deleted from the document & there is every chance that you will end up with 2 entries with identical results stacked on top of each other, as different fields for the same document text.
+
+3. Different Index results may be stacked on top of each other (above what is above) due to an incompetant LO search algorithm.     
+The perfect example currently in *Programming-In-Python3.odt* is *“print()”*. There are 3 different Index fields stacked on top of this word in addition to the issues at (2) above:
+- *print()* (expected)
+- *int()* (not expected)
+- *()* also not expected, and supposedly removed from the Index
 
 Look through these two screenshots of the current Index.     
 - The 1st shows multiple duplicate entries.
@@ -138,11 +144,11 @@ Ghosts:![ghosts](/screenshot_index-bugs-2.jpg)
 ### Exorcising the Ghosts
 This is [blooming painful](https://help.libreoffice.org/latest/en-US/text/swriter/guide/indices_delete.html?&DbPAR=WRITER&System=UNIX)
 
-![the ghost](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Marley%27s_Ghost-John_Leech%2C_1843.jpg/366px-Marley%27s_Ghost-John_Leech%2C_1843.jpg?20080819073347)
-
 It starts by placing your cursor within, or to the immediate left, of a problematic Index entry (within the document, not the Index). You then select `menu:Edit | Reference | Index Entry`.
 
 A Dialog comes up, and the Delete button will remove that specific entry. For some I had to remove twelve (12) instances of the same field before it disappeared from the document (the text remains, but the field shading goes). And remember, there may be multiple instances of the same field in different spots of the same page, and 600 pages in the whole document. So, that is several hundred — possibly several thousand — keypresses to get rid of just one instance of [Jacob Marley’s ghost](https://en.wikipedia.org/wiki/Jacob_Marley). I’m beginning to think that LibreOffice is not fit for purpose.
+
+![the ghost](/jacob-marley-ghost.jpg)
 
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
