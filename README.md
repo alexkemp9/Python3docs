@@ -138,6 +138,8 @@ Ghosts:![ghosts](/screenshot_index-bugs-2.jpg)
 ### Exorcising the Ghosts
 This is [blooming painful](https://help.libreoffice.org/latest/en-US/text/swriter/guide/indices_delete.html?&DbPAR=WRITER&System=UNIX)
 
+![the ghost](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Marley%27s_Ghost-John_Leech%2C_1843.jpg/366px-Marley%27s_Ghost-John_Leech%2C_1843.jpg?20080819073347)
+
 It starts by placing your cursor within, or to the immediate left, of a problematic Index entry (within the document, not the Index). You then select `menu:Edit | Reference | Index Entry`.
 
 A Dialog comes up, and the Delete button will remove that specific entry. For some I had to remove twelve (12) instances of the same field before it disappeared from the document (the text remains, but the field shading goes). And remember, there may be multiple instances of the same field in different spots of the same page, and 600 pages in the whole document. So, that is several hundred — possibly several thousand — keypresses to get rid of just one instance of [Jacob Marley’s ghost](https://en.wikipedia.org/wiki/Jacob_Marley). I’m beginning to think that LibreOffice is not fit for purpose.
