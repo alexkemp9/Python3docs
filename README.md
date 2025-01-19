@@ -112,6 +112,36 @@ The original author produced identically-named Headings. An example (not the onl
 
 The Contents utility has zero problem with this, but the Hyperlink process (`Ctrl-F5`) has a fatal problem with it, in that only the first in such links will work. I would love to report this to LibreOffice, but that would just be a waste of time (see [BugZilla #164307](https://bugs.documentfoundation.org/show_bug.cgi?id=164307) as one example why a bug report is a waste of time).
 
+<a name="2025-jan-19"></a>
+### 19 Jan 2025:
+
+LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index.
+
+A file called [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
+
+So what is the problem? The problem comes if you change the SDI file contents, and it comes in 2 ways:     
+1. You delete some entries.     
+Those fields will NOT be deleted from the document, which means that you will acquire ghost Index entries.
+
+2.  You change some existing entries.
+The original fields will NOT be deleted from the document & there is every chance that you will end up with 2 entries with identical results, but different text.
+
+Look through these two screenshots of the current Index.     
+- The 1st shows multiple duplicate entries.
+
+![dupes](/screenshot_index-bugs-1.jpg)
+
+- The 2nd is a page full of Index entries for ‘&’, ‘%’, etc. that are no longer in the SDI file but keep on appearing in the Index.
+
+Ghosts:![ghosts](/screenshot_index-bugs-2.jpg)
+
+### Exorcising the Ghosts
+This is [blooming painful](https://help.libreoffice.org/latest/en-US/text/swriter/guide/indices_delete.html?&DbPAR=WRITER&System=UNIX)
+
+It starts by placing your cursor within, or to the immediate left, of a problematic Index entry (within the document, not the Index). You then select `menu:Edit | Reference | Index Entry`.
+
+A Dialog comes up, and the Delete button will remove that specific entry. For some I had to remove twelve (12) instances of the same field before it disappeared from the document (the text remains, but the field shading goes). And remember, there may be multiple instances of the same field in different spots of the same page, and 600 pages in the whole document. So, that is several hundred — possibly several thousand — keypresses to get rid of just one instance of [Jacob Marley’s ghost](https://en.wikipedia.org/wiki/Jacob_Marley). I’m beginning to think that LibreOffice is not fit for purpose.
+
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
@@ -147,6 +177,7 @@ The above was all under LibreOffice v7.4.7.2.
 | Bug#07 | [Jan 04 2025](#bug-07)
 |***Success!*** |[Jan 06 2025](#success)|
 |[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
+| Index Bugs | [Jan 19 2025](#2025-jan-19)
 
 - On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. So, buggy from the start & now buggy for 7+ years. But not to worry: LibreOffice is *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)™”*.
 
