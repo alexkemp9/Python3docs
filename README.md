@@ -117,36 +117,40 @@ The Contents utility has zero problem with this, but the Hyperlink process (`Ctr
 
 LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index. You can play along with this by making use of *Programming-In-Python3.odt* from the latest [v0.5-eta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-eta).
 
-A file called [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (LibreOffice calls it a [Concordance file](https://help.libreoffice.org/latest/gu/text/swriter/01/04120250.html?&DbPAR=SHARED&System=UNIX)) (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
+A file named [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (LibreOffice calls it a [Concordance file](https://help.libreoffice.org/latest/gu/text/swriter/01/04120250.html?&DbPAR=SHARED&System=UNIX)) (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
 
-So what is the problem? The problem comes if you change the SDI file contents, and it comes in 2 main ways with a 3rd wrinkle:     
+- *Note 1*: The Alphabetical Index was part of the Grandfather 3.3.0.4 version     
+(inherited from Apache OpenOffice and, as far as I can tell, unchanged in it’s basics since then).
+- *Note 2*: go `menu:View | Field Shadings` to switch the Writer view on/off.
+
+So what is the problem? The problem comes if you change the SDI file contents then update the Index, and that comes in 2 main ways with a 3rd wrinkle:     
 1. You delete some entries.     
-Those fields will NOT be deleted from the document, which means that you will acquire ghost Index entries.
+Those deleted fields will NOT be auto-deleted from the document, which means that you will acquire ghost Index entries after update.
 
-2. You change some existing entries.
-The original fields will NOT be deleted from the document & there is every chance that you will end up with 2 entries with identical results stacked on top of each other, as different fields for the same document text.
+2. You change some entries.
+The original fields will NOT be deleted from the document & there is a chance that you will end up with 2 entries with identical results stacked on top of each other, as different fields for the same document text.
 
-3. Different Index results may be stacked on top of each other (above what is above) due to an incompetant LO search algorithm.     
-One perfect example currently in *Programming-In-Python3.odt* is *“print()”*. There are 3 different Index fields stacked on top of this word in addition to the issues at (2) above:
+3. Different Index results may be stacked on top of each other (above what is said above) due to an incompetant LO search algorithm.     
+One perfect example currently in *Programming-In-Python3.odt* is *“print()”*. There are at least 3 different Index fields stacked on top of this word in addition to the issues at (2) above:
 - *print()* (expected)
 - *int()* (not expected)
 - *()* also not expected, and supposedly removed from the Index
 
-Look through these two screenshots of the current Index.     
+Look through these two screenshots below from the current Index within the PDF.     
 - The 1st shows multiple duplicate entries.
 
 ![dupes](/screenshot_index-bugs-1.jpg)
 
-- The 2nd is a page full of Index entries for ‘&’, ‘%’, etc. that are no longer in the SDI file but keep on appearing in the Index.
+- The 2nd is a page full of Index entries for ‘&’, ‘%’, etc. Symbols that are no longer in the SDI file but keep on appearing in the Index.
 
 Ghosts:![ghosts](/screenshot_index-bugs-2.jpg)
 
 ### Exorcising the Ghosts
 This is [blooming painful](https://help.libreoffice.org/latest/en-US/text/swriter/guide/indices_delete.html?&DbPAR=WRITER&System=UNIX)
 
-It starts by placing your cursor within, or to the immediate left, of a problematic Index entry (within the document, not the Index). You then select `menu:Edit | Reference | Index Entry`.
+It starts by placing your cursor within, or to the immediate left, of a problematic Index entry (within the document, not the Index). You then select `menu:Edit | Reference | Index Entry`. Another method is to right-click within an Index field (within the document, not the Index) and then choose `Edit Index Entry…` from the menu.
 
-A Dialog comes up, and the Delete button will remove that specific entry. For some I had to remove twelve (12) instances of the same field before it disappeared from the document (the text remains, but the field shading goes). And remember, there may be multiple instances of the same field in different spots of the same page, and 600 pages in the whole document. So, that is several hundred — possibly several thousand — keypresses to get rid of just one instance of [Jacob Marley’s ghost](https://en.wikipedia.org/wiki/Jacob_Marley). I’m beginning to think that LibreOffice is not fit for purpose.
+A Dialog comes up, and the Delete button will remove that specific entry. For some I had to remove twelve (12) instances of the same field before it disappeared from the document (the text always remains, but the field shading goes). And remember, there may be multiple instances of the same field in different spots of the same page, and 600 pages in the whole document. So, that is several hundred — possibly several thousand — keypresses to get rid of just one instance of [Jacob Marley’s ghost](https://en.wikipedia.org/wiki/Jacob_Marley). Also, what I’ve just described is exactly what was present in the very 1st grandfather 3.3.0.4 version (more than 7 years ago).  I’m beginning to think that LibreOffice is not fit for purpose.
 
 ![the ghost](/jacob-marley-ghost.jpg)
 
