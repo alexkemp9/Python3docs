@@ -115,7 +115,7 @@ The Contents utility has zero problem with this, but the Hyperlink process (`Ctr
 <a name="2025-jan-19"></a>
 ### 19 Jan 2025:
 
-LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index.
+LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index. You can play along with this by making use of *Programming-In-Python3.odt* from the latest [v0.5-eta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-eta).
 
 A file called [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
 
