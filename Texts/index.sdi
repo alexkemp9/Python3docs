@@ -93,6 +93,7 @@ __bool__();;;;0;0
 bool();bool() (Built-In);;;0;0
 Boolean expressions;;;;0;0
 break;;;;0;0
+ .bz2;.bz2 (File Extension);;;0;0
 #
 # Built-In Functions
 abs();;Built-In Functions;;0;0
@@ -278,6 +279,7 @@ class variables;;;;0;0
 clear();;;;0;0
 close();;;;0;0
 cmath module;;;;0;0
+co2-sample.csv;co2-sample.csv (File);;;0;0
 collections module;;;;0;0
 combining functions;;;;0;0
 command-line arguments;;;;0;0
@@ -306,6 +308,7 @@ cosh(;cosh() (math Module);;;0;0
 count();count() (Bytearray Types + Byte Types);;;0;0
 cProfile module;;;;0;0
 CREATE TABLE;;;;0;0
+co2-sample.csv;.csv (File Extension;);;0;0
 csv module;;;;0;0
 csv2html.py;;;;0;0
 csv2html2_opt.py;;;;0;0
@@ -355,13 +358,13 @@ exp(;exp() (math Module);;;0;0
 expandtabs();expandtabs() (Bytearray Types + Byte Types);;;0;0
 extend();extend() (Bytearray Types);;;0;0
 #
-# Extensions (TLE for Files)
-.bz2;;Extensions;;0;0
-.csv;;Extensions;;0;0
-.gz;;Extensions;;0;0
-.ini;;Extensions;;0;0
-.m3u;;Extensions;;0;0
-.pls;;Extensions;;0;0
+# Extensions (TLS for Files)
+# space before each extension to reduce references
+ .bz2;.bz2;Extensions;;0;0
+co2-sample.csv;.csv;Extensions;;0;0
+.ini-style;.ini;Extensions;;0;0
+ .m3u format;.m3u;Extensions;;0;0
+ .pls format;.pls;Extensions;;0;0
 .py;;Extensions;;0;0
 .pyc;;Extensions;;0;0
 .pyo;;Extensions;;0;0
@@ -374,7 +377,7 @@ extend();extend() (Bytearray Types);;;0;0
 .wav;;Extensions;;0;0
 .xpm;;Extensions;;0;0
 .zip;;Extensions;;0;0
-# end Extensions (TLE for Files)
+# end Extensions (TLS for Files)
 #
 external_sites.py;;;;0;0
 ExternalStorage.py;;;;0;0
@@ -398,6 +401,7 @@ car_registration.py;;Files;;0;0
 car_registration_server.py;;Files;;0;0
 CharGrid.py;;Files;;0;0
 checktags.py;;Files;;0;0
+co2-sample.csv;;Files;;0;0
 convert-incidents.py;;Files;;0;0
 csv2html.py;;Files;;0;0
 csv2html2_opt.py;;Files;;0;0
@@ -474,6 +478,7 @@ grepword.py;;;;0;0
 grepword-m.py;;;;0;0
 grepword-p.py;;;;0;0
 grepword-t.py;;;;0;0
+gzip module;GZIP (Module + .gz File Extension);;;0;0
 #
 # H
 #
@@ -491,6 +496,7 @@ Image.py;;;;0;0
 __import__();__import__() (Built-In);;;0;0
 IndentedList.py;;;;0;0
 index();index() (Bytearray Types + Byte Types);;;0;0
+.ini-style;.ini (File Extension);;;0;0
 input();input() (Built-In);;;0;0
 insert();insert() (Bytearray Types);;;0;0
 int();int() (Built-In);;;0;0
@@ -535,6 +541,7 @@ lstrip();lstrip() (Bytearray Types + Byte Types);;;0;0
 #
 # M
 #
+.m3u format;.m3u (File Extension);;;0;0
 magic-numbers.py;;;;0;0
 make_html_skeleton.py;;;;0;0
 map();map() (Built-In);;;0;0
@@ -618,6 +625,7 @@ splitext();;os.path Module;;0;0
 #
 partition();partition() (Bytearray Types + Byte Types);;;0;0
 playlists.py;;;;0;0
+ .pls format;.pls (File Extension);;;0;0
 print_unicode.py;;;;0;0
 pop();pop() (Bytearray Types);;;0;0
 pow(;pow() (Built-In) + math Module);;;0;0
