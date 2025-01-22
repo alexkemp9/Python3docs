@@ -154,6 +154,22 @@ A Dialog comes up, and the Delete button will remove that specific entry. For so
 
 ![the ghost](/jacob-marley-ghost.jpg)
 
+<a name="2025-jan-22"></a>
+## Hello pip3
+…goodbye Programming-In-Python3.
+
+Whilst trying to get a working set of Indexes I made a small slip & that fatally compromised the Heading Numbering. Worse, it seems that I cannot reverse my mistake. I've had to abandon this latest ODT+PDF and start again from scratch.
+
+LibreOffice styles are used to build the Index. The main one is the set of *Heading x" paragraph styles (x = 1 … 10), with Heading 1 the principal style used in numbering.
+
+The opening index in the PDF is *“Contents at a Glance”*. That was easy to setup by asking it to build the index only on *Heading 1* styles. However, that meant that none of the Contents, Tables nor Alphabetical Index were listed. I later discovered that the first tab (‘Type’) of the setup dialog contains an *Additional styles* checkbox that allows this very feature. Before that I tried changing the *Contents Heading* paragraph style — used to style the ToC header — to be sourced (‘inherited’) from *Heading 1*. That worked, but had an atrocious, fatal side effect that I did not catch on to for a little while.
+
+*“Table 2.2: Numeric Operators and Functions”* has both a Header for the whole Table + headers for each column. The latter are named *Syntax* & *Description*. Their paragraph style is called *Table Index Heading*. It was inherited from another style, and that style was inherited from *Contents Heading*. Therefore, the styles for *Syntax* & *Description* were 4 steps removed from *Heading 1*. In spite of that, the *Content Numbering* for the Tables reset after the 1st one with a *Table Index Heading* style, and that was *Table 2.2*. Not only that: because those Tables gained a *Heading 1* numbering, suddenly the book went from having 15 Chapters to having 100 chapters.
+
+I was in the middle of exorcising all the ghosties from the Alphabetical Index when I discovered the above. I quickly discovered the most likely source of my error & reversed it, but the numbering errors remained. I tried removing Indexes, but nothing seemed to change it. Another bug, it seemed. It looked like I was going to have to toss all my previous efforts into the toilet. Again, and now for the 4th time in 5 months.
+
+Today I re-built the book from the 18 Chapters that I have carefully kept intact. That was reasonably quick, but I'm now having to trawl through & redo the work of inserting number-fields into all the Chapter links. That is painful & slow. This time, I'm re-updating each Chapter as I go. Wish me luck.
+
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
@@ -189,6 +205,8 @@ The above was all under LibreOffice v7.4.7.2.
 | Bug#07 | [Jan 04 2025](#bug-07)
 |***Success!*** |[Jan 06 2025](#success)|
 |[Programming-In-Python3.pdf](/Programming-In-Python3.pdf)|[Jan 13 2025](#2025-jan-13)|
+| Index Bugs | [Jan 19 2025](#2025-jan-19)
+| (4<sup>th</sup> Attempt) |   |
 | Index Bugs | [Jan 19 2025](#2025-jan-19)
 
 - On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. So, buggy from the start & now buggy for 7+ years. But not to worry: LibreOffice is *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)™”*.
