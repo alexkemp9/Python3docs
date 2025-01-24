@@ -115,7 +115,7 @@ The Contents utility has zero problem with this, but the Hyperlink process (`Ctr
 <a name="2025-jan-19"></a>
 ### 19 Jan 2025:
 
-LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index. You can play along with this by making use of *Programming-In-Python3.odt* from the latest [v0.5-eta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-eta).
+LibreOffice keeps kicking me in the goolies as I work to finish this wretched PDF. The latest location for LO bugs is in the Alphabetical Index. You can play along with this by making use of *Programming-In-Python3.odt* from the latest [v0.5-eta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-eta) (ignorance of Greek letters led me to name the tag badly: it should have been “*v0.5-epsilon*”).
 
 A file named [Texts/index.sdi](/Texts/index.sdi) is used during Index insertion (LibreOffice calls it a [Concordance file](https://help.libreoffice.org/latest/gu/text/swriter/01/04120250.html?&DbPAR=SHARED&System=UNIX)) (the file is plain-text, though GitHub may not be aware of that). It contains one index-entry per line. LO searches within the document for the text of each line and stores an index-field for every occurrance in the document. Those fields are used to build the Index.
 
@@ -170,6 +170,16 @@ I was in the middle of exorcising all the ghosties from the Alphabetical Index w
 
 Today I re-built the book from the 18 Chapters that I have carefully kept intact. That was reasonably quick, but I'm now having to trawl through & redo the work of inserting number-fields into all the Chapter links. That is painful & slow. This time, I'm re-updating each Chapter as I go. Wish me luck.
 
+<a name="2025-jan-24"></a>
+### 24 Jan 2025:
+pip3 has now obtained a set of Contents indexes.
+
+Chapters, Tables & Figures are all playing nicely with Contents numbering and, in spite of the usual minor stumbles along the way, no permanent bugs have bitten me in the arse yet (that I know of). The final stage will be an Alphabetical Index. Because that is a one-chance pony (updates are placed over the top of previous entries rather than the old ones being removed first) it will take some time to produce.
+
+I've uploaded + made a new release.
+
+You can play along with this by making use of *pip3.odt* and/or *pip3.pdf* from the latest [v0.5-zeta release](https://github.com/alexkemp9/Python3docs/releases/tag/v0.5-zeta) (irritation at having wrongly named the previous release led me to also name this tag badly: it should have been “*v0.6-zeta*”).
+
 ### *Warning!*
 In Sept 2024 the simple act of loading [“3_new.odt”](/3_new.odt) into Libreoffice caused the entire desktop computer to lockup & become unresponsive to anything other than the OFF power button on the case. Without any further action from me towards the ODT that has now, in Nov 2024, moderated into a LibreOffice freeze when the ODT is loaded, but not a System Freeze. YMMV     
 
@@ -208,6 +218,7 @@ The above was all under LibreOffice v7.4.7.2.
 | Index Bugs | [Jan 19 2025](#2025-jan-19)
 | (4<sup>th</sup> Attempt) |   |
 | Index Bugs | [Jan 19 2025](#2025-jan-19)
+| Almost Ready for the Ball | [Jan 24 2025](#2025-jan-24)
 
 - On [Dec 26](#bug-02) AppImages v5.0.6.3, v4.0.0.3 + v3.3.0.4 all proved to contain Bug03. So, buggy from the start & now buggy for 7+ years. But not to worry: LibreOffice is *“[working as designed](https://bugs.documentfoundation.org/show_bug.cgi?id=164295#c4)™”*.
 
