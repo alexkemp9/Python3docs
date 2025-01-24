@@ -94,6 +94,7 @@ bool();bool() (Built-In);;;0;0
 Boolean expressions;;;;0;0
 break;;;;0;0
  .bz2;.bz2 (File Extension);;;0;0
+bz2 module;;;;0;0
 #
 # Built-In Functions
 abs();;Built-In Functions;;0;0
@@ -365,15 +366,12 @@ co2-sample.csv;.csv;Extensions;;0;0
 .ini-style;.ini;Extensions;;0;0
  .m3u format;.m3u;Extensions;;0;0
  .pls format;.pls;Extensions;;0;0
-.py;;Extensions;;0;0
-.pyc;;Extensions;;0;0
-.pyo;;Extensions;;0;0
-.pyw;;Extensions;;0;0
-.svg;;Extensions;;0;0
-.tar;;Extensions;;0;0
-.tar.gz;;Extensions;;0;0
-.tar.bz2;;Extensions;;0;0
-.tgz;;Extensions;;0;0
+extension of .py;.py;Extensions;;0;0
+.pyc version;.pyc or .pyo;Extensions;;0;0
+extension .py0;.py0;Extensions;;0;0
+extension of .pyw;.pyw;Extensions;;0;0
+sufﬁx changed to .svg;.svg;Extensions;;0;0
+.tar, .tar.gz (also .tgz), and .tar.bz2 ﬁles;.tar, .tar.gz, .tar.bz2 + .tgz;Extensions;;0;0
 .wav;;Extensions;;0;0
 .xpm;;Extensions;;0;0
 .zip;;Extensions;;0;0
@@ -545,6 +543,7 @@ lstrip();lstrip() (Bytearray Types + Byte Types);;;0;0
 magic-numbers.py;;;;0;0
 make_html_skeleton.py;;;;0;0
 map();map() (Built-In);;;0;0
+MIME (Multipurpose Internet Mail Extensions);;;;0;0
 modf(;modf() (math Module);;;0;0
 #
 # math Module
@@ -632,10 +631,15 @@ pow(;pow() (Built-In) + math Module);;;0;0
 print();print() (Built-In);;;0;0
 property();property() (Built-In);;;0;0
 Property.py;;;;0;0
+extension of .py;.py (File Extension);;;0;0
+.pyc version;.pyc (File Extension);;;0;0
+extension .py0;.py0 (File Extension);;;0;0
+extension of .pyw;.pyw (GUI) (File Extension);;;0;0
 #
 # Q
 #
 quadratic.py;;;;0;0
+quopri module;;;;0;0
 #
 # R
 #
@@ -678,6 +682,8 @@ sqrt(;sqrt() (math Module);;;0;0
 startswith();startswith() (Bytearray Types + Byte Types);;;0;0
 staticmethod();staticmethod() (Built-In);;;0;0
 statistics.py;;;;0;0
+sufﬁx changed to .svg;.svg (File Extension);;;0;0
+SVG (Scalable Vector Graphics);;;;0;0
 #
 # Special Methods
 __complex__(;__complex__();Special Methods;;0;0
@@ -694,6 +700,8 @@ sys.argv;;;;0;0
 #
 tan(;tan() (math Module);;;0;0
 tanh(;tanh() (math Module);;;0;0
+.tar, .tar.gz (also .tgz), and .tar.bz2 ﬁles;.tar, .tar.gz, .tar.bz2 + .tgz (File Extension);;;0;0
+tarfile module;;;;0;0
 TextFilter.py;;;;0;0
 TextUtil.py;;;;0;0
 title();title() (Bytearray Types + Byte Types);;;0;0
@@ -718,6 +726,7 @@ vars(;vars() (Built-In);;;0;0
 #
 # W
 #
+wave module;;;;0;0
 #
 # X
 #
@@ -730,3 +739,4 @@ XmlShadow.py;;;;0;0
 #
 zfill(;zfill() (Bytearray Types + Byte Types);;;0;0
 zip();zip() (Built-In);;;0;0
+zipfile module;;;;0;0
