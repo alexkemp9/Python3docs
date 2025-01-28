@@ -119,7 +119,7 @@ asyncore module;asyncore (Module);;;0;0
 atan(;atan() (math Module);;;0;0
 atan2(;atan2() (math Module);;;0;0
 atanh(;atanh() (math Module);;;0;0
-Atomic module;Atomic module (Module);;;0;0
+Atomic module;Atomic (Module);;;0;0
 Atomic.py;Atomic.py (examples File);;;0;0
 Atomic.py module;Atomic.py (Module);;;0;0
 attrgetter();;;;0;0
@@ -155,6 +155,7 @@ BinaryRecordFile_ans.py;BinaryRecordFile_ans.py (examples File);;;0;0
 bisect module,bisect (Module);;;0;0
 bit_length();;;;0;0
 bitwise operators;;;;0;0
+Block module;Block (Module);;;0;0
 BlockOutput.py;BlockOutput.py (examples File);;;0;0
 BlockOutput.py module;BlockOutput.py (Module);;;0;0
 blocks.py;blocks.py (examples File);;;0;0
@@ -369,6 +370,7 @@ conﬁguration ﬁles;;;;0;0
 conjugate();;;;0;0
 connect();;;;0;0
 connection object;;;;0;0
+Console module;Console (Module);;;0;0
 __contains__();;;;0;0
 context managers;;;;0;0
 contextlib module;contextlib (Module);;;0;0
@@ -646,6 +648,7 @@ hash();hash() (Built-In);;;0;0
 heapq module;heapq (Module);;;0;0
 help();help() (Built-In);;;0;0
 hex();hex() (Built-In);;;0;0
+html.entities;html.entities (Module);;;0;0
 html.parser module;html.parser (Module);;;0;0
 html2text.py;html2text.py (examples File);;;0;0
 http.client module;http.client (Module);;;0;0
@@ -771,6 +774,7 @@ max();max() (Built-In);;;0;0
 min();min() (Built-In);;;0;0
 MIME (Multipurpose Internet Mail Extensions);;;;0;0
 mimetypes module;mimetypes (Module);;;0;0
+mmap module;mmap (Module);;;0;0
 modf(;modf() (math Module);;;0;0
 object’s module name;__module__ (Attribute);;;0;0
 #
@@ -786,6 +790,7 @@ audioop module;audioop;Modules;;0;0
 base64 module;base64;Modules;;0;0
 BikeStock module;BikeStock;Modules;;0;0
 bisect module,bisect;Modules;;0;0
+Block module;Block;Modules;;0;0
 BlockOutput.py module;BlockOutput.py;Modules;;0;0
 builtins module;builtins;Modules;;0;0
 bz2 module;bz2;Modules;;0;0
@@ -796,6 +801,7 @@ codecs module;codecs;Modules;;0;0
 collections.py;collections;Modules;;0;0
 Collections Module’s Main Abstract Base Classes;collections (ABC);Modules;;0;0
 configparser module;configparser;Modules;;0;0
+Console module;Console;Modules;;0;0
 contextlib module;contextlib;Modules;;0;0
 copy module;copy;Modules;;0;0
 cProfile module;cProfile;Modules;;0;0
@@ -817,6 +823,7 @@ gettext;gettext;Modules;;0;0
 glob module;glob;Modules;;0;0
 gzip module;gzip;Modules;;0;0
 heapq module;heapq;Modules;;0;0
+html.entities;html.entities;Modules;;0;0
 html.parser module;html.parser;Modules;;0;0
 http.client module;http.client;Modules;;0;0
 http.cookiejar module;http.cookiejar;Modules;;0;0
@@ -833,6 +840,7 @@ logging module;logging;Modules;;0;0
 mailbox module;mailbox;Modules;;0;0
 math Module;math;Modules;;0;0
 mimetypes module;mimetypes;Modules;;0;0
+mmap module;mmap;Modules;;0;0
 multiprocessing module;multiprocessing;Modules;;0;0
 nntplib module;nntplib;Modules;;0;0
 numbers module;numbers;Modules;;0;0
@@ -842,22 +850,27 @@ os module;os;Modules;;0;0
 os.path module;os.path;Modules;;0;0
 pickle module;pickle;Modules;;0;0
 PLY (Python Lex Yacc);PLY;Modules;;0;0
+ply.lex modules;ply.lex;Modules;;0;0
+ply.yacc modules;ply.yacc;Modules;;0;0
 poplib;poplib;Modules;;0;0
+Pythonic Parsing with PyParsing;PyParsing;Modules;;0;0
+pyparsing_py3 module;pyparsing_py3 module;Modules;;0;0
 Python profile module;profile;Modules;;0;0
 pstats module;pstats;Modules;;0;0
-Pythonic Parsing with PyParsing;PyParsing;Modules;;0;0
 queue module;queue;Modules;;0;0
 quopri module;quopri;Modules;;0;0
 random module;random;Modules;;0;0
 “regexes”;re;Modules;;0;0
 Shape module;Shape;Modules;;0;0
 shelve module;shelve;Modules;;0;0
+shlex module;shlex;Modules;;0;0
 shutil module;shutil;Modules;;0;0
 smtplib module;smtplib;Modules;;0;0
 smtpd module;smtpd;Modules;;0;0
 sndhdr module;sndhdr;Modules;;0;0
 socket module;socket;Modules;;0;0
 socketserver module;socketserver;Modules;;0;0
+sqlite3 module;sqlite3;Modules;;0;0
 ssl module;ssl;Modules;;0;0
 string module;string;Modules;;0;0
 struct module;struct;Modules;;0;0
@@ -872,6 +885,7 @@ Tk GUI library;tkinter;Modules;;0;0
 threading module;threading;Modules;;0;0
 time module handles timestamps;time;Modules;;0;0
 timeit module;timeit;Modules;;0;0
+tokenize module;tokenize;Modules;;0;0
 unicodedata module;unicodedata;Modules;;0;0
 unittest module;unittest;Modules;;0;0
 urllib package;urllib;Modules;;0;0
@@ -882,6 +896,7 @@ uu module;uu;Modules;;0;0
 Valid.py module;Valid.py;Modules;;0;0
 wave module;wave;Modules;;0;0
 weakref module;weakref;Modules;;0;0
+webbrowser module;webbrowser;Modules;;0;0
 xdrlib module;xdrlib;Modules;;0;0
 xml.dom module;xml.dom;Modules;;0;0
 xml.dom.minidom module;xml.dom.minidom;Modules;;0;0
@@ -938,6 +953,8 @@ playlists.py;playlists.py (examples File);;;0;0
 pickle module;pickle (Module);;;0;0
  .pls format;.pls (File Extension);;;0;0
 PLY (Python Lex Yacc);PLY (Module);;;0;0
+ply.lex modules;ply.lex (Module);;;0;0
+ply.yacc modules;ply.yacc (Module);;;0;0
 print_unicode.py;print_unicode.py (examples File);;;0;0
 print_unicode_uni.py;print_unicode_uni.py (examples File);;;0;0
 print_unicode_uni_ans.py;print_unicode_uni_ans.py (examples File);;;0;0
@@ -954,6 +971,7 @@ extension of .py;.py (File Extension);;;0;0
 .pyc version;.pyc (File Extension);;;0;0
 extension .py0;.py0 (File Extension);;;0;0
 Pythonic Parsing with PyParsing;PyParsing (Module);;;0;0
+pyparsing_py3 module;pyparsing_py3 (Module);;;0;0
 pyparsing_py3.py;pyparsing_py3.py (examples File);;;0;0
 extension of .pyw;.pyw (GUI) (File Extension);;;0;0
 #
@@ -1001,6 +1019,7 @@ ShapeAlt.py;ShapeAlt.py (examples File);;;0;0
 ShapeAlt_ans.py;ShapeAlt_ans.py (examples File);;;0;0
 Shape_ans.py;Shape_ans.py (examples File);;;0;0
 shelve module;shelve;Modules;;0;0
+shlex module;shlex (Module);;;0;0
 shutil module;shutil (Module);;;0;0
 sin(;sin() (math Module);;;0;0
 sinh(;sinh() (math Module);;;0;0
@@ -1019,7 +1038,7 @@ SortKey.py;SortKey.py (examples File);;;0;0
 split();split() (Bytearray Types + Byte Types Function);;;0;0
 splitlines();splitlines() (Bytearray Types + Byte Types Function);;;0;0
 splitext();;;;0;0
-sqlite3 module;;;;0;0
+sqlite3 module;sqlite3 (Module);;;0;0
 sqrt(;sqrt() (math Module);;;0;0
 ssl module;ssl (Module);;;0;0
 StandardMagicNumbers.py;StandardMagicNumbers.py (examples File);;;0;0
@@ -1065,6 +1084,7 @@ title();title() (Bytearray Types + Byte Types Function);;;0;0
 Tk GUI library;tkinter (Module);;;0;0
 time module handles timestamps;time (Module);;;0;0
 timeit module;timeit (Module);;;0;0
+tokenize module;tokenize (Module);;;0;0
 translate();translate() (Bytearray Types + Byte Types Function);;;0;0
 trunc(;trunc() (math Module);;;0;0
 tuple();tuple() (Built-In);;;0;0
@@ -1096,6 +1116,7 @@ vars(;vars() (Built-In);;;0;0
 wave module;.wav (File Extension);;;0;0
 wave module;wave (Module);;;0;0
 weakref module;weakref (Module);;;0;0
+webbrowser module;webbrowser (Module);;;0;0
 WindowsMagicNumbers.py;WindowsMagicNumbers.py (examples File);;;0;0
 #
 # X
